@@ -39,7 +39,7 @@ module.exports = function(smarty) {
 
 		// Quick Webserver
 		webserver 						: {
-			webserver_root 		: './html_frontend', /* seed webserver is overwriting this, so this might be a real project path */
+			webserver_root 		: './red-carpet', /* seed webserver is overwriting this, so this might be a real project path */
 			webserver_ip 		: 'localhost',
 			webserver_port 		: 6969,
 
