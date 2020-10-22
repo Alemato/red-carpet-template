@@ -1,0 +1,17 @@
+// any variable you put here, will overwrite Bootstrap and Smarty!
+// It's better to copy/paste here the variables you want to change instead of changing the original,
+// because would be a lot easier on updates! 
+
+// -------------------------------------------------------------------------------------------
+// 					DON'T FORGET ON UPDATES TO NEVER REPLACE THIS FOLDER :)
+// 					You might have a backup but who knows... some unsaved changes!
+// -------------------------------------------------------------------------------------------
+
+$primary-theme-color:                       #BB3132 !default;
+$yiq-text-dark:                             #BC827B !default;
+$yiq-text-light:                            #F3EED9 !default;
+$body-color:                                #212529 !default;                                       // body color
+$body-bg:                                   #FFF4F1 !default;                                       // body background color
+$footer-dark-bg:                #BC827B !default;           // dark background color
+$footer-dark-color:             #FFF4F1 !default;           // dark text color
+$footer-light-bg:               #FFF4F1 !default;           // light background color

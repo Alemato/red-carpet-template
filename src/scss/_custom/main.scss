@@ -1,0 +1,18 @@
+// your custom includes starts here
+.dropdown-menu-dark,
+.dropdown-menu-dark .dropdown-menu {
+  color: #F3EED9 !important;
+  background-color: #333333;
+}
+/* links */
+.dropdown-menu-dark a {
+  color: darken(#F3EED9, 20%) !important;
+}
+.dropdown-menu-dark a.dropdown-item:hover,
+.dropdown-menu-dark a.dropdown-item.active,
+.dropdown-menu-dark .dropdown-item:hover>a,
+.dropdown-menu-dark .dropdown-item.active>a,
+.dropdown-menu-dark .dropdown-item>a.active,
+.dropdown-menu-dark a:hover {
+  color: #F3EED9 !important;
+}
