@@ -1,10 +1,11 @@
+/*
 // your custom includes starts here
 .dropdown-menu-dark,
 .dropdown-menu-dark .dropdown-menu {
   color: #F3EED9 !important;
   background-color: #333333;
 }
-/* links */
+!* links *!
 .dropdown-menu-dark a {
   color: darken(#F3EED9, 20%) !important;
 }
@@ -15,4 +16,78 @@
 .dropdown-menu-dark .dropdown-item>a.active,
 .dropdown-menu-dark a:hover {
   color: #F3EED9 !important;
+}
+*/
+
+p.a-none-decoration-blold a button{
+  -webkit-text-stroke-width: 0;
+}
+
+p.a-none-decoration-blold a:hover button {
+  text-decoration: none;
+  -webkit-text-stroke-width: 0;
+}
+p.a-none-decoration-blold a {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(187, 49, 50, 0.8);
+}
+
+p.a-none-decoration-blold a:hover {
+  text-decoration: none;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(126, 36, 34, 0.8);
+}
+
+.fs--90 {
+  font-size: 90px !important;
+}
+
+.nav-pills{
+  justify-content: space-between;
+}
+
+.nav-pills .nav-link:not(.active) {
+  background-color: rgb(235, 179, 180);
+  border-color: rgb(235, 179, 180);
+  text-align: center;
+}
+
+.nav-pills .nav-link.active {
+  color: #f3eed9;
+  background-color: #bb3132;
+  border-color: #bb3132;
+  text-align: center;
+}
+
+.bg-secondary-palette {
+  background-color: $yiq-text-dark;
+}
+
+.h--275{
+  height: 275px;
+}
+
+.text-ter-palette {
+  color: $yiq-text-dark !important;
+}
+
+.text-quar-palette{
+  color: $footer-dark-color !important;
+}
+
+.text-secondary-palette {
+  color: $yiq-text-light !important;
+}
+
+.a-text-secondary-palette {
+  color: $yiq-text-light !important;
+}
+
+.a-text-secondary-palette:hover {
+  color: adjust-color($yiq-text-dark, $lightness: +15%) !important;
+}
+
+.text-stroke-primary{
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(126, 36, 34, 0.8);
 }

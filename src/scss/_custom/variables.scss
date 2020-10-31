@@ -15,3 +15,73 @@ $body-bg:                                   #FFF4F1 !default;                   
 $footer-dark-bg:                #BC827B !default;           // dark background color
 $footer-dark-color:             #FFF4F1 !default;           // dark text color
 $footer-light-bg:               #FFF4F1 !default;           // light background color
+
+///
+
+/// -- --
+/// ## THEME COLORS
+/// (bootstrap rewrites)
+///
+/// Recommended to use the GOV.UK colour palette.
+/// https://design-system.service.gov.uk/styles/colour/
+///
+/// Notes:
+///   $pink - added by Smarty. Remove if not needed
+/// -- --
+
+///
+$blue:        $primary-theme-color !default;    // orig: #007bff (*-primary)
+$red:         #f64e60 !default;                 // orig: #dc3545 (*-danger)
+$yellow:      #fad776 !default;                 // orig: #ffc107 (*-warning)
+$green:       #6dbb30 !default;                 // orig: #28a745 (*-success)
+$cyan:        #73e7f7 !default;                 // orig: #17a2b8 (*-info)
+$indigo:      #533be2 !default;                 // orig: #6610f2 (*-ingido)
+$purple:      #4c2c92 !default;                 // orig: #6f42c1 (*-purple)
+$pink:        #f92084 !default;                 // orig: #e83e8c (*-pink)
+$light:       #f8f9fa !default;                 // orig: $gray-100 (*-light)
+$secondary:   #6c757d !default;                 // orig: $gray-800 (*-secondary)
+$dark:        #2E2E2E !default;                 // orig: #000000 (*-dark)
+$gray-600:     #6C757D;
+$text-muted:  $gray-600 !default;               // orig: $gray-600
+
+
+// Theme Colors (buttons are also generated from here)
+$theme-colors: () !default;
+$theme-colors: map-merge(
+                (
+                        "primary":      $blue,
+                        "secondary":    $secondary,
+                        "success":      $green,
+                        "info":         $cyan,
+                        "warning":      $yellow,
+                        "danger":       $red,
+                        "light":        $light,
+                        "dark":         $dark,
+
+                        "indigo":       $indigo,
+                        "purple":       $purple,
+                        "pink":         $pink
+                ),
+                $theme-colors
+);
+
+// MUST be a match for $theme-colors (see above)
+// Is a percent of rgba, sued to soften the colors
+$theme-colors-soft: () !default;
+$theme-colors-soft: map-merge(
+                (
+                        "primary":      35%,
+                        "secondary":    49%,
+                        "success":      42%,
+                        "info":         15%,
+                        "warning":      15%,
+                        "danger":       31%,
+                        "light":        10%,
+                        "dark":         59%,
+
+                        "indigo":       40%,
+                        "purple":       39%,
+                        "pink":         28%
+                ),
+                $theme-colors-soft
+);
