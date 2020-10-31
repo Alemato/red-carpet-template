@@ -1,0 +1,192 @@
+<div class="clearfix mt--5 p--15">
+    <div class="row">
+    <h3 class="font-weight-light mb-4 col-11">
+        Recensisci: The Avengers
+    </h3>
+
+        <button type="button" class="close pointer col" data-dismiss="modal" aria-label="Close">
+            <span class="fi fi-close fs--18" aria-hidden="true"></span>
+        </button>
+    </div>
+    <!-- already logged in -->
+    <span class="d-block text-muted fs--12 mb-1">
+									Loggato come: <b>John Doe</b>.
+									non sei tu? Perfavore effetua il <a rel="nofollow" href="#!">sign out</a>
+								</span>
+
+    <!-- Write Comment Form -->
+    <form novalidate method="post" action="#" class="bs-validate d-block bg-white shadow-primary-xs rounded p-3 mb-5">
+
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+
+                <div class="form-label-group mb-3">
+                    <input required placeholder="Name" id="comment_name" type="text" value="" class="form-control">
+                    <label for="comment_name">Titolo</label>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-6">
+
+                <div class="form-label-group">
+                    <label for="formControlRange">Valutazione complessiava: <i id="rank" class="rating-1_0 text-warning d-inline"></i> <span class="font-weight-bold text-primary mt-1 valueSpan"></span> stelle</label>
+                    <input type="range" class=" custom-range"  min="0" max="5" step="0.5" value="0" id="formControlRange">
+                </div>
+                <script>
+                    $(document).ready(function() {
+
+                        const $valueSpan = $('.valueSpan');
+                        const $rank = $('#rank');
+                        const $value = $('#formControlRange');
+                        $valueSpan.html($value.val());
+                        switch($value.val()) {
+                            case "0":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-0_0");
+                                break;
+                            case "0.5":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-0_5");
+                                break;
+                            case "1":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-1_0");
+                                break;
+                            case "1.5":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-1_5");
+                                break;
+                            case "2":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-2_0");
+                                break;
+                            case "2.5":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-2_5");
+                                break;
+                            case "3":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-3_0");
+                                break;
+                            case "3.5":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-3_5");
+                                break;
+                            case "4":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-4_0");
+                                break;
+                            case "4.5":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-4_5");
+                                break;
+                            case "5":
+                                $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                $rank.addClass("rating-5_0");
+                                break;
+                        }
+                        $value.on('input change', () => {
+                            $valueSpan.html($value.val());
+                            switch($value.val()) {
+                                case "0":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-0_0");
+                                    break;
+                                case "0.5":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-0_5");
+                                    break;
+                                case "1":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-1_0");
+                                    break;
+                                case "1.5":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-1_5");
+                                    break;
+                                case "2":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-2_0");
+                                    break;
+                                case "2.5":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-2_5");
+                                    break;
+                                case "3":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-3_0");
+                                    break;
+                                case "3.5":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-3_5");
+                                    break;
+                                case "4":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-4_0");
+                                    break;
+                                case "4.5":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-4_5");
+                                    break;
+                                case "5":
+                                    $rank.removeClass("rating-0_0 rating-0_5 rating-1_0 rating-1_5 rating-2_0 rating-2_5 rating-3_0 rating-3_5 rating-4_0 rating-4_5 rating-5_0");
+                                    $rank.addClass("rating-5_0");
+                                    break;
+                            }
+                        });
+                    });
+                </script>
+            </div>
+
+        </div>
+
+
+        <div class="clearfix mb-3">
+
+            <div class="form-label-group">
+											<textarea required rows="3" id="comment_description"
+                                                      data-output-target=".js-form-advanced-char-left"
+                                                      class="form-control js-form-advanced-char-count-down"
+                                                      maxlength="3000" placeholder="La tua recenzione"></textarea>
+                <label for="comment_description">La tua recenzione</label>
+            </div>
+
+            <span class="fs--12 text-muted text-align-end float-end mt-1">
+											characters left: <span class="js-form-advanced-char-left">3000</span>
+										</span>
+
+        </div>
+
+
+        <!--
+            GDPR CONSENT
+            !only if user not logged in!
+        -->
+        <div class="clearfix bg-light position-relative rounded p-4 mb-4">
+
+										<span class="text-muted fs--12 d-block position-absolute bottom-0 end-0 m-2">
+											EU GDPR
+										</span>
+
+            <label class="form-checkbox form-checkbox-primary">
+                <input required type="checkbox" name="checkbox">
+                <i></i>
+                <span>
+												I consent that my data is being stored in
+												line with the guidelines set out in
+												<a href="page-terms-and-conditions.html" target="_blank">Privacy Policy</a>.
+											</span>
+            </label>
+
+        </div>
+        <!-- /GDPR CONSENT -->
+
+
+        <button type="submit" class="btn btn-primary btn-sm">
+           Invia recenzione
+        </button>
+    </form>
+    <!-- /Write Comment Form -->
+</div>
