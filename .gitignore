@@ -76,3 +76,12 @@ fabric.properties
 #ignore nodejs files
 node_modules
 package-lock.json
+
+#ignore file compilati
+dist
+_gulp/tmp
+red-carpet/assets/css
+red-carpet/assets/js
+
+#ignora i log
+debug.log
