@@ -85,3 +85,8 @@ red-carpet/assets/js
 
 #ignora i log
 debug.log
+/_gulp/tmp/
+/dist/assets/
+/dist/
+/red-carpet/assets/css/
+/red-carpet/assets/js/
