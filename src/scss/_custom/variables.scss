@@ -16,8 +16,7 @@ $footer-dark-bg:                #BC827B !default;           // dark background c
 $footer-dark-color:             #FFF4F1 !default;           // dark text color
 $footer-light-bg:               #FFF4F1 !default;           // light background color
 
-///
-
+/* rimappatura */
 /// -- --
 /// ## THEME COLORS
 /// (bootstrap rewrites)
@@ -41,8 +40,9 @@ $pink:        #f92084 !default;                 // orig: #e83e8c (*-pink)
 $light:       #f8f9fa !default;                 // orig: $gray-100 (*-light)
 $secondary:   #6c757d !default;                 // orig: $gray-800 (*-secondary)
 $dark:        #2E2E2E !default;                 // orig: #000000 (*-dark)
-$gray-600:     #6C757D;
+$gray-600:    #6c757d !default;
 $text-muted:  $gray-600 !default;               // orig: $gray-600
+// $nuova-var: #codice
 
 
 // Theme Colors (buttons are also generated from here)
@@ -61,6 +61,7 @@ $theme-colors: map-merge(
                         "indigo":       $indigo,
                         "purple":       $purple,
                         "pink":         $pink
+                        //"rosa":         $nuova-var
                 ),
                 $theme-colors
 );
