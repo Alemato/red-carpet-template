@@ -25,9 +25,9 @@ module.exports = function(smarty) {
 
 		// Output of compiled files -only-
 		// Usually: `dist/` folder 	(by default are also copied to html_frontend/assets/)
-		dest_JS 						: 'dist/assets/js',
-		dest_CSS 						: 'dist/assets/css',
-		dest_FONTS 						: 'dist/assets/fonts',
+		dest_JS 						: 'red-carpet/assets/js',
+		dest_CSS 						: 'red-carpet/assets/css',
+		dest_FONTS 						: 'red-carpet/assets/fonts',
 
 		// false 	= build both: minified & unminified
 		build_minified_only 			: false,
