@@ -148,3 +148,26 @@ p.a-none-decoration-blold a:hover {
 .h--128{
   height:128px!important
 }
+
+.vertical-center {
+  margin: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.rounded-top-video-slidser {
+  border-top-left-radius:.50rem!important;
+  border-top-right-radius:.50rem!important;
+}
+.border-title-lines {
+  height: 2px!important;
+  background-color: #BB3132!important;
+  border-bottom: solid 1px #a1a1a1!important;
+}
+
+.star_rating {
+  font-size: 40px;
+  display: inline-flex;
+  cursor: pointer;
+}
