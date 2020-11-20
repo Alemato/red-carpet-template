@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Smarty V3</title>
+		<meta name="description" content="...">
+
+        <meta name="viewport" content="width=device-width, maximum-scale=5, initial-scale=1, user-scalable=0">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+        <!-- up to 10% speed up for external res -->
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+        <!-- preloading icon font is helping to speed up a little bit -->
+        <link rel="preload" href="assets/fonts/flaticon/Flaticon.woff2" as="font" type="font/woff2" crossorigin>
+
+        <link rel="stylesheet" href="assets/css/core.min.css">
+        <link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="demo.files/logo/icon_512x512.png">
+
+		<link rel="manifest" href="assets/images/manifest/manifest.json">
+		<meta name="theme-color" content="#377dff">
+
+	</head>
+
+	<!--
+
+		Available Body Classes
+			.layout-boxed 					- boxed layout (ignored if any .header-* class is present)
+
+			.header-scroll-reveal  			- header : hide on scroll down and reveal on scroll up
+			.header-sticky  				- header : always visible on top
+			.header-over  					- header : over slider|parallax|image (next section must contain a large image, else will be indistinguishable)
+
+				Possible header combinations:
+					.header-over + .header-scroll-reveal
+					.header-over + .header-sticky
+						* NOTE: if .header-sticky + .header-scroll-reveal are both used, .header-scroll-reveal is ignored
+
+
+			.bg-cover .bg-fixed 			- both classes used with .layout-boxed to set a background image via style="background-image:url(...)"
+	-->
+	<body>
+
+		<div id="wrapper">
+
+			<!-- HEADER -->
+			<header id="header" class="shadow-xs bg-gradient-primary">
+				<!-- NAVBAR -->
+				<div class="container position-relative">
+
+
+					<!--
+
+                        [SOW] SEARCH SUGGEST PLUGIN
+                        [GULP/src/plugins/sow_search_suggest/sow_search_suggest.js]
+                        [SCSS/_plugins/sow_search_suggest.scss]
+                        ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++
+
+                        PLEASE READ DOCUMENTATION
+                        documentation/plugins-sow-search.html
+
+                    -->
+					<form action="page/search-result-1.html"
+						  method="GET"
+						  data-autosuggest="on"
+						  data-container="#sow-search-container"
+						  data-input-min-length="2"
+						  data-input-delay="300"
+						  data-related-keywords=""
+						  data-related-url="_ajax/search_suggest_related.html"
+						  data-suggest-url="_ajax/search_suggest_input.html"
+						  data-related-action="related_get"
+						  data-suggest-action="suggest_get"
+						  class="js-ajax-search sow-search sow-search-over hide d-inline-flex">
+						<div class="sow-search-input w-100">
+
+							<div class="input-group-over d-flex align-items-center w-100 h-100 rounded shadow-md">
+
+								<input placeholder="what are you looking today?" name="s" type="text"
+									   class="form-control-sow-search form-control form-control form-control-lg shadow-xs"
+									   value="" autocomplete="off">
+
+								<span class="sow-search-buttons">
+
+									<!-- search button -->
+									<button type="submit"
+											class="btn btn-primary btn-noshadow m--0 pl--8 pr--8 pt--3 pb--3 b--0 bg-transparent text-muted">
+										<i class="fi fi-search fs--20"></i>
+									</button>
+
+									<!-- close : mobile only (d-inline-block d-lg-none) -->
+									<a href="javascript:;"
+									   class="btn-sow-search-toggler btn btn-light btn-noshadow m--0 pl--8 pr--8 pt--3 pb--3 d-inline-block d-lg-none">
+										<i class="fi fi-close fs--20"></i>
+									</a>
+
+								</span>
+
+							</div>
+
+						</div>
+
+						<!-- search suggestion container -->
+						<div class="sow-search-container w-100 p--0 hide shadow-md" id="sow-search-container">
+							<div class="sow-search-container-wrapper">
+
+								<!-- main search container -->
+								<div class="sow-search-loader p--15 text-center hide">
+									<i class="fi fi-circle-spin fi-spin text-muted fs--30"></i>
+								</div>
+
+								<!--
+                                    AJAX CONTENT CONTAINER
+                                    SHOULD ALWAYS BE AS IT IS : NO COMMENTS OR EVEN SPACES!
+                                -->
+								<div class="sow-search-content rounded w-100 scrollable-vertical"></div>
+
+							</div>
+						</div>
+						<!-- /search suggestion container -->
+
+						<!--
+
+                            overlay combinations:
+                                overlay-dark opacity-* [1-9]
+                                overlay-light opacity-* [1-9]
+
+                        -->
+						<div class="sow-search-backdrop overlay-dark opacity-3 hide"></div>
+
+					</form>
+					<!-- /SEARCH -->
+
+
+					<nav class="navbar navbar-expand-lg navbar-dark justify-content-lg-between justify-content-md-inherit">
+
+						<div class="align-items-start">
+
+							<!-- mobile menu button : show -->
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMainNav"
+									aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+								<svg width="25" viewBox="0 0 20 20">
+									<path d="M 19.9876 1.998 L -0.0108 1.998 L -0.0108 -0.0019 L 19.9876 -0.0019 L 19.9876 1.998 Z"></path>
+									<path d="M 19.9876 7.9979 L -0.0108 7.9979 L -0.0108 5.9979 L 19.9876 5.9979 L 19.9876 7.9979 Z"></path>
+									<path d="M 19.9876 13.9977 L -0.0108 13.9977 L -0.0108 11.9978 L 19.9876 11.9978 L 19.9876 13.9977 Z"></path>
+									<path d="M 19.9876 19.9976 L -0.0108 19.9976 L -0.0108 17.9976 L 19.9876 17.9976 L 19.9876 19.9976 Z"></path>
+								</svg>
+							</button>
+
+							<!--
+                                Logo : height: 70px max
+                            -->
+							<a class="navbar-brand" href="index.html">
+								<img src="assets/images/logo/logo_dark.svg" width="110" height="70" alt="...">
+							</a>
+
+						</div>
+
+
+						<!-- Menu -->
+						<div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
+
+
+							<!-- MOBILE MENU NAVBAR -->
+							<div class="navbar-xs d-none">
+
+								<!-- mobile menu button : close -->
+								<button class="navbar-toggler pt-0" type="button" data-toggle="collapse"
+										data-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false"
+										aria-label="Toggle navigation">
+									<svg width="20" viewBox="0 0 20 20">
+										<path d="M 20.7895 0.977 L 19.3752 -0.4364 L 10.081 8.8522 L 0.7869 -0.4364 L -0.6274 0.977 L 8.6668 10.2656 L -0.6274 19.5542 L 0.7869 20.9676 L 10.081 11.679 L 19.3752 20.9676 L 20.7895 19.5542 L 11.4953 10.2656 L 20.7895 0.977 Z"></path>
+									</svg>
+								</button>
+
+								<!--
+                                    Mobile Menu Logo
+                                    Logo : height: 70px max
+                                -->
+								<a class="navbar-brand" href="index.html">
+									<img src="assets/images/logo/logo_dark.svg" width="110" height="70" alt="...">
+								</a>
+
+							</div>
+							<!-- /MOBILE MENU NAVBAR -->
+
+
+							<!-- NAVIGATION -->
+							<ul class="navbar-nav">
+
+								<!-- mobile only image + simple search (d-block d-sm-none) -->
+								<li class="nav-item d-block d-sm-none">
+
+									<!-- image -->
+									<div class="mb-4">
+										<img width="600" height="600" class="img-fluid"
+											 src="demo.files/svg/artworks/people_crossbrowser.svg" alt="...">
+									</div>
+
+									<!-- search -->
+									<form method="get" action="#!search"
+										  class="input-group-over mb-5 bg-light p-2 form-control-pill">
+										<input type="text" name="keyword" value="" placeholder="Quick search..."
+											   class="form-control border-dashed">
+										<button class="btn btn-primary btn-ghost fi fi-search p-0 ml-2 mr-2 w--50 h--50"></button>
+									</form>
+
+								</li>
+
+
+								<!-- home -->
+								<li class="nav-item">
+
+									<a class="nav-link" href="index.html">
+										Home
+									</a>
+
+								</li>
+
+
+								<!-- dropdown -->
+								<li class="nav-item dropdown active">
+
+									<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+									   aria-expanded="false" id="mainNavPages">
+										Films
+									</a>
+
+									<ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover"
+										aria-labelledby="mainNavPages">
+										<li class="dropdown-item dropdown">
+											<a href="#" class="dropdown-link" data-toggle="dropdown">Deep Dropdown</a>
+
+											<ul class="dropdown-menu dropdown-menu-hover shadow-lg b--0 m--0">
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Link 1</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Link 2</a>
+												</li>
+												<li class="dropdown-item">
+													<a class="dropdown-link" href="#">Link 3</a>
+												</li>
+											</ul>
+
+										</li>
+
+										<li class="dropdown-item active">
+											<a href="the_avengers.html" class="dropdown-link">The Avengers</a>
+										</li>
+										<li class="dropdown-item">
+											<a href="#" class="dropdown-link">Link 2</a>
+										</li>
+										<li class="dropdown-item">
+											<a href="#" class="dropdown-link">Link 3</a>
+										</li>
+										<li class="dropdown-item">
+											<a href="#" class="dropdown-link">Link 4</a>
+										</li>
+									</ul>
+
+								</li>
+
+
+								<!-- social : mobile only (d-block d-sm-none)-->
+								<li class="nav-item d-block d-sm-none text-center mb-4">
+
+									<h3 class="h6 text-muted">Follow Us</h3>
+
+									<a href="#!" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
+									   rel="noopener">
+										<i class="fi fi-social-facebook"></i>
+									</a>
+
+									<a href="#!" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
+									   rel="noopener">
+										<i class="fi fi-social-twitter"></i>
+									</a>
+
+									<a href="#!" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle"
+									   rel="noopener">
+										<i class="fi fi-social-linkedin"></i>
+									</a>
+
+									<a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
+									   rel="noopener">
+										<i class="fi fi-social-youtube"></i>
+									</a>
+
+								</li>
+
+							</ul>
+							<!-- /NAVIGATION -->
+
+
+						</div>
+
+
+						<!-- OPTIONS -->
+						<ul class="list-inline list-unstyled mb--0 d-flex align-items-end">
+
+							<li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+								<a href="#" id="dropdownAccountOptions"
+								   class="btn btn-sm rounded-circle btn-primary btn-soft-static" data-toggle="dropdown"
+								   aria-expanded="false" aria-haspopup="true">
+									<span class="group-icon">
+										<i class="fi fi-user-male"></i>
+										<i class="fi fi-close"></i>
+									</span>
+								</a>
+								<div aria-labelledby="dropdownAccountOptions"
+									 class="prefix-link-icon prefix-icon-dot dropdown-menu dropdown-menu-clean dropdown-menu-invert dropdown-click-ignore p--0 mt--18 fs--15">
+									<div class="dropdown-header">
+										John Doe
+									</div>
+									<div class="dropdown-divider"></div>
+									<a href="#!" class="dropdown-item text-truncate font-weight-light active">
+										My Orders <small>(2)</small>
+									</a>
+									<a href="#!" class="dropdown-item text-truncate font-weight-light">
+										My Favourites <small>(3)</small>
+									</a>
+									<a href="#!" class="dropdown-item text-truncate font-weight-light">
+										Account Settings
+									</a>
+									<div class="dropdown-divider mb--0"></div>
+									<a href="#!" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
+										<i class="fi fi-power float-start"></i>
+										Log Out
+									</a>
+								</div>
+
+							</li>
+
+							<li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+								<a href="#"
+								   class="btn-sow-search-toggler btn btn-sm rounded-circle btn-primary btn-soft-static">
+									<i class="fi fi-search"></i>
+								</a>
+
+							</li>
+
+
+						</ul>
+						<!-- /OPTIONS -->
+
+
+					</nav>
+
+				</div>
+				<!-- /NAVBAR -->
+			</header>
+			<!-- /HEADER-->
+
+			<!-- COVER -->
+			<section class="py-2">
+
+				<div class="container min-h-50vh d-middle pt-3">
+
+					<div class="row text-center-xs">
+
+						<div class="col-12 col-md-6 pb-3" data-aos="fade-in" data-aos-delay="200">
+
+							<!-- image -->
+							<img width="450" height="250" class="ml-2 img-fluid rounded-xl" src="assets/images/the_avengers/robert_d_j.jpg" alt="...">
+
+							<!-- lines, looks like through a glass -->
+							<div class="absolute-full w-100 overflow-hidden opacity-6">
+								<img class="img-fluid" width="1000" height="1000" src="assets/images/masks/shape-line-lense.svg" alt="...">
+							</div>
+
+						</div>
+
+						<div class="col-12 col-md-6 d-middle">
+								
+							<div class="my-4" data-aos="fade-in" data-aos-delay="300">
+								
+								<div class="bg-light p-4 rounded-xl">
+
+									<!-- mobile : top arrow : documentation/util-misc.html -->
+									<i class="arrow arrow-lg arrow-top arrow-center border-light d-block d-md-none"></i>
+									<!-- desktop side arrow : documentation/util-misc.html -->
+									<i class="arrow arrow-lg arrow-start mt-3 border-light d-none d-md-inline-block d-lg-inline-block d-xl-inline-block"></i>
+
+									<h1 class="h2-xs font-weight-medium mb-0">
+										Robert Downey Jr.
+									</h1>
+									
+									<p class="text-primary h4 h6-xs font-weight-light mb-4">
+										Attore / Produttore
+									</p>
+
+									<p class="text-primary-hover lead max-w-600">
+										Attore americano la cui migliore definizione del suo talento è ricavata da quella leggerezza che usa per recitare un dialogo in una scena:
+										ogni sua mossa è irripetibile, dai suoi sussurri ai suoi sguardi mai uguali. Peccato che nonostante questo stato di grazia continuo che lo pervade, Robert Downey Jr.
+										abbia rischiato di diventare disarmonico nel momento in cui il cammino della sua vita è incappato nella facile tentazione delle droghe.
+									</p>
+
+								</div>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+
+			</section>	
+			<!-- /COVER -->
+
+
+
+
+			<!-- QUOTE -->
+			<section class="py-2">
+				<div class="container">
+
+					<blockquote class="blockquote text-center" data-aos="fade-in" data-aos-delay="250" data-aos-offset="0">
+						<p class="fs--30 h1 h2-xs max-w-800 m-auto font-weight-light font-italic text-muted">
+							Capitan America: "Sei grosso con quella corazza ma senza, cosa rimane?" Tony Stark: "Be', vediamo, sono un genio, un milionario, un playboy e anche un filantropo!"
+						</p>
+
+						<footer class="blockquote-footer mt-4 fs--25 font-weight-light text-gray-500">
+							<cite title="Source Title">dal film The Avengers (2012) Robert Downey Jr. Tony Stark / Iron Man</cite>
+						</footer>
+					</blockquote>
+
+				</div>
+			</section>
+			<!-- /QUOTE -->
+
+			<!-- TEMPORARY SECTION -->
+			<section class="pt--20">
+				<div class="container p--0">
+					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item col pl--0 pr--3">
+							<a class="nav-link active" id="pills-biography-tab" data-toggle="pill" href="#pills-biography" role="tab"
+							   aria-controls="pills-biography" aria-selected="true">Biografia</a>
+						</li>
+
+						<li class="nav-item col pl--0 pr--3">
+							<a class="nav-link " id="pills-filmography-tab" data-toggle="pill" href="#pills-filmography" role="tab"
+							   aria-controls="pills-filmography" aria-selected="false">Filmografia</a>
+						</li>
+						<li class="nav-item col pl--0 pr--3">
+							<a class="nav-link" id="pills-awards-tab" data-toggle="pill" href="#pills-awards" role="tab"
+							   aria-controls="pills-awards" aria-selected="false">Premi</a>
+						</li>
+						<li class="nav-item col p--0">
+							<a class="nav-link" id="pills-photo-tab" data-toggle="pill" href="#pills-photo" role="tab"
+							   aria-controls="pills-photo" aria-selected="false">Foto</a>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="pills-tabContent">
+
+						<div class="js-ajax tab-pane fade show active" id="pills-biography" role="tabpanel" aria-labelledby="pills-biography-tab" data-ajax-url="about_person_content/biography.html" >
+							<div class="text-center p--30">
+								<i class="fi fi-circle-spin fi-spin fs--30 text-muted"></i>
+							</div>
+						</div>
+
+						<div class="tab-pane fade show js-ajax" id="pills-filmography" role="tabpanel" aria-labelledby="pills-filmography-tab"  data-ajax-url="about_person_content/filmography.html">
+							<div class="text-center p--30">
+								<i class="fi fi-circle-spin fi-spin fs--30 text-muted"></i>
+							</div>
+						</div>
+
+						<div class="tab-pane fade show js-ajax" id="pills-awards" role="tabpanel" aria-labelledby="pills-awards-tab" data-ajax-url="about_person_content/awards.html">
+							<div class="text-center p--30">
+								<i class="fi fi-circle-spin fi-spin fs--30 text-muted"></i>
+							</div>
+						</div>
+
+						<div class="tab-pane fade show js-ajax" id="pills-photo" role="tabpanel" aria-labelledby="pills-photo-tab" data-ajax-url="about_person_content/photo.html" >
+							<div class="text-center p--30">
+								<i class="fi fi-circle-spin fi-spin fs--30 text-muted"></i>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- /TEMPORARY SECTION -->
+
+
+
+
+
+			<!-- Footer -->
+			<footer id="footer" class="footer-dark">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="bg-distinct col-12 col-md-6 col-lg-4 text-center p-0 pt--60 pb--60">
+
+							<div class="footer-svg-shape position-absolute absolute-top z-index-2 mt--n70 w-100 overflow-hidden pt--5">
+								<svg viewBox="0 0 1440 28" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+									<path d="M0 28H1440C1440 28 1154 3.21961e-10 720 1.30487e-09C286 2.28777e-09 0 28 0 28Z"></path>
+								</svg>
+							</div>
+
+							<form method="post" action="#subscribe_url" class="px-4"> 
+
+								<input type="hidden" name="action" value="subscribe" tabindex="-1"> 
+								
+								<p id="btnAriaFooterFormTitle" class="text-muted">
+									Claim your candy now!
+								</p>
+								
+									
+								<div class="input-group-over input-group-pill mb-4"> 
+									
+									<input required class="form-control b-0" name="subscriber_email" type="email" value="" placeholder="email address..." aria-label="email address...">
+									
+									<button type="submit" class="btn bg-transparent shadow-none" aria-label="subscribe" aria-labelledby="btnAriaFooterFormTitle"> 
+										<i class="fi fi-send fs--18"></i> 
+									</button>
+
+								</div>
+
+
+							</form>
+
+							<div class="mt--12"> 
+
+								<a href="#!" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="facebook page">
+									<i class="fi fi-social-facebook"></i> 
+								</a>
+
+								<a href="#!" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="twitter page">
+									<i class="fi fi-social-twitter"></i> 
+								</a>
+
+								<a href="#!" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="linkedin page">
+									<i class="fi fi-social-linkedin"></i> 
+								</a>
+
+								<a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle" rel="noopener" aria-label="youtube page">
+									<i class="fi fi-social-youtube"></i> 
+								</a>
+
+							</div>
+
+						</div>
+
+
+						<div class="col-12 col-md-6 col-lg-8 pt--60 pb--60 fs--15 text-center-xs">
+
+							<h3 class="fs--15 text-muted">SPY US! WE'VE GOT SECRETS!</h3>
+
+							<ul class="mt--30 mb-0 breadcrumb bg-transparent p-0 block-xs"> 
+								<li class="breadcrumb-item"><a href="contact-1.html">Contact</a></li> 
+								<li class="breadcrumb-item"><a href="about-us-1.html">About Us</a></li> 
+								<li class="breadcrumb-item"><a href="page-terms-and-conditions.html">Terms &amp; Conditions</a></li> 
+								<li class="breadcrumb-item"><a href="page-cookie.html">GDPR &amp; Cookies</a></li> 
+							</ul>
+
+							<div class="text-muted mt--30">
+								<p>
+									Frontend? Admin? What if you don't need anymore to learn and work with two different templates on your projects? 
+									<b>What would you do if time really matter?</b> Both: frontend and admin uses exactly the same core and all elements can be used in both sides because... actually there are no such thing "two sides" with Smarty!
+								</p>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="bg-distinct py-3 clearfix">
+
+					<div class="container clearfix font-weight-light text-center-xs">
+
+						<div class="fs--14 py-2 float-start float-none-xs m-0-xs">
+							&copy; My Company Inc.
+						</div>
+
+						<ul class="list-inline mb-0 mt-2 float-end float-none-xs m-0-xs"> 
+							<li class="list-inline-item m-0"> 
+								<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/visa.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="visa credit card icon">
+							</li> 
+
+							<li class="list-inline-item m-0"> 
+								<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/mastercard.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="mastercard credit card icon">
+							</li> 
+
+							<li class="list-inline-item m-0"> 
+								<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/discover.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="discover credit card icon">
+							</li>
+
+							<li class="list-inline-item m-0"> 
+								<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/amazon.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="amazon credit card icon">
+							</li>
+							
+							<li class="list-inline-item m-0"> 
+								<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/paypal.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="paypal credit card icon">
+							</li>
+
+							<li class="list-inline-item m-0"> 
+								<img width="38" height="24" class="lazy" data-src="assets/images/credit_card/skrill.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="skrill credit card icon">
+							</li>
+
+							<!-- more vendors on assets/images/credit_card/ -->
+
+						</ul>
+
+					</div>
+				</div>
+
+			</footer>
+			<!-- /Footer -->
+
+
+		</div><!-- /#wrapper -->
+
+		<script src="assets/js/core.min.js"></script>
+		
+	</body>
+</html>
