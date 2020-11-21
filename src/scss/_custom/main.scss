@@ -148,14 +148,30 @@ p.a-none-decoration-blold a:hover {
 .h--128{
   height:128px!important
 }
-
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 2;
+  font-size: 21px;
+}
+.pr--27{
+  padding-right: 27px;
+}
+.text-primary-hover:hover{
+  color: $primary-theme-color;
+}
+/* manipolazione del colore del calendario */
+.webkit-calendar-picker-indicator::-webkit-calendar-picker-indicator {
+  filter: invert(65%);
+}
 .vertical-center {
   margin: 0;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
 .rounded-top-video-slidser {
   border-top-left-radius:.50rem!important;
   border-top-right-radius:.50rem!important;
@@ -165,7 +181,6 @@ p.a-none-decoration-blold a:hover {
   background-color: #BB3132!important;
   border-bottom: solid 1px #a1a1a1!important;
 }
-
 .star_rating {
   font-size: 40px;
   display: inline-flex;

@@ -1,0 +1,199 @@
+<!-- AJAX CONTENT -->
+<div class="modal-header">
+    <h2 class="modal-title fs--18 m-0 text-primary">
+        Accedi
+    </h2>
+
+    <button type="button" class="close pointer" data-dismiss="modal" aria-label="Close">
+        <span class="fi fi-close fs--18" aria-hidden="true"></span>
+    </button>
+</div>
+
+<div class="modal-body p--30">
+
+    <div class="row">
+
+        <div class="col-12 col-md-6">
+
+            <div class="pb--30 pt--30">
+                <img class="img-fluid" src="../demo.files/svg/content/undraw_mention_6k5d.svg" alt="...">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+
+            <div class="accordion" id="accordionDropdownSignInUp">
+
+
+                <!-- SIGN IN -->
+                <form class="collapse bs-validate show" novalidate method="post" action="#" id="accordionDropdownSignInUpSignIn" data-parent="#accordionDropdownSignInUp">
+                    <div class="p--30 pt--0">
+
+                        <div class="form-label-group mb-4">
+                            <input required placeholder="Email" id="signin_email" type="email" class="form-control form-control-clean">
+                            <label for="signin_email">Email</label>
+                        </div>
+
+                        <div class="form-label-group mb-4">
+                                <input required placeholder="Password" id="signin_password" type="password" class="form-control form-control-clean pr--27" autocomplete="new-password">
+                                <label for="signin_password">Password</label>
+                                <i class="fi fi-fw fi-eye field-icon toggle-password"></i>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-soft btn-block">
+                            Accedi
+                        </button>
+
+                        <div class="text-center mt--30">
+                            <a href="#accordionDropdownSignInUpSignUp" class="d-block text-gray-600 text-decoration-none text-primary-hover" data-toggle="collapse" aria-expanded="true" aria-controls="accordionDropdownSignInUpSignUp">
+                                Registrati
+                            </a>
+                        </div>
+
+                        <div class="text-center mt--30">
+                            <a href="#accordionDropdownSignInUpSignUp2" class="d-block text-gray-600 text-decoration-none text-primary-hover" data-toggle="collapse" aria-expanded="true" aria-controls="accordionDropdownSignInUpSignUp">
+                                Registrati come Critico
+                            </a>
+                        </div>
+
+                    </div>
+                </form>
+                <!-- /SIGN IN -->
+
+                <!-- REGISTRATI -->
+                <form class="collapse bs-validate" novalidate method="post" action="#" id="accordionDropdownSignInUpSignUp" data-parent="#accordionDropdownSignInUp">
+                    <div class="p--30 pt--0">
+
+                        <h5 class="text-center pb-3 pt-3 text-primary">Registrati</h5>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_name" type="text" class="form-control form-control-clean" placeholder="Nome">
+                            <label for="signup_name">Nome</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_surname" type="text" class="form-control form-control-clean" placeholder="Cognome">
+                            <label for="signup_name">Cognome</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_date" type="date" class="form-control form-control-clean pr--0 webkit-calendar-picker-indicator">
+                            <label for="signup_name">Data nascita</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_email" type="email" class="form-control form-control-clean" placeholder="Email">
+                            <label for="signup_email">Email</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required placeholder="Password" id="signup_password_1" type="password" class="form-control form-control-clean" autocomplete="new-password">
+                            <label for="signup_password_1">Password</label>
+                            <i class="fi fi-fw fi-eye field-icon toggle-password"></i>
+                        </div>
+
+                        <div class="form-label-group mb-4">
+                            <input required placeholder="Password Again" id="signup_password_2" type="password" class="form-control form-control-clean" autocomplete="new-password">
+                            <label for="signup_password_2">Rimetti Password</label>
+                            <i class="fi fi-fw fi-eye field-icon toggle-password"></i>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-soft btn-block">
+                            Registrati
+                        </button>
+
+                        <div class="text-center mt--30">
+                            <a href="#accordionDropdownSignInUpSignIn" class="d-block text-gray-600 text-muted text-decoration-none text-primary-hover" data-toggle="collapse" aria-expanded="true" aria-controls="accordionDropdownSignInUpSignIn">
+                                Torna Indietro
+                            </a>
+                        </div>
+
+                    </div>
+                </form>
+                <!-- /REGISTRATI -->
+
+                <!-- REGISTRATI COME CRITICO -->
+                <form class="collapse bs-validate" novalidate method="post" action="#" id="accordionDropdownSignInUpSignUp2" data-parent="#accordionDropdownSignInUp">
+                    <div class="p--30 pt--0">
+
+                        <h5 class="text-center pb-3 pt-3 text-primary">Registrati</h5>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_name_critico" type="text" class="form-control form-control-clean" placeholder="Nome">
+                            <label for="signup_name">Nome</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_surname_critico" type="text" class="form-control form-control-clean" placeholder="Cognome">
+                            <label for="signup_name">Cognome</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_cod_identificato" type="text" class="form-control form-control-clean" placeholder="Codice Identificativo nell'Albo">
+                            <label for="signup_name">Codice Identificato nell'Albo</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_rivista" type="text" class="form-control form-control-clean" placeholder="Rivista / Azienda">
+                            <label for="signup_name">Rivista / Azienda</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="signup_email_critico" type="email" class="form-control form-control-clean" placeholder="Email">
+                            <label for="signup_email">Email</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required placeholder="Password" id="signup_password_1_critico" type="password" class="form-control form-control-clean pr--27" autocomplete="new-password">
+                            <label for="signup_password_1">Password</label>
+                            <i class="fi fi-fw fi-eye field-icon toggle-password"></i>
+                        </div>
+
+                        <div class="form-label-group mb-4">
+                            <input required placeholder="Password Again" id="signup_password_2_critico" type="password" class="form-control form-control-clean pr--27" autocomplete="new-password">
+                            <label for="signup_password_2">Rimetti Password</label>
+                            <i class="fi fi-fw fi-eye field-icon toggle-password"></i>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-soft btn-block">
+                            Registrati
+                        </button>
+
+                        <div class="text-center mt--30">
+                            <a href="#accordionDropdownSignInUpSignIn" class="d-block text-gray-600 text-muted text-decoration-none text-primary-hover" data-toggle="collapse" aria-expanded="true" aria-controls="accordionDropdownSignInUpSignIn">
+                                Torna Indietro
+                            </a>
+                        </div>
+
+                    </div>
+                </form>
+                <!-- /REGISTRATI COME CRITICO -->
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="border-top text-muted p--15 fs--13 bg-light rounded-bottom pl--30 pr--30 pt--20 pb--20">
+    <b>Privacy:</b> All data is secure, never transfered to a third party provider/service.
+</div>
+<script>
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fi-eye fi-eye-disabled");
+            var input = $(this).parent().children().first();
+            if (input.attr("type") === "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+        console.log( "ready2!" );
+    });
+</script>

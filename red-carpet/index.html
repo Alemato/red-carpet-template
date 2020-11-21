@@ -326,25 +326,6 @@
 									</span>
                         </a>
 
-
-                        <!--
-
-                            Dropdown Classes
-                                .dropdown-menu-dark 		- dark dropdown (desktop only, will be white on mobile)
-                                .dropdown-menu-hover 		- open on hover
-                                .dropdown-menu-clean 		- no background color on hover
-                                .dropdown-menu-invert 		- open dropdown in oposite direction (left|right, according to RTL|LTR)
-                                .dropdown-click-ignore 		- keep dropdown open on inside click (useful on forms inside dropdown)
-
-                                Dropdown prefix icon (optional, if enabled in variables.scss)
-                                    .prefix-link-icon .prefix-icon-dot 		- link prefix
-                                    .prefix-link-icon .prefix-icon-line 	- link prefix
-                                    .prefix-link-icon .prefix-icon-ico 		- link prefix
-                                    .prefix-link-icon .prefix-icon-arrow 	- link prefix
-
-                                    .prefix-icon-ignore 					- ignore, do not use on a specific link
-
-                        -->
                         <div aria-labelledby="dropdownAccountOptions"
                              class="prefix-link-icon prefix-icon-dot dropdown-menu dropdown-menu-clean dropdown-menu-invert dropdown-click-ignore p--0 mt--18 fs--15">
                             <div class="dropdown-header">
@@ -360,12 +341,23 @@
                             <a href="impostazione_profilo_utente_front_end.html" class="dropdown-item text-truncate font-weight-light">
                                 Account Settings
                             </a>
+                            <a href="#"
+                               data-href="accedi_modal.html"
+                               data-ajax-modal-size="modal-lg"
+                               data-ajax-modal-centered="false"
+                               data-ajax-modal-callback-function=""
+                               data-ajax-modal-backdrop=""
+                               class="js-ajax-modal dropdown-item text-truncate font-weight-light">
+                                Login
+                            </a>
                             <div class="dropdown-divider mb--0"></div>
                             <a href="#!" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
                                 <i class="fi fi-power float-start"></i>
                                 Log Out
                             </a>
                         </div>
+
+
 
                     </li>
 
@@ -378,6 +370,10 @@
 
                     </li>
 
+                    <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+                        <!-- TRIGGER -->
+                    </li>
 
                 </ul>
                 <!-- /OPTIONS -->
@@ -475,7 +471,7 @@
                                         <span class="fs--17 font-weight-bolder pl--5 text-dark">4.5</span>
                                     </span>
                                             <h2 class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2">
-                                                Scam 1992: The Harshad Mehta Story BBBBBBBBB
+                                                Scam 1992: The Harshad Mehta Story
                                             </h2>
                                             <p class="lead overflow-hidden mb--0 h--100 fs--18 text-truncate-4">
                                                 Un gruppo di super-eroi si riunisce per sconfingere un'invasione aliena
