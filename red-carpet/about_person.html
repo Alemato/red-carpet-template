@@ -164,6 +164,35 @@
 
 
 						<!-- Menu -->
+						<!--
+
+                            Dropdown Classes (should be added to primary .dropdown-menu only, dropdown childs are also affected)
+                                .dropdown-menu-dark 		- dark dropdown (desktop only, will be white on mobile)
+                                .dropdown-menu-hover 		- open on hover
+                                .dropdown-menu-clean 		- no background color on hover
+                                .dropdown-menu-invert 		- open dropdown in oposite direction (left|right, according to RTL|LTR)
+                                .dropdown-menu-uppercase 	- uppercase text (font-size is scalled down to 13px)
+                                .dropdown-click-ignore 		- keep dropdown open on inside click (useful on forms inside dropdown)
+
+                                Repositioning long dropdown childs (Example: Pages->Account)
+                                    .dropdown-menu-up-n100 		- open up with top: -100px
+                                    .dropdown-menu-up-n100 		- open up with top: -150px
+                                    .dropdown-menu-up-n180 		- open up with top: -180px
+                                    .dropdown-menu-up-n220 		- open up with top: -220px
+                                    .dropdown-menu-up-n250 		- open up with top: -250px
+                                    .dropdown-menu-up 			- open up without negative class
+
+
+                                Dropdown prefix icon (optional, if enabled in variables.scss)
+                                    .prefix-link-icon .prefix-icon-dot 		- link prefix
+                                    .prefix-link-icon .prefix-icon-line 	- link prefix
+                                    .prefix-link-icon .prefix-icon-ico 		- link prefix
+                                    .prefix-link-icon .prefix-icon-arrow 	- link prefix
+
+                                .nav-link.nav-link-caret-hide 	- no dropdown icon indicator on main link
+                                .nav-item.dropdown-mega 		- required ONLY on fullwidth mega menu
+
+                        -->
 						<div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
 
 
@@ -215,7 +244,7 @@
 
 
 								<!-- home -->
-								<li class="nav-item">
+								<li class="nav-item active">
 
 									<a class="nav-link" href="index.html">
 										Home
@@ -225,7 +254,7 @@
 
 
 								<!-- dropdown -->
-								<li class="nav-item dropdown active">
+								<li class="nav-item dropdown">
 
 									<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 									   aria-expanded="false" id="mainNavPages">
@@ -251,11 +280,11 @@
 
 										</li>
 
-										<li class="dropdown-item active">
+										<li class="dropdown-item">
 											<a href="the_avengers.html" class="dropdown-link">The Avengers</a>
 										</li>
 										<li class="dropdown-item">
-											<a href="#" class="dropdown-link">Link 2</a>
+											<a href="dash_e_lily.html" class="dropdown-link">dash e lily</a>
 										</li>
 										<li class="dropdown-item">
 											<a href="#" class="dropdown-link">Link 3</a>
@@ -315,6 +344,7 @@
 										<i class="fi fi-close"></i>
 									</span>
 								</a>
+
 								<div aria-labelledby="dropdownAccountOptions"
 									 class="prefix-link-icon prefix-icon-dot dropdown-menu dropdown-menu-clean dropdown-menu-invert dropdown-click-ignore p--0 mt--18 fs--15">
 									<div class="dropdown-header">
@@ -327,8 +357,17 @@
 									<a href="#!" class="dropdown-item text-truncate font-weight-light">
 										My Favourites <small>(3)</small>
 									</a>
-									<a href="#!" class="dropdown-item text-truncate font-weight-light">
+									<a href="impostazione_profilo_utente_front_end.html" class="dropdown-item text-truncate font-weight-light">
 										Account Settings
+									</a>
+									<a href="#"
+									   data-href="accedi_modal.html"
+									   data-ajax-modal-size="modal-lg"
+									   data-ajax-modal-centered="false"
+									   data-ajax-modal-callback-function=""
+									   data-ajax-modal-backdrop=""
+									   class="js-ajax-modal dropdown-item text-truncate font-weight-light">
+										Login
 									</a>
 									<div class="dropdown-divider mb--0"></div>
 									<a href="#!" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
@@ -336,6 +375,8 @@
 										Log Out
 									</a>
 								</div>
+
+
 
 							</li>
 
@@ -348,6 +389,10 @@
 
 							</li>
 
+							<li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+								<!-- TRIGGER -->
+							</li>
 
 						</ul>
 						<!-- /OPTIONS -->
