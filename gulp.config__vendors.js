@@ -562,7 +562,8 @@ module.exports = function (smarty) {
                 'node_modules/@fullcalendar/google-calendar/main.js'				// 3Kb
             ],
             path_css: [
-                'node_modules/@fullcalendar/core/main.css',
+                //'node_modules/@fullcalendar/core/main.css',
+                'node_modules/@fullcalendar/common/main.css',
                 // plugins
                 'node_modules/@fullcalendar/daygrid/main.css',
                 'node_modules/@fullcalendar/timegrid/main.css',
