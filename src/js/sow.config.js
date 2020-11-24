@@ -16,7 +16,7 @@
 			+++++++++++++++++++++++++++++++++
 
 		*/
-		sow__debug_enable								: false,
+		sow__debug_enable								: true,
 
 
 
