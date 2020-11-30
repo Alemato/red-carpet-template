@@ -186,3 +186,17 @@ p.a-none-decoration-blold a:hover {
   display: inline-flex;
   cursor: pointer;
 }
+
+@media (min-width: 443px) {
+  .w--382 {
+    width: 382px !important;
+  }
+
+  .h--565 {
+    height: 565px !important;
+  }
+
+  /*.h-75{
+    height: 75%;
+  }*/
+}

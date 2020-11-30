@@ -69,7 +69,7 @@
                         visibility : mobile only
                     -->
                     <a class="navbar-brand d-inline-block d-lg-none" href="index.html">
-                        <img src="../assets/images/logo/logo_dark.svg" width="110" height="70" alt="...">
+                        <img src="../assets/images/logo/redcarpet.png" alt="...">
                     </a>
 
 
@@ -95,7 +95,7 @@
                             Logo : height: 70px max
                         -->
                         <a class="navbar-brand" href="index.html">
-                            <img src="../assets/images/logo/logo_dark.svg" width="110" height="70" alt="...">
+                            <img src="../assets/images/logo/redcarpet.png" alt="...">
                         </a>
 
                     </div>
@@ -274,7 +274,7 @@
 
                     <!-- Logo : height: 60px max -->
                     <a class="w-100 align-self-center navbar-brand px-3" href="index.html">
-                        <img src="../assets/images/logo/logo_light.svg" width="110" height="60" alt="...">
+                        <img src="../assets/images/logo/redcarpet.png" alt="...">
                     </a>
 
                 </div>
@@ -575,69 +575,605 @@
 
             </div>
 
+            <form class="">
+                <!-- Primary -->
+                <section class="rounded mb-3">
 
-            <!-- Primary -->
-            <section class="rounded mb-3">
+
+                    <!-- section header -->
+                    <div class="bg-light rounded clearfix p-3 mb-4">
+
+                        Scheda Film
+                        <small class="fs--11 text-muted d-block mt-1">Titolo, Trama e Copertina</small>
+
+                    </div>
+                    <!-- /section header -->
 
 
-                <!-- section header -->
-                <div class="bg-light rounded clearfix p-3 mb-4">
+                    <div class="row">
+                        <div class="col-12 col-md-auto">
 
-                    Scheda Film
-                    <small class="fs--11 text-muted d-block mt-1">Titolo, Trama e Copertina</small>
+                            <label class="rounded text-center position-relative d-block cursor-pointer border border-secondary border-dashed h--565 w--382">
 
-                </div>
-                <!-- /section header -->
+                                <!-- remove button -->
+                                <a href="#"
+                                   class="js-file-input-showcase-remove hide position-absolute absolute-top text-align-start w-100 z-index-3">
+		                            <span class="d-inline-block btn btn-sm bg-secondary text-white pt--4 pb--4 pl--10 pr--10 m--1"
+                                          title="remove image" data-tooltip="tooltip">
+			<i class="fi fi-close m-0"></i>
+		</span>
+                                </a>
 
-                <form class="">
-                    <div class="form-label-group mb-3">
-                        <select id="select_ajax" class="form-control select2 ajax-method" name="st" data-input-min-length="1" data-ajax-method="GET" data-ajax-url="https://api.github.com/search/repositories" data-input-delay="250">
-                        </select>
-                        <label for="select_ajax" class="label-select2">Boo</label>
+                                <span class="z-index-2 js-file-input-showcase-container d-block absolute-full z-index-1 hide-empty"><!-- image container --></span>
+
+                                <input name="showcase_file"
+                                       type="file"
+                                       data-file-ext="jpg, jpeg, png"
+                                       data-file-max-size-kb-per-file="10240"
+                                       data-file-ext-err-msg="Allowed:"
+                                       data-file-size-err-item-msg="File too large!"
+                                       data-file-size-err-total-msg="Total allowed size exceeded!"
+                                       data-file-toast-position="top-center"
+                                       data-file-preview-container=".js-file-input-showcase-container"
+                                       data-file-preview-show-info="false"
+                                       data-file-preview-class="m-0 p-0 rounded"
+                                       data-file-preview-img-height="auto"
+                                       data-file-btn-clear="a.js-file-input-showcase-remove"
+                                       data-file-preview-img-cover="true"
+                                       class="custom-file-input absolute-full">
+
+                                <div class="absolute-full">
+                                    <div class="d-table">
+                                        <div class="d-table-cell align-middle text-center">
+
+                                            <i class="fi fi-image fs--50 text-muted"></i>
+                                            <small class="d-block text-muted">
+                                                <b>IMAGE/COVER OF YOUR WORK</b>
+                                                <span class="d-block mt-1">
+						squared is preffered<br>
+						please upload 380x563 px minimum.
+					</span>
+                                            </small>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ratio maintained using a `blank` image -->
+                                <img class="w-100"
+                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                     alt="...">
+
+                            </label>
+
+                        </div>
+                        <div class="col-12 col-md">
+                            <div class="form-label-group mb-3">
+                                <input placeholder="Titolo Originale" id="titolo_originale_film" type="text" value=""
+                                       class="form-control">
+                                <label for="titolo_originale_film">Titolo Originale Film</label>
+                            </div>
+                            <div class="form-label-group mb-3">
+                                <input placeholder="Titolo" id="titolo_film" type="text" value="" class="form-control">
+                                <label for="titolo_film">Titolo Film</label>
+                            </div>
+                            <label for="description" class="">Trama:</label>
+                            <textarea id="description" class="summernote-editor w-100"
+                                      data-placeholder="Trama"
+                                      data-min-height="340"
+                                      data-max-height="340"
+                                      data-lang="it-IT"
+                                      data-disable-resize-rditor="true"
+                                      data-ajax-url="_ajax/demo.summernote.php"
+                                      data-ajax-params="['action','upload']['param2','value2']"
+
+                                      data-toolbar='[
+			["style", ["style"]],
+			["font", ["bold", "italic", "underline", "clear"]],
+			["para", ["ul", "ol", "paragraph"]],
+			["insert", ["link", "hr"]],
+			["view", ["fullscreen", "codeview"]],
+			["help", ["help"]]
+		]'
+                            ></textarea>
+
+                        </div>
                     </div>
 
 
-                    <div class="form-label-group mb-3">
-                            <select id="select_options" class="form-control select2" name="st">
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                        <label for="select_options" class="label-select2">Boo</label>
+                </section>
+                <!-- /Primary -->
+
+                <section class="rounded mb-3">
+                    <!-- section header -->
+                    <div class="bg-light rounded clearfix p-3 mb-4">
+
+                        Cast
+                        <small class="fs--11 text-muted d-block mt-1">Cast & Filmmakers</small>
+                    </div>
+                    <!-- /section header -->
+
+                    <div id="clone_group_list" class="pr--15 pl--15 row">
+                        <div class="col-12 col-lg-6 pl--0 pr--5 mb--5 js-cloned">
+                            <div class="card h-100" style="border: 1px solid rgba(0,0,0,.19607843137254902);">
+                                <div class="card-body">
+                                    <div class="card-title"><h4 class="text-center">Filmmakers</h4>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+                                        <a href="#"
+                                           class="col-auto d-block clearfix p-2 shadow-xs text-decoration-none position-relative bg-white transition-all-ease-250 rounded overflow-hidden show-hover-container">
+
+                                            <div class="p-2 px-2 m-0 text-center bg-light-radial rounded position-relative z-index-1 overlay-dark-hover overlay-opacity-3 h--250 w--150">
+
+                                                <!-- image
+                                                <img src="../assets/images/the_avengers/regista.jpg" alt="..." class="img-fluid bg-suprime opacity--9">  -->
+                                                <div class="absolute-full">
+                                                    <div class="d-table">
+                                                        <div class="d-table-cell align-middle text-center">
+
+                                                            <i class="fi fi-image fs--50 text-muted"></i>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+                                        <div class="col">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-center">Seleziona un Filmmakers:</h6>
+                                                    <div class="form-label-group mb-2">
+                                                        <select id="select_filmmakers"
+                                                                class="form-control select2-plugin ajax-method"
+                                                                name="select_filmmakers[0]"
+                                                                data-input-min-length="1" data-ajax-method="GET"
+                                                                data-ajax-url="http://localhost:6969/backend/_ajax/cast.json"
+                                                                data-input-delay="250">
+                                                        </select>
+                                                        <label for="select_filmmakers"
+                                                               class="label-select2">Filmmakers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto pl--0" style="margin-top: 24px;">
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary mt-1 mb-1">
+                                                            Oppure Creane Uno
+                                                            <i class="fi fi-plus pl--5 mr--0"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-center">Tipologia:</h6>
+                                                    <div class="form-label-group mb-1">
+                                                        <select id="tipologia_filmmakers" class="form-control"
+                                                                name="tipologia_filmmakers[0]">
+                                                            <option value="_"></option>
+                                                            <option value="Regista">Registra</option>
+                                                            <option value="Attore">Attore</option>
+                                                        </select>
+                                                        <label for="tipologia_filmmakers" class="label-select2">Tipologia
+                                                            Filmmakers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto pl--0" style="margin-top: 24px;">
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary mt-1 mb-1">
+                                                            Oppure Creane Una
+                                                            <i class="fi fi-plus pl--5 mr--0"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-label-group mt-4 mb-1">
+                                                <input id="ruolo" type="text" class="form-control" name="ruolo[0]"
+                                                       value=""
+                                                       placeholder="Ruolo">
+                                                <label for="ruolo">Ruolo</label>
+                                            </div>
+                                            <!-- <h5 class="card-title text-center"><a href="#">Joss Whedon</a></h5> -->
+                                            <!--<p class="card-text text-center">
+                                                Regista
+                                            </p>-->
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="configurator_tpl" class="hide">
+                        <div class="col-12 col-lg-6 pl--0 pr--5 mb--5">
+                            <div class="card h-100" style="border: 1px solid rgba(0,0,0,.19607843137254902);">
+                                <div class="card-body">
+                                    <div class="card-title"><h4 class="text-center">Filmmakers</h4>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+                                        <a href="#"
+                                           class="col-auto d-block clearfix p-2 shadow-xs text-decoration-none position-relative bg-white transition-all-ease-250 rounded overflow-hidden show-hover-container">
+
+                                            <div class="p-2 px-2 m-0 text-center bg-light-radial rounded position-relative z-index-1 overlay-dark-hover overlay-opacity-3 h--250 w--150">
+
+                                                <!-- image
+                                                <img src="../assets/images/the_avengers/regista.jpg" alt="..." class="img-fluid bg-suprime opacity--9">  -->
+                                                <div class="absolute-full">
+                                                    <div class="d-table">
+                                                        <div class="d-table-cell align-middle text-center">
+
+                                                            <i class="fi fi-image fs--50 text-muted"></i>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+                                        <div class="col">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-center">Seleziona un Filmmakers:</h6>
+                                                    <div class="form-label-group mb-2">
+                                                        <select class="form-control"
+                                                                data-cloned-replace-class="form-control select2-plugin ajax-method"
+                                                                name="select_filmmakers[]"
+                                                                data-cloned-replace-name="select_filmmakers[$]"
+                                                                data-input-min-length="1" data-ajax-method="GET"
+                                                                data-ajax-url="http://localhost:6969/backend/_ajax/cast.json"
+                                                                data-input-delay="250">
+                                                        </select>
+                                                        <label
+                                                                class="label-select2">Filmmakers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto pl--0" style="margin-top: 24px;">
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary mt-1 mb-1">
+                                                            Oppure Creane Uno
+                                                            <i class="fi fi-plus pl--5 mr--0"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-center">Tipologia:</h6>
+                                                    <div class="form-label-group mb-1">
+                                                        <select class="form-control"
+                                                                name="tipologia_filmmakers[]"
+                                                                data-cloned-replace-name="tipologia_filmmakers[$]">
+                                                            <option value="_"></option>
+                                                            <option value="Regista">Registra</option>
+                                                            <option value="Attore">Attore</option>
+                                                        </select>
+                                                        <label class="label-select2">Tipologia
+                                                            Filmmakers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto pl--0" style="margin-top: 24px;">
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary mt-1 mb-1">
+                                                            Oppure Creane Una
+                                                            <i class="fi fi-plus pl--5 mr--0"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-label-group mt-4 mb-1">
+                                                <input type="text" class="form-control" name="ruolo[]"
+                                                       data-cloned-replace-name="ruolo[$]" value=""
+                                                       placeholder="Ruolo">
+                                                <label>Ruolo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-end">
+                        <a href="#" class="btn btn-primary mt-1 mb-1 sow-util-cloner"
+                           data-clone-target="#configurator_tpl>div"
+                           data-clone-destination="#clone_group_list"
+                           data-clone-limit="50">
+                            Aggiungi Un Altro Filmmakers
+                            <i class="fi fi-plus-slim pl--5 mr--0"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="rounded mb-3 shadow-3d">
+                    <!-- section header -->
+                    <div class="bg-light rounded clearfix p-3 mb-4">
+
+                        Cast
+                        <small class="fs--11 text-muted d-block mt-1">Cast & Filmmakers</small>
+                    </div>
+                    <!-- /section header -->
+
+                    <div class="row px-3">
+                        <div class="col-12 col-lg-2 pl--0 pr--5 mb-3">
+                            <div class="card h-100 shadow-dark-xs">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-center mb-3">
+                                        <a href="#"
+                                           class="d-block clearfix p-2 shadow-xs text-decoration-none position-relative bg-white transition-all-ease-250 rounded overflow-hidden show-hover-container">
+
+                                            <div class="p-2 px-2 m-0 text-center bg-light-radial rounded position-relative z-index-1 overlay-dark-hover overlay-opacity-3 h--250 w--150">
+
+                                                <!-- image
+                                                <img src="../assets/images/dashelily/Fred Savage.jpg" alt="..."
+                                                     class="img-fluid bg-suprime opacity--9">-->
+                                                <div class="absolute-full w--150">
+                                                    <div class="d-table">
+                                                        <div class="d-table-cell align-middle text-center">
+
+                                                            <i class="fi fi-image fs--50 text-muted"></i>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+                                    </div>
+                                    <h5 class="card-title text-center"><a href="#">Filmmakers</a></h5>
+                                    <p class="card-text text-center">
+                                        Ruolo
+                                    </p>
+                                    <button type="button" class="btn btn-dark mb-3" data-toggle="modal"
+                                            data-target="#exampleModalMd">
+                                        Modifica
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
-                    <div class="form-label-group mb-3">
-                        <select id="sel-1" class="form-control select2" name="states[]" multiple="multiple">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <label for="sel-1" class="control-label">booo</label>
+                    <button type="button" class="btn btn-primary mb-3" data-toggle="modal"
+                            data-target="#exampleModalMd">
+                        aggiungi
+                    </button>
+                    <!-- Modal -->
+                    <div id="exampleModalMd" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelMd"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs--18 m-0">
+                                        Filmmakers
+                                    </h2>
+
+                                    <button type="button" class="close pointer" data-dismiss="modal" aria-label="Close">
+                                        <span class="fi fi-close fs--18" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+
+                                <!-- body -->
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <a href="#"
+                                           class="col-auto d-block clearfix p-2 shadow-xs text-decoration-none position-relative bg-white transition-all-ease-250 rounded overflow-hidden show-hover-container">
+
+                                            <div class="p-2 px-2 m-0 text-center bg-light-radial rounded position-relative z-index-1 overlay-dark-hover overlay-opacity-3 h--250 w--150">
+
+                                                <!-- image
+                                                <img src="../assets/images/the_avengers/regista.jpg" alt="..." class="img-fluid bg-suprime opacity--9">  -->
+                                                <div class="absolute-full">
+                                                    <div class="d-table">
+                                                        <div class="d-table-cell align-middle text-center">
+
+                                                            <i class="fi fi-image fs--50 text-muted"></i>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+                                        <div class="col">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-center">Seleziona un Filmmakers:</h6>
+                                                    <div class="form-label-group mb-2">
+                                                        <select
+                                                                class="form-control select2-plugin ajax-method"
+                                                                name="select_filmmakers[0]"
+                                                                data-input-min-length="1" data-ajax-method="GET"
+                                                                data-ajax-url="http://localhost:6969/backend/_ajax/cast.json"
+                                                                data-input-delay="250">
+                                                        </select>
+                                                        <label
+                                                                class="label-select2">Filmmakers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto pl--0" style="margin-top: 24px;">
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary mt-1 mb-1">
+                                                            Oppure Creane Uno
+                                                            <i class="fi fi-plus pl--5 mr--0"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-center">Tipologia:</h6>
+                                                    <div class="form-label-group mb-1">
+                                                        <select class="form-control"
+                                                                name="tipologia_filmmakers[0]">
+                                                            <option value="_"></option>
+                                                            <option value="Regista">Registra</option>
+                                                            <option value="Attore">Attore</option>
+                                                        </select>
+                                                        <label class="label-select2">Tipologia
+                                                            Filmmakers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto pl--0" style="margin-top: 24px;">
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary mt-1 mb-1">
+                                                            Oppure Creane Una
+                                                            <i class="fi fi-plus pl--5 mr--0"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-label-group mt-4 mb-1">
+                                                <input type="text" class="form-control" name="ruolo[0]"
+                                                       value=""
+                                                       placeholder="Ruolo">
+                                                <label>Ruolo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="fi fi-check"></i>
+                                        Save
+                                    </button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        <i class="fi fi-close"></i>
+                                        Close
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+                    <hr>
+                    <button type="button" class="btn btn-primary mb-3" data-toggle="modal"
+                            data-target="#exampleModalMd1">
+                        aggiungi
+                    </button>
+                    <!-- Modal -->
+                    <div id="exampleModalMd1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelMd"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs--18 m-0">
+                                        Filmmakers
+                                    </h2>
 
-                    <div class="form-label-group mb-3">
-                        <select id="sel-2" class="form-control bs-select">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <label for="sel-2">booo 2</label>
+                                    <button type="button" class="close pointer" data-dismiss="modal" aria-label="Close">
+                                        <span class="fi fi-close fs--18" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+
+                                <!-- body -->
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <a href="#"
+                                           class="col-auto d-block clearfix p-2 shadow-xs text-decoration-none position-relative bg-white transition-all-ease-250 rounded overflow-hidden show-hover-container">
+
+                                            <div class="p-2 px-2 m-0 text-center bg-light-radial rounded position-relative z-index-1 overlay-dark-hover overlay-opacity-3 h--250 w--150">
+
+                                                <!-- image
+                                                <img src="../assets/images/the_avengers/regista.jpg" alt="..." class="img-fluid bg-suprime opacity--9">  -->
+                                                <div class="absolute-full">
+                                                    <div class="d-table">
+                                                        <div class="d-table-cell align-middle text-center">
+
+                                                            <i class="fi fi-image fs--50 text-muted"></i>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+                                        <div class="col">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-center">Seleziona un Filmmakers:</h6>
+                                                    <div class="form-label-group mb-2">
+                                                        <select
+                                                                class="form-control select2-plugin ajax-method"
+                                                                name="select_filmmakers[0]"
+                                                                data-input-min-length="1" data-ajax-method="GET"
+                                                                data-ajax-url="http://localhost:6969/backend/_ajax/cast.json"
+                                                                data-input-delay="250">
+                                                        </select>
+                                                        <label
+                                                                class="label-select2">Filmmakers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto pl--0" style="margin-top: 24px;">
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary mt-1 mb-1">
+                                                            Oppure Creane Uno
+                                                            <i class="fi fi-plus pl--5 mr--0"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <h6 class="text-center">Tipologia:</h6>
+                                                    <div class="form-label-group mb-1">
+                                                        <select class="form-control"
+                                                                name="tipologia_filmmakers[0]">
+                                                            <option value="_"></option>
+                                                            <option value="Regista">Registra</option>
+                                                            <option value="Attore">Attore</option>
+                                                        </select>
+                                                        <label class="label-select2">Tipologia
+                                                            Filmmakers</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto pl--0" style="margin-top: 24px;">
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#" class="btn btn-primary mt-1 mb-1">
+                                                            Oppure Creane Una
+                                                            <i class="fi fi-plus pl--5 mr--0"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-label-group mt-4 mb-1">
+                                                <input type="text" class="form-control" name="ruolo[0]"
+                                                       value=""
+                                                       placeholder="Ruolo">
+                                                <label>Ruolo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="fi fi-check"></i>
+                                        Save
+                                    </button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        <i class="fi fi-close"></i>
+                                        Close
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+                    <hr>
+                </section>
 
-                    <div class="form-label-group mb-3">
-                        <select id="sel-4" class="form-control bs-select" multiple="multiple" name="st[]">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <label for="sel-4">booo 4</label>
-                    </div>
-
-                </form>
-
-            </section>
-            <!-- /Primary -->
+            </form>
 
             <!--
 
@@ -2144,6 +2680,14 @@
     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 -->
-<div id="page_js_files"><!-- specific page javascript files here --></div>
+<div id="page_js_files"><!-- specific page javascript files here -->
+    <script>
+        $('.modal').on('hide.bs.modal', function (e) {
+            // do something...
+            $.SOW.helper.consoleLog('MODALEEEEEEE off');
+            $.SOW.helper.consoleLog($(this));
+        })
+    </script>
+</div>
 </body>
 </html>
