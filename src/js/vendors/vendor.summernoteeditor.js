@@ -143,7 +143,8 @@
 				lang 					= _this.data('lang')								|| 'en-US',
 				ajaxURL 				= _this.data('ajax-url')							|| '',
 				ajaxParams 				= _this.data('ajax-params')							|| '',
-				toolbar 				= _this.data('toolbar')								|| '';
+				toolbar 				= _this.data('toolbar')								|| '',
+				disableResizeEditor = _this.data('disable-resize-rditor') || 'false';
 
 			if(ID == '') {
 				var ID = 'rand_'+$.SOW.helper.randomStr(3);
@@ -159,7 +160,7 @@
 				maxHeight: 		maxHeight, 								// set maximum height of editor
 				focus: 			(focus+'' == 'true') ? true : false, 	// set focus to editable area after initializin
 				lang: 			(lang != '') ? lang : 'en-US', 			// default: 'en-US'
-
+				disableResizeEditor: (focus+'' == 'true') ? true : false,
 				toolbar: (typeof toolbar === 'object') ? toolbar : null,
 
 				/**
