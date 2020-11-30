@@ -774,7 +774,7 @@ module.exports = function (smarty) {
         summernoteeditor: {		/* SUMMERNOTE EDITOR */
             path_js: [
                 'node_modules/summernote/dist/summernote-bs4.js',
-
+                'node_modules/summernote/lang/summernote-it-IT.js'
                 // load a language and add to Markup: data-lang="de-DE"
                 // 'node_modules/summernote/lang/summernote-de-DE.js'
             ],
@@ -1053,7 +1053,7 @@ module.exports = function (smarty) {
             // you can keep only `reinit_ajax: true` if plugin need reinit on ajax calls
             autoinit: {
                 function: '$.SOW.vendor.select2.init',
-                selector: '.select2',
+                selector: '.select2-plugin',
                 config: {}
             },
             dependencies: [],

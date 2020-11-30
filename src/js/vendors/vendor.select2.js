@@ -154,7 +154,7 @@
 
             // 2. Has selector
             return this.collection.each(function () {
-
+                $.SOW.helper.consoleLog($(this));
                 $.SOW.vendor.select2.process($(this));
 
             });
@@ -185,14 +185,14 @@
                 language = _this.attr('language') || $.SOW.vendor.select2.config.language,
                 multiple = !!(_this.attr('multiple')),
                 width = _this.attr('width') ||  $.SOW.vendor.select2.config.width,
-                scrollAfterSelect = _this.attr('scrollafterselect') || $.SOW.vendor.select2.config.scrollAfterSelect,
+                scrollAfterSelect = _this.attr('data-scrollafterselect') || $.SOW.vendor.select2.config.scrollAfterSelect,
                 config = $.SOW.vendor.select2.config;
 
             _this.addClass('js-select2ed');
 
             // Add random ID if doesn't one
             if (select2ID == '') {
-                select2ID = 'rand_' + $.SOW.helper.randomStr(3, N);
+                select2ID = 'rand_' + $.SOW.helper.randomStr(3, 'N');
                 _this.attr('id', select2ID);
             }
 
@@ -230,7 +230,7 @@
                 width = _this.attr('width') ||  $.SOW.vendor.select2.config.width,
                 scrollAfterSelect = _this.attr('data-scrollafterselect') || $.SOW.vendor.select2.config.scrollAfterSelect,
                 method= _this.attr('data-ajax-method')||"GET",
-                url= _this.attr('https://api.github.com/search/repositories') || "",
+                url= _this.attr('data-ajax-url') || "",
                 config = $.SOW.vendor.select2.config;
 
             $('#' + select2ID).select2({
@@ -284,7 +284,7 @@
 
                 var $container = $(
                     "<div class='select2-result-repository clearfix'>" +
-                    "<div class='select2-result-repository__avatar'><img class='' src='" + repo.owner.avatar_url + "'  alt='avatar'/></div>" +
+                    "<div class='select2-result-repository__avatar'><img class='' src='" + repo.avatar_url + "'  alt='avatar'/></div>" +
                     "<div class='select2-result-repository__meta'>" +
                     "<div class='select2-result-repository__title '></div>" +
                     "<div class='select2-result-repository__description'></div>" +
