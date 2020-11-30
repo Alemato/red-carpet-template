@@ -1,0 +1,18 @@
+{
+  "total_count": 2,
+  "incomplete_results": true,
+  "items": [
+    {
+      "id": 1,
+      "avatar_url": "http://localhost:6969/assets/images/the_avengers/regista.jpg",
+      "full_name": "Joss Whedon",
+      "description": "Regista"
+    },
+     {
+      "id": 2,
+      "avatar_url": "http://localhost:6969/assets/images/the_avengers/robert_downey_jr.jpg",
+      "full_name": "Robert Downey Jr.",
+      "description": "Attore, Regista, Produttore"
+    }
+  ]
+}
