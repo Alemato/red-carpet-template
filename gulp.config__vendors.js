@@ -211,7 +211,8 @@ module.exports = function (smarty) {
 
 
         bootstrap_select: {		/* BOOTSTRAP SELECT [best select2 replacement] */
-            path_js: ['node_modules/bootstrap-select/dist/js/bootstrap-select.js'], 			// 51Kb
+            path_js: ['node_modules/bootstrap-select/dist/js/bootstrap-select.js',
+            'node_modules/bootstrap-select/dist/js/i18n/defaults-it_IT.js'], 			// 51Kb
             path_css: [
                 'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
                 'src/scss/_vendors/vendor.bootstrap_select.scss' /* custom styling : 250 Bytes */
