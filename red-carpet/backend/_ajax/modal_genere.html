@@ -1,0 +1,32 @@
+<div class="modal-header">
+    <h2 class="modal-title fs--18 m-0">
+        Nuovo Genere
+    </h2>
+
+    <button type="button" class="close pointer" data-dismiss="modal" aria-label="Close">
+        <span class="fi fi-close fs--18" aria-hidden="true"></span>
+    </button>
+</div>
+
+<!-- body -->
+<div class="modal-body">
+    <form id="genere" href="#">
+       <div class="form-label-group mb-3">
+            <input placeholder="Nome genere" id="nome_genere" type="text"  name="nome_genere" value=""
+                   class="form-control">
+            <label for="nome_genere">Nome Nuovo Genere</label>
+        </div>
+    </form>
+</div>
+
+<!-- footer -->
+<div class="modal-footer d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+        <i class="fi fi-close"></i>
+        Annulla
+    </button>
+    <button type="submit" form="genere" class="btn btn-primary" data-dismiss="modal">
+        <i class="fi fi-check"></i>
+        Salva
+    </button>
+</div>
