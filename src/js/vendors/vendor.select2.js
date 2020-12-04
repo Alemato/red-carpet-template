@@ -231,9 +231,11 @@
                 scrollAfterSelect = _this.attr('data-scrollafterselect') || $.SOW.vendor.select2.config.scrollAfterSelect,
                 method= _this.attr('data-ajax-method')||"GET",
                 url= _this.attr('data-ajax-url') || "",
+                ev_container= _this.attr('data-event') || null,
                 config = $.SOW.vendor.select2.config;
 
-            $('#' + select2ID).select2({
+            var select2JQ = $('#' + select2ID);
+            select2JQ.select2({
                 ajax: {
                     method:method,
                     url: url,
@@ -276,7 +278,16 @@
                 templateResult: formatRepo,
                 templateSelection: formatRepoSelection
             });
-
+            if(ev_container === "img-container"){
+                select2JQ.on('select2:select', function (e){
+                    var data = e.params.data;
+                    $.SOW.helper.consoleLog(data);
+                    var container_img = _this.parent().parent().parent().parent().siblings().children();
+                    container_img.children().remove();
+                    var $img = $("<img src='"+ data.avatar_url +"' alt='...' class='img-fluid bg-suprime opacity--9'>");
+                    container_img.append($img);
+                });
+            }
             function formatRepo (repo) {
                 if (repo.loading) {
                     return repo.text;
