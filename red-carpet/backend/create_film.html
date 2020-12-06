@@ -578,7 +578,7 @@
 
             <form class="">
                 <!-- Primary -->
-                <section class="rounded mb-3">
+                <section class="rounded ">
 
 
                     <!-- section header -->
@@ -599,7 +599,7 @@
                     </div>
                     <!-- /section header -->
 
-                    <div class="collapse show" id="collapse1">
+                    <div class="collapse mb-3 show" id="collapse1">
                         <div class="row">
                             <div class="col-12 col-md-auto">
 
@@ -827,7 +827,7 @@
                 <!-- /Primary -->
 
                 <!-- CAST -->
-                <section class="rounded mb-3 shadow-3d">
+                <section class="rounded shadow-3d">
                     <!-- section header -->
                     <div class="bg-light rounded clearfix p-3 mb-4">
                         <div class="d-flex justify-content-between">
@@ -845,7 +845,7 @@
                         </div>
                     </div>
                     <!-- /section header -->
-                    <div class="collapse" id="collapse2">
+                    <div class="collapse mb-3" id="collapse2">
                         <!--
          default
              data-table-clone-method="append|prepend"
@@ -946,7 +946,7 @@
                 <!-- /CAST-->
 
                 <!-- MEDIA -->
-                <section class="rounded mb-3 shadow-3d">
+                <section class="rounded shadow-3d">
                     <!-- section header -->
                     <div class="bg-light rounded clearfix p-3 mb-4">
                         <div class="d-flex justify-content-between">
@@ -963,7 +963,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="collapse" id="collapse3">
+                    <div class="collapse mb-3" id="collapse3">
                         <!-- /section header -->
                         <!--
          default
@@ -1438,6 +1438,381 @@
                     </div>
                 </section>
                 <!-- /MEDIA-->
+
+                <!-- PREMI -->
+                <section class="rounded shadow-3d">
+                    <!-- section header -->
+                    <div class="bg-light rounded clearfix p-3 mb-4">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                PREMI
+                                <small class="fs--11 text-muted d-block mt-1">Premi & Nomination</small>
+                            </div>
+                            <a class="pt--5" data-toggle="collapse" href="#collapse4"
+                               role="button" aria-expanded="false" aria-controls="collapse4">
+		<span class="group-icon">
+			<i class="fi fi-arrow-end-slim"></i>
+			<i class="fi fi-arrow-down-slim"></i>
+		</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse mb-3" id="collapse4">
+                        <!-- /section header -->
+                        <!--
+         default
+             data-table-clone-method="append|prepend"
+     -->
+                        <div class="js-form-advanced-table mb-6"
+                             data-table-column-insert-before=".js-clone-before"
+                             data-table-column-insert-element='<input type="text" class="form-control form-control-sm" value="">'
+                             data-table-column-delete-button='<span class="btn-table-column-delete fi fi-close fs--15 cursor-pointer px-1 d-inline-block"></span>'
+                             data-table-column-limit="4"
+                             data-table-row-limit="50"
+                             data-table-row-method="prepend">
+
+
+                            <!--
+
+                                ADD COLUMN
+
+                                    The name of this input (name="option" in this demo)
+                                    is used to generate input fields with names like this:
+                                        name="option[color]"
+
+                                    if no input name used, field name is generated like this:
+                                        name="color"
+
+                            -->
+                            <!--
+                            <div class="js-form-advanced-table-column-add input-group mb-3 max-w-300">
+    -->
+                            <!--
+                                Optional Plugin used:
+                                SOW : Search Inline
+                            -->
+                            <!--
+                                <input type="text" name="variant" class="form-control form-control-sm input-suggest"
+                                       placeholder="Ex: color, size"
+                                       aria-label="Table Cloner"
+                                       aria-describedby="button-table-cloner"
+                                       data-input-suggest-type="text"
+                                       data-input-suggest-name="variant"
+                                       data-input-suggest-ajax-url="_ajax/input_suggest_variants.json"
+                                       data-input-suggest-ajax-method="GET"
+                                       data-input-suggest-ajax-limit="100">
+
+                                <div class="input-group-append">
+                                    <button class="btn btn-sm btn-outline-secondary" type="button" id="button-table-cloner">Add</button>
+                                </div>
+                            </div>  -->
+
+
+                            <table class="table table-bordered table-align-middle table-sm">
+                                <thead>
+                                <tr>
+                                    <th>GENERE</th>
+                                    <th>TIPOLOGIA</th>
+                                    <th>ASSEGNATO A</th>
+                                    <th>DESCRIZIONE</th>
+                                    <th>DATA</th>
+                                    <th class="w--80 text-center">
+                                        <a href="#" class="btn btn-sm btn-primary btn-table-clone rounded-circle">
+                                            <i class="fi fi-plus"></i>
+                                        </a>
+                                    </th>
+                                </tr>
+                                </thead>
+
+                                <!--
+                                    See Sortable doumentation if ajax reorder is needed
+                                -->
+                                <tbody class="sortable">
+
+                                <!--
+                                    OPTIONAL
+                                    ACTING AS A TEMPLATE TO CLONE
+                                    IS REMOVED ON LOAD IF .hide CLASS IS PRESENT
+
+                                    Else, the first TR is used by default!
+                                    .js-ignore = optional, used by sortable to igore from drag/drop reorder
+                                -->
+                                <tr class="js-ignore hide">
+                                    <!-- Genere -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control bs-select" name="premio[genere]">
+                                                <option value="0"></option>
+                                                <option value="1">Oscar</option>
+                                                <option value="2">BAFTA - British Academy of Film and Television</option>
+                                                <option value="3">Critics Choice Award</option>
+                                            </select>
+                                            <label>Premio</label>
+                                        </div>
+                                    </td>
+
+                                    <!-- Tipologia -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control bs-select" name="premio[tipologia]">
+                                                <option value="0"></option>
+                                                <option value="1">Fotografia</option>
+                                                <option value="2">Regia</option>
+                                                <option value="3">Miglior Interpretazione</option>
+                                            </select>
+                                            <label>Premio per</label>
+                                        </div>
+                                    </td>
+
+                                    <!-- Assegnato -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control select2-plugin ajax-method"
+                                                    name="cast[select_filmmakers]"
+                                                    data-input-min-length="1" data-ajax-method="GET"
+                                                    data-ajax-url="http://localhost:6969/backend/_ajax/cast.json"
+                                                    data-input-delay="250">
+                                            </select>
+                                            <label
+                                                    class="label-select2">Assegnato a</label>
+                                        </div>
+                                    </td>
+
+
+                                    <!-- Descrizione -->
+                                    <td>
+                                        <div class="form-label-group">
+                                        <textarea placeholder="Descrizione" class="form-control" rows="2"
+                                                  name="premio[descrizione]"></textarea>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-label-group mb-3">
+                                            <input placeholder="Data premiazione" type="date" value="2020-01-01" class="form-control" name="premio[data_premiazione]">
+                                            <label>Data Premiazione</label>
+                                        </div>
+                                    </td>
+
+
+                                    <!-- Option -->
+                                    <td class="position-relative text-center">
+
+                                        <!-- direct delete -->
+                                        <!--
+                                        <a href="#" class="btn btn-sm btn-light btn-table-clone-remove rounded-circle">
+                                            <i class="fi fi-thrash"></i>
+                                        </a>
+                                        -->
+
+                                        <!-- remove button (confirm trigger) -->
+                                        <a href="#"
+                                           class="btn btn-table-clone-remove-confirm btn-sm btn-light rounded-circle">
+                                            <i class="fi fi-thrash"></i>
+                                        </a>
+
+                                        <!-- confirm -->
+                                        <div class="position-absolute bg-warning shadow top-0 bottom-0 end-0 w--200 z-index-10 hide">
+                                            <i class="arrow arrow-lg arrow-start arrow-center border-warning"></i>
+                                            <label class="d-block fs--13 mb--2">Sei sicuro?</label>
+                                            <a href="#!"
+                                               class="btn btn-table-clone-remove btn-danger btn-sm px-2 pt--2 pb--2">Cancella</a>
+                                            <a href="#!"
+                                               class="btn btn-table-clone-remove-cancel btn-secondary btn-sm px-2 pt--2 pb--2">Annulla</a>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- preadded -->
+                                <tr>
+                                    <!-- Genere -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control bs-select" name="premio[genere]">
+                                                <option value="0"></option>
+                                                <option value="1" selected>Oscar</option>
+                                                <option value="2">BAFTA - British Academy of Film and Television</option>
+                                                <option value="3">Critics Choice Award</option>
+                                            </select>
+                                            <label>Premio</label>
+                                        </div>
+                                    </td>
+
+                                    <!-- Tipologia -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control bs-select" name="premio[tipologia]">
+                                                <option value="0"></option>
+                                                <option value="1" selected>Fotografia</option>
+                                                <option value="2">Regia</option>
+                                                <option value="3">Miglior Interpretazione</option>
+                                            </select>
+                                            <label>Premio per</label>
+                                        </div>
+                                    </td>
+
+                                    <!-- Assegnato -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control select2-plugin ajax-method"
+                                                    name="cast[select_filmmakers]"
+                                                    data-input-min-length="1" data-ajax-method="GET"
+                                                    data-ajax-url="http://localhost:6969/backend/_ajax/cast.json"
+                                                    data-input-delay="250">
+                                                <option value="1">Mario Rossi</option>
+                                            </select>
+                                            <label
+                                                    class="label-select2">Assegnato a</label>
+                                        </div>
+                                    </td>
+
+
+                                    <!-- Descrizione -->
+                                    <td>
+                                        <div class="form-label-group">
+                                        <textarea placeholder="Descrizione" class="form-control" rows="2"
+                                                  name="premio[descrizione]">Premio assegnato a Mario Rossi</textarea>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-label-group mb-3">
+                                            <input placeholder="Data premiazione" type="date" value="2020-01-09" class="form-control" name="premio[data_premiazione]">
+                                            <label>Data Premiazione</label>
+                                        </div>
+                                    </td>
+
+                                    <!-- Option -->
+                                    <td class="position-relative text-center">
+
+                                        <!-- direct delete -->
+                                        <!--
+                                        <a href="#" class="btn btn-sm btn-light btn-table-clone-remove rounded-circle">
+                                            <i class="fi fi-thrash"></i>
+                                        </a>
+                                        -->
+
+                                        <!-- remove button (confirm trigger) -->
+                                        <a href="#"
+                                           class="btn btn-table-clone-remove-confirm btn-sm btn-light rounded-circle">
+                                            <i class="fi fi-thrash"></i>
+                                        </a>
+
+                                        <!-- confirm -->
+                                        <div class="position-absolute bg-warning shadow top-0 bottom-0 end-0 w--200 z-index-10 hide">
+                                            <i class="arrow arrow-lg arrow-start arrow-center border-warning"></i>
+                                            <label class="d-block fs--13 mb--2">Sei sicuro?</label>
+                                            <a href="#!"
+                                               class="btn btn-table-clone-remove btn-danger btn-sm px-2 pt--2 pb--2">Cancella</a>
+                                            <a href="#!"
+                                               class="btn btn-table-clone-remove-cancel btn-secondary btn-sm px-2 pt--2 pb--2">Annulla</a>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <!-- preadded -->
+                                <tr>
+                                    <!-- Genere -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control bs-select" name="premio[genere]">
+                                                <option value="0"></option>
+                                                <option value="1">Oscar</option>
+                                                <option value="2" selected>BAFTA - British Academy of Film and Television</option>
+                                                <option value="3">Critics Choice Award</option>
+                                            </select>
+                                            <label>Premio</label>
+                                        </div>
+                                    </td>
+
+                                    <!-- Tipologia -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control bs-select" name="premio[tipologia]">
+                                                <option value="0"></option>
+                                                <option value="1">Fotografia</option>
+                                                <option value="2" selected>Regia</option>
+                                                <option value="3">Miglior Interpretazione</option>
+                                            </select>
+                                            <label>Premio per</label>
+                                        </div>
+                                    </td>
+
+                                    <!-- Assegnato -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <select class="form-control select2-plugin ajax-method"
+                                                    name="cast[select_filmmakers]"
+                                                    data-input-min-length="1" data-ajax-method="GET"
+                                                    data-ajax-url="http://localhost:6969/backend/_ajax/cast.json"
+                                                    data-input-delay="250">
+                                                <option value="1">Marco Bianchi</option>
+                                            </select>
+                                            <label
+                                                    class="label-select2">Assegnato a</label>
+                                        </div>
+                                    </td>
+
+
+                                    <!-- Descrizione -->
+                                    <td>
+                                        <div class="form-label-group">
+                                        <textarea placeholder="Descrizione" class="form-control" rows="2"
+                                                  name="premio[descrizione]">Premio assegnato a Marco Bianchi</textarea>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-label-group mb-3">
+                                            <input placeholder="Data premiazione" type="date" value="2020-02-09" class="form-control" name="premio[data_premiazione]">
+                                            <label>Data Premiazione</label>
+                                        </div>
+                                    </td>
+
+
+                                    <!-- Option -->
+                                    <td class="position-relative text-center">
+
+                                        <!-- direct delete -->
+                                        <!--
+                                        <a href="#" class="btn btn-sm btn-light btn-table-clone-remove rounded-circle">
+                                            <i class="fi fi-thrash"></i>
+                                        </a>
+                                        -->
+
+                                        <!-- remove button (confirm trigger) -->
+                                        <a href="#"
+                                           class="btn btn-table-clone-remove-confirm btn-sm btn-light rounded-circle">
+                                            <i class="fi fi-thrash"></i>
+                                        </a>
+
+                                        <!-- confirm -->
+                                        <div class="position-absolute bg-warning shadow top-0 bottom-0 end-0 w--200 z-index-10 hide">
+                                            <i class="arrow arrow-lg arrow-start arrow-center border-warning"></i>
+                                            <label class="d-block fs--13 mb--2">Sei sicuro?</label>
+                                            <a href="#!"
+                                               class="btn btn-table-clone-remove btn-danger btn-sm px-2 pt--2 pb--2">Cancella</a>
+                                            <a href="#!"
+                                               class="btn btn-table-clone-remove-cancel btn-secondary btn-sm px-2 pt--2 pb--2">Annulla</a>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            <small class="d-block text-muted mt-1">Se vuoi puoi trascinare e rilasciare le righe per
+                                riordinarle</small>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- /PREMI-->
 
             </form>
         </div>
