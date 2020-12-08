@@ -186,7 +186,9 @@ p.a-none-decoration-blold a:hover {
   display: inline-flex;
   cursor: pointer;
 }
-
+.p-input{
+  padding: .78rem 1rem;
+}
 @media (min-width: 443px) {
   .w--382 {
     width: 382px !important;
@@ -200,6 +202,14 @@ p.a-none-decoration-blold a:hover {
     height: 75%;
   }*/
 }
+.fs--68perc{
+  font-size: 68%;
+}
 .h--55{
   height: 55px;
+}
+.reset-hover:hover{
+  //color: $primary-theme-color;
+  background-color: #ebb3b4;
+  border-color: #ebb3b4;
 }
