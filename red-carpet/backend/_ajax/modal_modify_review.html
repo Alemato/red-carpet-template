@@ -1,0 +1,62 @@
+<div class="modal-header">
+    <h2 class="modal-title fs--18 m-0">
+        Modifica Recensione
+    </h2>
+
+    <button type="button" class="close pointer" data-dismiss="modal" aria-label="Close">
+        <span class="fi fi-close fs--18" aria-hidden="true"></span>
+    </button>
+</div>
+
+<!-- body -->
+<div class="modal-body">
+    <form id="filmmakers" href="#">
+        <div class="form-label-group mb-3">
+            <input placeholder="Titolo Recensione" id="title" type="text"  name="title" value="Questo film é bellissimo!"
+                   class="form-control">
+            <label for="title">Titolo Recensione</label>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <label for="review" class="">Recensione</label>
+                <textarea id="review" class="summernote-editor w-100"
+                          data-placeholder="Recensione"
+                          data-min-height="285"
+                          data-max-height="285"
+                          data-lang="it-IT"
+                          data-disable-resize-rditor="true"
+                          data-ajax-url="_ajax/demo.summernote.php"
+                          data-ajax-params="['action','upload']['param2','value2']"
+
+                          data-toolbar='[
+			["style", ["style"]],
+			["font", ["bold", "italic", "underline", "clear"]],
+			["para", ["ul", "ol", "paragraph"]],
+			["insert", ["link", "hr"]],
+			["view", ["fullscreen", "codeview"]],
+			["help", ["help"]]
+		]'
+                >Dopo il flop immeritato di John Carter (oltre 200 milioni di perdite)
+                    che è costato il posto al presidente di Disney Studios, Rich Ross, tocca ad un manipolo di super-eroi
+                    tentare la missione impossibile di recuperare il disavanzo economico. Su The Avengers, del resto, si
+                    punta forte perché è senza dubbio il miglior film nato da personaggi Marvel, grazie ad un mix azzeccato
+                    di umorismo ed azione, pur con qualche lungaggine di troppo che finisce, in parte, per mortificare il
+                    risultato finale. In effetti, è allettante l’idea di vedere tutti insieme appassionatamente (non senza
+                    difficoltà visti i loro differenti caratteri) Capitan America (ChrisEvans), IronMan (Rohert DowneyJr.)</textarea>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<!-- footer -->
+<div class="modal-footer d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+        <i class="fi fi-close"></i>
+        Annulla
+    </button>
+    <button type="submit" form="filmmakers" class="btn btn-primary" data-dismiss="modal">
+        <i class="fi fi-check"></i>
+        Salva
+    </button>
+</div>
