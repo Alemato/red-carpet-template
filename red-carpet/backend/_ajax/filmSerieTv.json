@@ -1,0 +1,18 @@
+{
+  "total_count": 2,
+  "incomplete_results": true,
+  "items": [
+    {
+      "id": 1,
+      "avatar_url": "http://localhost:6969/assets/images/the_avengers/locandina.jpg",
+      "full_name": "The avengers",
+      "description": "Film 2012"
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://localhost:6969/assets/images/dashelily/poster.jpg",
+      "full_name": "Dash & Lily",
+      "description": "SerieTv 2020"
+    }
+  ]
+}
