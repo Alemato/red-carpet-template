@@ -853,7 +853,7 @@
                         <div class="js-form-advanced-table mb-6"
                              data-table-column-delete-button='<span class="btn-table-column-delete fi fi-close fs--15 cursor-pointer px-1 d-inline-block"></span>'
                              data-table-row-limit="50"
-                             data-table-row-method="append">
+                             data-table-row-method="prepend">
 
 
                             <table class="table table-bordered table-align-middle table-sm">
@@ -887,7 +887,7 @@
                                             <div class="col-auto pl--5">
                                                 <a href="#" class="js-ajax-modal btn btn-primary"
                                                    data-href="_ajax/modal_filmmakers.html"
-                                                   data-ajax-modal-size="modal-lg"
+                                                   data-ajax-modal-size="modal-xl"
                                                    data-ajax-modal-centered="false"
                                                    data-ajax-modal-callback-function=""
                                                    data-ajax-modal-backdrop="">
@@ -1019,10 +1019,12 @@
                             <table class="table table-bordered table-align-middle table-sm">
                                 <thead>
                                 <tr>
+                                    <th class="w--30">&nbsp;</th>
                                     <th class="w--150">STAGIONE</th>
                                     <th class="w--400">TITOLO EPISODIO</th>
                                     <th class="w--100">COPERTINA</th>
                                     <th>DESCRIZIONE</th>
+                                    <th class="w--150">DURATA PUNTATA</th>
                                     <th class="w--80 text-center">
                                         <a href="#" class="btn btn-sm btn-primary btn-table-clone rounded-circle">
                                             <i class="fi fi-plus"></i>
@@ -1045,6 +1047,10 @@
                                     .js-ignore = optional, used by sortable to igore from drag/drop reorder
                                 -->
                                 <tr class="js-ignore hide">
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
                                     <!-- Stagione -->
                                     <td>
                                         <div class="form-label-group">
@@ -1128,6 +1134,15 @@
                                         </div>
                                     </td>
 
+                                    <!-- Durata puntata -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <input type="number" class="form-control"
+                                                   name="stagioni_episodi[dutata_puntata]" min="1">
+                                            <label>Durata Puntata</label>
+                                        </div>
+                                    </td>
+
 
                                     <!-- Option -->
                                     <td class="position-relative text-center">
@@ -1161,6 +1176,10 @@
 
                                 <!-- preadded -->
                                 <tr>
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
                                     <!-- Stagione -->
                                     <td>
                                         <div class="form-label-group">
@@ -1201,7 +1220,7 @@
                                             <span class="js-table-file-preview-1 z-index-2 d-block absolute-full z-index-1 hide-empty">
 							<span data-id="0"
                                   data-file-name="mutzii-fmDCrqPQKog-unsplash-min.jpg"
-                                  style="background-image:url('../demo.files/images/unsplash/products/sneakers/thumb_330/mutzii-fmDCrqPQKog-unsplash-min.jpg')"
+                                  style="background-image:url('../assets/images/dashelily/puntata-1-dash.webp')"
                                   class="js-file-input-item d-inline-block position-relative overflow-hidden text-center m-0 p-0 animate-bouncein bg-cover w-100 h-100">
 							</span>
 						</span>
@@ -1254,6 +1273,15 @@
                                         </div>
                                     </td>
 
+                                    <!-- Durata puntata -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <input type="number" class="form-control"
+                                                   name="stagioni_episodi[dutata_puntata]" min="1" value="23">
+                                            <label>Durata Puntata</label>
+                                        </div>
+                                    </td>
+
                                     <!-- Option -->
                                     <td class="position-relative text-center">
 
@@ -1286,6 +1314,10 @@
 
                                 <!-- preadded -->
                                 <tr>
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
                                     <!-- Stagione -->
                                     <td>
                                         <div class="form-label-group">
@@ -1325,7 +1357,7 @@
                                             <span class="js-table-file-preview-2 z-index-2 d-block absolute-full z-index-1 hide-empty">
 							<span data-id="0"
                                   data-file-name="nikita-kachanovsky-ad_0wMHtvlU-unsplash-min.jpg"
-                                  style="background-image:url('../demo.files/images/unsplash/products/sneakers/thumb_330/nikita-kachanovsky-ad_0wMHtvlU-unsplash-min.jpg')"
+                                  style="background-image:url('../assets/images/dashelily/puntata-2-lily.webp')"
                                   class="js-file-input-item d-inline-block position-relative overflow-hidden text-center m-0 p-0 animate-bouncein bg-cover w-100 h-100">
 							</span>
 						</span>
@@ -1376,6 +1408,16 @@
                                                   name="media[descrizione]"> la descrizione puntata 2</textarea>
                                         </div>
                                     </td>
+
+                                    <!-- Durata puntata -->
+                                    <td>
+                                        <div class="form-label-group">
+                                            <input type="number" class="form-control"
+                                                   name="stagioni_episodi[dutata_puntata]" min="1" value="23">
+                                            <label>Durata Puntata</label>
+                                        </div>
+                                    </td>
+
                                     <!-- Option -->
                                     <td class="position-relative text-center">
 
@@ -1490,6 +1532,7 @@
                             <table class="table table-bordered table-align-middle table-sm">
                                 <thead>
                                 <tr>
+                                    <th class="w--30">&nbsp;</th>
                                     <th>SCHEDA</th>
                                     <th class="w--90">MEDIA</th>
                                     <th>TIPOLOGIA</th>
@@ -1516,6 +1559,11 @@
                                     .js-ignore = optional, used by sortable to igore from drag/drop reorder
                                 -->
                                 <tr class="js-ignore hide">
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
+
                                     <!-- Scheda -->
                                     <td>
                                         <div class="form-label-group">
@@ -1643,6 +1691,10 @@
 
                                 <!-- preadded -->
                                 <tr>
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
                                     <!-- scheda -->
                                     <td>
                                         <div class="form-label-group">
@@ -1774,6 +1826,10 @@
 
                                 <!-- preadded -->
                                 <tr>
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
                                     <!-- scheda -->
                                     <td>
                                         <div class="form-label-group">
@@ -1986,6 +2042,7 @@
                             <table class="table table-bordered table-align-middle table-sm">
                                 <thead>
                                 <tr>
+                                    <th class="w--30">&nbsp;</th>
                                     <th>GENERE</th>
                                     <th>TIPOLOGIA</th>
                                     <th>ASSEGNATO A</th>
@@ -2013,6 +2070,10 @@
                                     .js-ignore = optional, used by sortable to igore from drag/drop reorder
                                 -->
                                 <tr class="js-ignore hide">
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
                                     <!-- Genere -->
                                     <td>
                                         <div class="form-label-group">
@@ -2104,6 +2165,10 @@
 
                                 <!-- preadded -->
                                 <tr>
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
                                     <!-- Genere -->
                                     <td>
                                         <div class="form-label-group">
@@ -2195,6 +2260,10 @@
 
                                 <!-- preadded -->
                                 <tr>
+                                    <!-- sortable handler -->
+                                    <td class="px-0 text-center">
+                                        <div class="sortable-handle line-height-1 py-2 fi fi-dots-vertical"></div>
+                                    </td>
                                     <!-- Genere -->
                                     <td>
                                         <div class="form-label-group">
