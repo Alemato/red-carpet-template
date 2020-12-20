@@ -129,7 +129,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link nav-link-caret-hide">
+                            <a href="users_list.html" class="nav-link nav-link-caret-hide">
                                 <i class="fi fi-users float-start m-0"></i>
                                 <span>Gestisci Utenti</span>
                             </a>
@@ -533,12 +533,12 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link js-ajax" href="press_review.html">
-                                        Recensioni Stampa
+                                        Stampa
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link js-ajax" href="user_review.html">
-                                        Recensioni Utenti
+                                        Utenti
                                     </a>
                             </ul>
 
@@ -649,7 +649,7 @@
                                             <tr>
                                                 <th class="pt--10 pb--10" scope="row">1</th>
                                                 <td class="pt--10 pb--10">Amministratore</td>
-                                                <td class="pt--10 pb--10">Colui che Amministra le situazioni</td>
+                                                <td class="pt--10 pb--10">Utente che ha accesso al Backend e amministra gli altri utenti</td>
                                                 <td class="text-center pt--10 pb--10">
                                                     <div class="d-flex align-items-center justify-content-center">
                                                         <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Servizi</h6> <ul class='p-0'><li>Accesso area privata</li><li>Accesso al backend</li><li>Inserimento Articoli</li><li>Modifica Articoli</li></ul></div>">
@@ -696,7 +696,7 @@
                                             <tr>
                                                 <th class="pt--10 pb--10" scope="row">2</th>
                                                 <td class="pt--10 pb--10">Critico</td>
-                                                <td class="pt--10 pb--10">Colui che critica le situazioni</td>
+                                                <td class="pt--10 pb--10">Utente che scrive delle recensioni da critico per una rivista</td>
                                                 <td class="text-center pt--10 pb--10">
                                                     <div class="d-flex align-items-center justify-content-center">
                                                         <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--15 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Servizi</h6> <ul class='p-0'><li>Visualizzazione</li><li>Inserimento Articoli</li><li>Modifica Articoli</li></ul></div>">
@@ -743,7 +743,7 @@
                                             <tr>
                                                 <th class="pt--10 pb--10" scope="row">3</th>
                                                 <td class="pt--10 pb--10">Utente base</td>
-                                                <td class="pt--10 pb--10">Colui che usa le situazioni</td>
+                                                <td class="pt--10 pb--10">Utente standard che ha accesso al frontend e può lasciare recensioni private</td>
                                                 <td class="text-center pt--10 pb--10">
                                                     <div class="d-flex align-items-center justify-content-center">
                                                         <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--15 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Servizi</h6> <ul class='p-0'><li>Visualizzazione</li><li>Inserimento Articoli</li><li>Modifica Articoli</li></ul></div>">
@@ -772,53 +772,6 @@
 
                                                             data-ajax-confirm-title="Per favore conferma"
                                                             data-ajax-confirm-body="Sei sicuro di voler eliminare il gruppo <strong>Utente base</strong> dal sistema?"
-
-                                                            data-ajax-confirm-btn-yes-class="btn-sm btn-danger"
-                                                            data-ajax-confirm-btn-yes-text="Conferma"
-                                                            data-ajax-confirm-btn-yes-icon="fi fi-check"
-
-                                                            data-ajax-confirm-btn-no-class="btn-sm btn-light"
-                                                            data-ajax-confirm-btn-no-text="Annulla"
-                                                            data-ajax-confirm-btn-no-icon="fi fi-close"
-
-                                                            data-ajax-confirm-callback-function="">
-                                                        <i class="fi fi-thrash"></i>
-                                                        <span class="hidden-sm-down">Elimina</span>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="pt--10 pb--10" scope="row">4</th>
-                                                <td class="pt--10 pb--10">Revisore recensioni</td>
-                                                <td class="pt--10 pb--10">Colui che rivede le situazioni</td>
-                                                <td class="text-center pt--10 pb--10">
-                                                    <div class="d-flex align-items-center justify-content-center">
-                                                        <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Servizi</h6> <ul class='p-0'><li>Accesso area privata</li><li>Accesso al backend</li><li>Inserimento Articoli</li><li>Modifica Articoli</li></ul></div>">
-                                                            <span><i class="fi fi-round-info-full fs--20 pr-1 mb--1"></i></span>
-                                                            <span class="hidden-sm-down">Servizi</span>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center pt--10 pb--10">
-                                                    <button class="btn btn-sm rounded-circle-xs btn-indigo btn-pill pl--20 pr--20 mb--0 mt--0">
-                                                        <i class="fi fi-pencil"></i>
-                                                        <span class="hidden-sm-down">Modifica</span>
-                                                    </button>
-                                                </td>
-                                                <td class="text-center pt--10 pb--10">
-                                                    <button data-href="plugins-sow-ajax-confirm.html?action=delete&amp;item_id=1"
-                                                            type="button"
-                                                            href="#"
-                                                            class="js-ajax-confirm btn btn-sm rounded-circle-xs btn-secondary text-white btn-pill pl--20 pr--20 mb--0 mt--0"
-
-                                                            data-ajax-confirm-mode="ajax"
-                                                            data-ajax-confirm-method="GET"
-
-                                                            data-ajax-confirm-size="modal-md"
-                                                            data-ajax-confirm-centered="false"
-
-                                                            data-ajax-confirm-title="Per favore conferma"
-                                                            data-ajax-confirm-body="Sei sicuro di voler eliminare il gruppo <strong>Amministratore</strong> dal sistema?"
 
                                                             data-ajax-confirm-btn-yes-class="btn-sm btn-danger"
                                                             data-ajax-confirm-btn-yes-text="Conferma"
@@ -867,7 +820,7 @@
                                                 <td class="pt--10 pb--10">Accesso all'area per soli utenti loggati</td>
                                                 <td class="text-center pt--10 pb--10">
                                                     <div class="d-flex align-items-center justify-content-center">
-                                                        <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Gruppi</h6> <ul class='p-0'><li>Amministratore</li><li>Critico</li><li>Utente base</li><li>Revisore Recensioni</li></ul></div>">
+                                                        <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Gruppi</h6> <ul class='p-0'><li>Amministratore</li><li>Critico</li><li>Utente base</li></ul></div>">
                                                             <span><i class="fi fi-round-info-full fs--20 pr-1 mb--1"></i></span>
                                                             <span class="hidden-sm-down">Gruppi</span>
                                                         </a>
@@ -893,7 +846,7 @@
                                                 <td class="pt--10 pb--10">Inserimento dei Film e delle Serie TV</td>
                                                 <td class="text-center pt--10 pb--10">
                                                     <div class="d-flex align-items-center justify-content-center">
-                                                        <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Gruppi</h6> <ul class='p-0'><li>Amministratore</li><li>Revisore Recensioni</li></ul></div>">
+                                                        <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Gruppi</h6> <ul class='p-0'><li>Amministratore</li></ul></div>">
                                                             <span><i class="fi fi-round-info-full fs--20 pr-1 mb--1"></i></span>
                                                             <span class="hidden-sm-down">Gruppi</span>
                                                         </a>
@@ -906,26 +859,14 @@
                                                 <td class="pt--10 pb--10">Modifica dei Film e Serie TV</td>
                                                 <td class="text-center pt--10 pb--10">
                                                     <div class="d-flex align-items-center justify-content-center">
-                                                        <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Gruppi</h6> <ul class='p-0'><li>Amministratore</li><li>Revisore Recensioni</li></ul></div>">
+                                                        <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Gruppi</h6> <ul class='p-0'><li>Amministratore</li></ul></div>">
                                                             <span><i class="fi fi-round-info-full fs--20 pr-1 mb--1"></i></span>
                                                             <span class="hidden-sm-down">Gruppi</span>
                                                         </a>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <th class="pt--10 pb--10" scope="row">5</th>
-                                                <td class="pt--10 pb--10">Revisione Recensioni</td>
-                                                <td class="pt--10 pb--10">Moderare le recensioni dei Film E delle Serie TV</td>
-                                                <td class="text-center pt--10 pb--10">
-                                                    <div class="d-flex align-items-center justify-content-center">
-                                                    <a href="#" class="mb-1 text-decoration-none" data-toggle="tooltip" data-placement="left" data-html="true" title="<div class='scrollable-vertical max-h-200 pl--15 pr--10 pt--10 pb--10 text-align-start'> <h6 class='p-0 fs--15 text-warning mb-2'>Gruppi</h6> <ul class='p-0'><li>Amministratore</li><li>Revisore Recensioni</li></ul></div>">
-                                                        <span><i class="fi fi-round-info-full fs--20 pr-1 mb--1"></i></span>
-                                                        <span class="hidden-sm-down">Gruppi</span>
-                                                    </a>
-                                                    </div>
-                                                </td>
-                                            </tr>
+
                                             </tbody>
                                         </table>
                                         <div class="d-flex justify-content-end pt-4 pr-4">
@@ -1085,49 +1026,7 @@
                                                     </form>
                                                 </th>
                                             </tr>
-                                            <tr>
-                                                <th class="pt--10 pb--10" scope="row">Revisore</th>
-                                                <th class="pt--10 pb--10 text-center" scope="row">
-                                                    <form method="post" action="">
-                                                        <label class="form-checkbox form-checkbox-primary">
-                                                            <input type="checkbox" name="checkbox" checked>
-                                                            <i class="text-center"></i>
-                                                        </label>
-                                                    </form>
-                                                </th>
-                                                <th class="pt--10 pb--10 text-center" scope="row">
-                                                    <form method="post" action="">
-                                                        <label class="form-checkbox form-checkbox-primary">
-                                                            <input type="checkbox" name="checkbox">
-                                                            <i class="text-center"></i>
-                                                        </label>
-                                                    </form>
-                                                </th>
-                                                <th class="pt--10 pb--10 text-center" scope="row">
-                                                    <form method="post" action="">
-                                                        <label class="form-checkbox form-checkbox-primary">
-                                                            <input type="checkbox" name="checkbox">
-                                                            <i class="text-center"></i>
-                                                        </label>
-                                                    </form>
-                                                </th>
-                                                <th class="pt--10 pb--10 text-center" scope="row">
-                                                    <form method="post" action="">
-                                                        <label class="form-checkbox form-checkbox-primary">
-                                                            <input type="checkbox" name="checkbox" checked>
-                                                            <i class="text-center"></i>
-                                                        </label>
-                                                    </form>
-                                                </th>
-                                                <th class="pt--10 pb--10 text-center" scope="row">
-                                                    <form method="post" action="">
-                                                        <label class="form-checkbox form-checkbox-primary">
-                                                            <input type="checkbox" name="checkbox" checked>
-                                                            <i class="text-center"></i>
-                                                        </label>
-                                                    </form>
-                                                </th>
-                                            </tr>
+
                                             </tbody>
                                         </table>
                                     </div>
