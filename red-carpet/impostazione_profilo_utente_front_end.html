@@ -36,19 +36,7 @@
         <!-- NAVBAR -->
         <div class="container position-relative">
 
-
-            <!--
-
-                [SOW] SEARCH SUGGEST PLUGIN
-                [GULP/src/plugins/sow_search_suggest/sow_search_suggest.js]
-                [SCSS/_plugins/sow_search_suggest.scss]
-                ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++
-
-                PLEASE READ DOCUMENTATION
-                documentation/plugins-sow-search.html
-
-            -->
-            <form action="page/search-result-1.html"
+            <form action="risultati_ricerca.html"
                   method="GET"
                   data-autosuggest="on"
                   data-container="#sow-search-container"
@@ -64,7 +52,7 @@
 
                     <div class="input-group-over d-flex align-items-center w-100 h-100 rounded shadow-md">
 
-                        <input placeholder="what are you looking today?" name="s" type="text"
+                        <input placeholder="cosa vuoi cercare oggi?" name="search" type="text"
                                class="form-control-sow-search form-control form-control form-control-lg shadow-xs"
                                value="" autocomplete="off">
 
@@ -146,11 +134,12 @@
 
 
                 <!-- Menu -->
+
                 <div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
 
 
                     <!-- MOBILE MENU NAVBAR -->
-                    <div class="navbar-xs d-none">
+                    <div class="navbar-xs d-none bg-primary">
 
                         <!-- mobile menu button : close -->
                         <button class="navbar-toggler pt-0" type="button" data-toggle="collapse"
@@ -166,7 +155,7 @@
                             Logo : height: 70px max
                         -->
                         <a class="navbar-brand" href="index.html">
-                            <img src="assets/images/logo/redcarpet.png"  alt="...">
+                            <img src="assets/images/logo/redcarpet.png" alt="...">
                         </a>
 
                     </div>
@@ -179,16 +168,10 @@
                         <!-- mobile only image + simple search (d-block d-sm-none) -->
                         <li class="nav-item d-block d-sm-none">
 
-                            <!-- image -->
-                            <div class="mb-4">
-                                <img width="600" height="600" class="img-fluid"
-                                     src="demo.files/svg/artworks/people_crossbrowser.svg" alt="...">
-                            </div>
-
                             <!-- search -->
-                            <form method="get" action="#!search"
+                            <form method="get" action="#"
                                   class="input-group-over mb-5 bg-light p-2 form-control-pill">
-                                <input type="text" name="keyword" value="" placeholder="Quick search..."
+                                <input type="text" name="keyword" value="" placeholder="Ricerca veloce"
                                        class="form-control border-dashed">
                                 <button class="btn btn-primary btn-ghost fi fi-search p-0 ml-2 mr-2 w--50 h--50"></button>
                             </form>
@@ -197,7 +180,7 @@
 
 
                         <!-- home -->
-                        <li class="nav-item">
+                        <li class="nav-item active">
 
                             <a class="nav-link" href="index.html">
                                 Home
@@ -207,40 +190,22 @@
 
 
                         <!-- dropdown -->
-                        <li class="nav-item dropdown active">
+                        <li class="nav-item dropdown">
 
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="false" id="mainNavPages">
-                                Films
+                                Pages
                             </a>
 
-                            <ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover"
-                                aria-labelledby="mainNavPages">
-                                <li class="dropdown-item dropdown">
-                                    <a href="#" class="dropdown-link" data-toggle="dropdown">Deep Dropdown</a>
-
-                                    <ul class="dropdown-menu dropdown-menu-hover shadow-lg b--0 m--0">
-                                        <li class="dropdown-item">
-                                            <a class="dropdown-link" href="#">Link 1</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="dropdown-link" href="#">Link 2</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="dropdown-link" href="#">Link 3</a>
-                                        </li>
-                                    </ul>
-
+                            <ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover">
+                                <li class="dropdown-item">
+                                    <a href="lista_film.html" class="dropdown-link">Film Recenti</a>
                                 </li>
-
-                                <li class="dropdown-item active">
+                                <li class="dropdown-item">
                                     <a href="the_avengers.html" class="dropdown-link">The Avengers</a>
                                 </li>
                                 <li class="dropdown-item">
-                                    <a href="#" class="dropdown-link">Link 2</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="lista_film.html" class="dropdown-link">Lista Film</a>
+                                    <a href="dash_e_lily.html" class="dropdown-link">Dash &amp; Lily</a>
                                 </li>
                                 <li class="dropdown-item">
                                     <a href="about_person.html" class="dropdown-link">Rober Downey Jr.</a>
@@ -248,42 +213,15 @@
                                 <li class="dropdown-item">
                                     <a href="award_edition.html" class="dropdown-link">Oscar 2020</a>
                                 </li>
+                                <li class="dropdown-item">
+                                    <a href="backend/index.html" class="dropdown-link">Back-End</a>
+                                </li>
                             </ul>
-
-                        </li>
-
-
-                        <!-- social : mobile only (d-block d-sm-none)-->
-                        <li class="nav-item d-block d-sm-none text-center mb-4">
-
-                            <h3 class="h6 text-muted">Follow Us</h3>
-
-                            <a href="#!" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
-                               rel="noopener">
-                                <i class="fi fi-social-facebook"></i>
-                            </a>
-
-                            <a href="#!" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
-                               rel="noopener">
-                                <i class="fi fi-social-twitter"></i>
-                            </a>
-
-                            <a href="#!" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle"
-                               rel="noopener">
-                                <i class="fi fi-social-linkedin"></i>
-                            </a>
-
-                            <a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
-                               rel="noopener">
-                                <i class="fi fi-social-youtube"></i>
-                            </a>
 
                         </li>
 
                     </ul>
                     <!-- /NAVIGATION -->
-
-
                 </div>
 
 
@@ -300,30 +238,37 @@
 										<i class="fi fi-close"></i>
 									</span>
                         </a>
+
                         <div aria-labelledby="dropdownAccountOptions"
                              class="prefix-link-icon prefix-icon-dot dropdown-menu dropdown-menu-clean dropdown-menu-invert dropdown-click-ignore p--0 mt--18 fs--15">
                             <div class="dropdown-header">
                                 John Doe
                             </div>
                             <div class="dropdown-divider"></div>
-                            <a href="#!" class="dropdown-item text-truncate font-weight-light active">
-                                My Orders <small>(2)</small>
-                            </a>
-                            <a href="#!" class="dropdown-item text-truncate font-weight-light">
-                                My Favourites <small>(3)</small>
-                            </a>
-                            <a href="#!" class="dropdown-item text-truncate font-weight-light">
-                                Account Settings
-                            </a>
                             <a href="review_list.html" class="dropdown-item text-truncate font-weight-light">
-                                Recensioni
+                                Le Tue Recensioni
+                            </a>
+                            <a href="impostazione_profilo_utente_front_end.html" class="dropdown-item text-truncate font-weight-light">
+                                Impostazioni Account
+                            </a>
+
+                            <a href="#"
+                               data-href="accedi_modal.html"
+                               data-ajax-modal-size="modal-lg"
+                               data-ajax-modal-centered="false"
+                               data-ajax-modal-callback-function=""
+                               data-ajax-modal-backdrop=""
+                               class="js-ajax-modal dropdown-item text-truncate font-weight-light">
+                                Login
                             </a>
                             <div class="dropdown-divider mb--0"></div>
-                            <a href="#!" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
+                            <a href="#" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
                                 <i class="fi fi-power float-start"></i>
                                 Log Out
                             </a>
                         </div>
+
+
 
                     </li>
 
@@ -336,6 +281,10 @@
 
                     </li>
 
+                    <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+                        <!-- TRIGGER -->
+                    </li>
 
                 </ul>
                 <!-- /OPTIONS -->
@@ -358,7 +307,7 @@
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb fs--14">
-                    <li class="breadcrumb-item "><a href="#!">Home</a></li>
+                    <li class="breadcrumb-item "><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item  active" aria-current="page">Impostazioni Account</li>
                 </ol>
             </nav>
@@ -490,45 +439,49 @@
 
                     </div>
                     <div class="form-group pr--15 pl--15 pt--15">
-                        <label for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter name">
+                        <label for="name">Nome:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Inserisci nome" value="Mario">
                     </div>
 
+                    <div class="form-group pr--15 pl--15 mb--20">
+                        <label for="surname">Cognome:</label>
+                        <input type="text" class="form-control" id="surname" placeholder="Inserisci Cognome" value="Rossi">
+                    </div>
                     <div class="form-group pr--15 pl--15 mb--90">
-                        <label for="surname">Cognome</label>
-                        <input type="text" class="form-control" id="surname" placeholder="Enter surname">
+                        <label for="data_nascita">Data di Nascita:</label>
+                        <input type="date" class="form-control" id="data_nascita" value="1989-01-01">
                     </div>
 
                     <div class="font-raleway border-bottom border-top border-primary-soft p--15 shadow-danger-xs mb--40"><i
                             class="fi fi-locked"></i> INFORMAZIONI ACCESSO
                     </div>
                     <div class="form-group pr--15 pl--15">
-                        <label for="inputEmail">Email address</label>
+                        <label for="inputEmail">Email:</label>
                         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-                               placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
+                               placeholder="Inserisci Email" value="abc@abc.it">
+                        <small id="emailHelp" class="form-text text-muted">Non condivideremo mai la tua email con nessuno
+                            altro.</small>
                     </div>
 
                     <div class="form-group pr--15 pl--15">
-                        <label for="oldPassword">Password</label>
-                        <input type="password" class="form-control" id="oldPassword" placeholder="old Password">
+                        <label for="oldPassword">Password Vecchia:</label>
+                        <input type="password" class="form-control" id="oldPassword" placeholder="Inserisci Vecchia Password">
                     </div>
 
                     <div class="form-group pr--15 pl--15">
-                        <label for="newPassword1">Password</label>
-                        <input type="password" class="form-control" id="newPassword1" placeholder="new Password">
+                        <label for="newPassword1">Nuova Password:</label>
+                        <input type="password" class="form-control" id="newPassword1" placeholder="Inserici Nuova Password">
                     </div>
 
                     <div class="form-group pr--15 pl--15 mb--50">
-                        <label for="newPassword2">Password</label>
-                        <input type="password" class="form-control" id="newPassword2" placeholder=" re-new Password">
+                        <label for="newPassword2">Nuova Password:</label>
+                        <input type="password" class="form-control" id="newPassword2" placeholder="Inserisci dinuovo la nuova Password">
                     </div>
 
 
 
                     <div class="d-flex d-flex justify-content-between">
-                        <button type="submit" class="btn btn-warning m--15">Annulla</button>
+                        <button type="submit" class="btn btn-secondary m--15">Annulla</button>
                         <button type="submit" class="btn btn-primary m--15">Modifica</button>
                     </div>
 

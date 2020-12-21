@@ -36,19 +36,7 @@
         <!-- NAVBAR -->
         <div class="container position-relative">
 
-
-            <!--
-
-                [SOW] SEARCH SUGGEST PLUGIN
-                [GULP/src/plugins/sow_search_suggest/sow_search_suggest.js]
-                [SCSS/_plugins/sow_search_suggest.scss]
-                ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++
-
-                PLEASE READ DOCUMENTATION
-                documentation/plugins-sow-search.html
-
-            -->
-            <form action="page/search-result-1.html"
+            <form action="risultati_ricerca.html"
                   method="GET"
                   data-autosuggest="on"
                   data-container="#sow-search-container"
@@ -64,7 +52,7 @@
 
                     <div class="input-group-over d-flex align-items-center w-100 h-100 rounded shadow-md">
 
-                        <input placeholder="what are you looking today?" name="s" type="text"
+                        <input placeholder="cosa vuoi cercare oggi?" name="search" type="text"
                                class="form-control-sow-search form-control form-control form-control-lg shadow-xs"
                                value="" autocomplete="off">
 
@@ -146,11 +134,12 @@
 
 
                 <!-- Menu -->
+
                 <div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
 
 
                     <!-- MOBILE MENU NAVBAR -->
-                    <div class="navbar-xs d-none">
+                    <div class="navbar-xs d-none bg-primary">
 
                         <!-- mobile menu button : close -->
                         <button class="navbar-toggler pt-0" type="button" data-toggle="collapse"
@@ -179,16 +168,10 @@
                         <!-- mobile only image + simple search (d-block d-sm-none) -->
                         <li class="nav-item d-block d-sm-none">
 
-                            <!-- image -->
-                            <div class="mb-4">
-                                <img width="600" height="600" class="img-fluid"
-                                     src="demo.files/svg/artworks/people_crossbrowser.svg" alt="...">
-                            </div>
-
                             <!-- search -->
-                            <form method="get" action="#!search"
+                            <form method="get" action="#"
                                   class="input-group-over mb-5 bg-light p-2 form-control-pill">
-                                <input type="text" name="keyword" value="" placeholder="Quick search..."
+                                <input type="text" name="keyword" value="" placeholder="Ricerca veloce"
                                        class="form-control border-dashed">
                                 <button class="btn btn-primary btn-ghost fi fi-search p-0 ml-2 mr-2 w--50 h--50"></button>
                             </form>
@@ -197,7 +180,7 @@
 
 
                         <!-- home -->
-                        <li class="nav-item">
+                        <li class="nav-item ">
 
                             <a class="nav-link" href="index.html">
                                 Home
@@ -211,33 +194,18 @@
 
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
                                aria-expanded="false" id="mainNavPages">
-                                Films
+                                Pages
                             </a>
 
-                            <ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover"
-                                aria-labelledby="mainNavPages">
-                                <li class="dropdown-item dropdown">
-                                    <a href="#" class="dropdown-link" data-toggle="dropdown">Deep Dropdown</a>
-
-                                    <ul class="dropdown-menu dropdown-menu-hover shadow-lg b--0 m--0">
-                                        <li class="dropdown-item">
-                                            <a class="dropdown-link" href="#">Link 1</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="dropdown-link" href="#">Link 2</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="dropdown-link" href="#">Link 3</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                                <li class="dropdown-item active">
-                                    <a href="the_avengers.html" class="dropdown-link">The Avengers</a>
+                            <ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover">
+                                <li class="dropdown-item">
+                                    <a href="lista_film.html" class="dropdown-link">Film Recenti</a>
                                 </li>
                                 <li class="dropdown-item">
-                                    <a href="lista_film.html" class="dropdown-link">Lista Film</a>
+                                    <a href="the_avengers.html" class="dropdown-link">The Avengers</a>
+                                </li>
+                                <li class="dropdown-item active">
+                                    <a href="dash_e_lily.html" class="dropdown-link">Dash &amp; Lily</a>
                                 </li>
                                 <li class="dropdown-item">
                                     <a href="about_person.html" class="dropdown-link">Rober Downey Jr.</a>
@@ -245,42 +213,15 @@
                                 <li class="dropdown-item">
                                     <a href="award_edition.html" class="dropdown-link">Oscar 2020</a>
                                 </li>
+                                <li class="dropdown-item">
+                                    <a href="backend/index.html" class="dropdown-link">Back-End</a>
+                                </li>
                             </ul>
-
-                        </li>
-
-
-                        <!-- social : mobile only (d-block d-sm-none)-->
-                        <li class="nav-item d-block d-sm-none text-center mb-4">
-
-                            <h3 class="h6 text-muted">Follow Us</h3>
-
-                            <a href="#!" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
-                               rel="noopener">
-                                <i class="fi fi-social-facebook"></i>
-                            </a>
-
-                            <a href="#!" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
-                               rel="noopener">
-                                <i class="fi fi-social-twitter"></i>
-                            </a>
-
-                            <a href="#!" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle"
-                               rel="noopener">
-                                <i class="fi fi-social-linkedin"></i>
-                            </a>
-
-                            <a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
-                               rel="noopener">
-                                <i class="fi fi-social-youtube"></i>
-                            </a>
 
                         </li>
 
                     </ul>
                     <!-- /NAVIGATION -->
-
-
                 </div>
 
 
@@ -297,30 +238,37 @@
 										<i class="fi fi-close"></i>
 									</span>
                         </a>
+
                         <div aria-labelledby="dropdownAccountOptions"
                              class="prefix-link-icon prefix-icon-dot dropdown-menu dropdown-menu-clean dropdown-menu-invert dropdown-click-ignore p--0 mt--18 fs--15">
                             <div class="dropdown-header">
                                 John Doe
                             </div>
                             <div class="dropdown-divider"></div>
-                            <a href="#!" class="dropdown-item text-truncate font-weight-light active">
-                                My Orders <small>(2)</small>
-                            </a>
-                            <a href="#!" class="dropdown-item text-truncate font-weight-light">
-                                My Favourites <small>(3)</small>
-                            </a>
-                            <a href="#!" class="dropdown-item text-truncate font-weight-light">
-                                Account Settings
-                            </a>
                             <a href="review_list.html" class="dropdown-item text-truncate font-weight-light">
-                                Recensioni
+                                Le Tue Recensioni
+                            </a>
+                            <a href="impostazione_profilo_utente_front_end.html" class="dropdown-item text-truncate font-weight-light">
+                                Impostazioni Account
+                            </a>
+
+                            <a href="#"
+                               data-href="accedi_modal.html"
+                               data-ajax-modal-size="modal-lg"
+                               data-ajax-modal-centered="false"
+                               data-ajax-modal-callback-function=""
+                               data-ajax-modal-backdrop=""
+                               class="js-ajax-modal dropdown-item text-truncate font-weight-light">
+                                Login
                             </a>
                             <div class="dropdown-divider mb--0"></div>
-                            <a href="#!" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
+                            <a href="#" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
                                 <i class="fi fi-power float-start"></i>
                                 Log Out
                             </a>
                         </div>
+
+
 
                     </li>
 
@@ -333,6 +281,10 @@
 
                     </li>
 
+                    <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+                        <!-- TRIGGER -->
+                    </li>
 
                 </ul>
                 <!-- /OPTIONS -->
@@ -369,7 +321,7 @@
                     completo
                 </button>
             </a> Titolo originale: DASH & LILY. Genere <a href="#">Commedia</a>, - USA, 2020, <b><br> Uscita lunedì 26 ottobre 2020 distribuito da <a href="#">Netflix</a>. -
-                MYmonetro <b class="text-primary font-weight-bold">4,50</b> su <b class="text-primary font-weight-bold">5</b>
+                REDCARPOMETRO <b class="text-primary font-weight-bold">4,50</b> su <b class="text-primary font-weight-bold">5</b>
                 recensioni tra critica, pubblico e dizionari.
             </p>
 
@@ -478,7 +430,7 @@
 
 
     <!-- Footer -->
-    <footer id="footer" class="footer-dark">
+    <footer id="footer" class="footer-dark text-white">
         <div class="container">
 
             <div class="row">
@@ -496,15 +448,15 @@
 
                         <input type="hidden" name="action" value="subscribe" tabindex="-1">
 
-                        <p id="btnAriaFooterFormTitle" class="text-muted">
-                            Claim your candy now!
+                        <p id="btnAriaFooterFormTitle" class="text-white">
+                            Rimani informato, iscriviti alla nostra newletter!
                         </p>
 
 
                         <div class="input-group-over input-group-pill mb-4">
 
                             <input required class="form-control b-0" name="subscriber_email" type="email" value=""
-                                   placeholder="email address..." aria-label="email address...">
+                                   placeholder="Indirizzo email" aria-label="indirizzo email">
 
                             <button type="submit" class="btn bg-transparent shadow-none" aria-label="subscribe"
                                     aria-labelledby="btnAriaFooterFormTitle">
@@ -518,19 +470,14 @@
 
                     <div class="mt--12">
 
-                        <a href="#!" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
+                        <a href="#" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
                            rel="noopener" aria-label="facebook page">
                             <i class="fi fi-social-facebook"></i>
                         </a>
 
-                        <a href="#!" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
+                        <a href="#" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
                            rel="noopener" aria-label="twitter page">
                             <i class="fi fi-social-twitter"></i>
-                        </a>
-
-                        <a href="#!" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle"
-                           rel="noopener" aria-label="linkedin page">
-                            <i class="fi fi-social-linkedin"></i>
                         </a>
 
                         <a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
@@ -543,25 +490,21 @@
                 </div>
 
 
-                <div class="col-12 col-md-6 col-lg-8 py-5 fs--15 text-center-xs">
+                <div class="pl--30 col-12 col-md-6 col-lg-8 py-5 text-center-xs">
 
-                    <h3 class="fs--15 text-muted">SPY US! WE'VE GOT SECRETS!</h3>
 
-                    <ul class="mt--30 mb-0 breadcrumb bg-transparent p-0 block-xs">
-                        <li class="breadcrumb-item"><a href="contact-1.html">Contact</a></li>
-                        <li class="breadcrumb-item"><a href="about-us-1.html">About Us</a></li>
-                        <li class="breadcrumb-item"><a href="page-terms-and-conditions.html">Terms &amp; Conditions</a>
+                    <ul class="mb-0 breadcrumb bg-transparent p-0 block-xs font-weight-bold fs--18">
+                        <li class="breadcrumb-item"><a href="#">Contact</a></li>
+                        <li class="breadcrumb-item"><a href="#">About Us</a></li>
+                        <li class="breadcrumb-item"><a href="#">Terms &amp; Conditions</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="page-cookie.html">GDPR &amp; Cookies</a></li>
+                        <li class="breadcrumb-item"><a href="#">GDPR &amp; Cookies</a></li>
                     </ul>
 
                     <div class="text-muted mt--30">
                         <p>
-                            Frontend? Admin? What if you don't need anymore to learn and work with two different
-                            templates on your projects?
-                            <b>What would you do if time really matter?</b> Both: frontend and admin uses exactly the
-                            same core and all elements can be used in both sides because... actually there are no such
-                            thing "two sides" with Smarty!
+                            Sul sito Red Carpet trovi tutto sul mondo del cinema e delle serieTv:
+                            i trailer dei film in uscita, le recensioni delle migliori testate gionalistiche , recensioni di altri utenti appassionati e tutte le informazioni su attori e cast e tanto altro ancora!!!
                         </p>
                     </div>
 
@@ -576,49 +519,9 @@
             <div class="container clearfix font-weight-light text-center-xs">
 
                 <div class="fs--14 py-2 float-start float-none-xs m-0-xs">
-                    &copy; My Company Inc.
+                    &copy; Red Carpet.
                 </div>
 
-                <ul class="list-inline mb-0 mt-2 float-end float-none-xs m-0-xs">
-                    <li class="list-inline-item m-0">
-                        <img width="38" height="24" class="lazy" data-src="assets/images/credit_card/visa.svg"
-                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                             alt="visa credit card icon">
-                    </li>
-
-                    <li class="list-inline-item m-0">
-                        <img width="38" height="24" class="lazy" data-src="assets/images/credit_card/mastercard.svg"
-                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                             alt="mastercard credit card icon">
-                    </li>
-
-                    <li class="list-inline-item m-0">
-                        <img width="38" height="24" class="lazy" data-src="assets/images/credit_card/discover.svg"
-                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                             alt="discover credit card icon">
-                    </li>
-
-                    <li class="list-inline-item m-0">
-                        <img width="38" height="24" class="lazy" data-src="assets/images/credit_card/amazon.svg"
-                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                             alt="amazon credit card icon">
-                    </li>
-
-                    <li class="list-inline-item m-0">
-                        <img width="38" height="24" class="lazy" data-src="assets/images/credit_card/paypal.svg"
-                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                             alt="paypal credit card icon">
-                    </li>
-
-                    <li class="list-inline-item m-0">
-                        <img width="38" height="24" class="lazy" data-src="assets/images/credit_card/skrill.svg"
-                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                             alt="skrill credit card icon">
-                    </li>
-
-                    <!-- more vendors on assets/images/credit_card/ -->
-
-                </ul>
 
             </div>
         </div>

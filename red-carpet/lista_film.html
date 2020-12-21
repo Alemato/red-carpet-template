@@ -56,19 +56,7 @@
 		<!-- NAVBAR -->
 		<div class="container position-relative">
 
-
-			<!--
-
-                [SOW] SEARCH SUGGEST PLUGIN
-                [GULP/src/plugins/sow_search_suggest/sow_search_suggest.js]
-                [SCSS/_plugins/sow_search_suggest.scss]
-                ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++ ++
-
-                PLEASE READ DOCUMENTATION
-                documentation/plugins-sow-search.html
-
-            -->
-			<form action="page/search-result-1.html"
+			<form action="risultati_ricerca.html"
 				  method="GET"
 				  data-autosuggest="on"
 				  data-container="#sow-search-container"
@@ -84,7 +72,7 @@
 
 					<div class="input-group-over d-flex align-items-center w-100 h-100 rounded shadow-md">
 
-						<input placeholder="what are you looking today?" name="s" type="text"
+						<input placeholder="cosa vuoi cercare oggi?" name="search" type="text"
 							   class="form-control-sow-search form-control form-control form-control-lg shadow-xs"
 							   value="" autocomplete="off">
 
@@ -166,40 +154,12 @@
 
 
 				<!-- Menu -->
-				<!--
 
-                    Dropdown Classes (should be added to primary .dropdown-menu only, dropdown childs are also affected)
-                        .dropdown-menu-dark 		- dark dropdown (desktop only, will be white on mobile)
-                        .dropdown-menu-hover 		- open on hover
-                        .dropdown-menu-clean 		- no background color on hover
-                        .dropdown-menu-invert 		- open dropdown in oposite direction (left|right, according to RTL|LTR)
-                        .dropdown-menu-uppercase 	- uppercase text (font-size is scalled down to 13px)
-                        .dropdown-click-ignore 		- keep dropdown open on inside click (useful on forms inside dropdown)
-
-                        Repositioning long dropdown childs (Example: Pages->Account)
-                            .dropdown-menu-up-n100 		- open up with top: -100px
-                            .dropdown-menu-up-n100 		- open up with top: -150px
-                            .dropdown-menu-up-n180 		- open up with top: -180px
-                            .dropdown-menu-up-n220 		- open up with top: -220px
-                            .dropdown-menu-up-n250 		- open up with top: -250px
-                            .dropdown-menu-up 			- open up without negative class
-
-
-                        Dropdown prefix icon (optional, if enabled in variables.scss)
-                            .prefix-link-icon .prefix-icon-dot 		- link prefix
-                            .prefix-link-icon .prefix-icon-line 	- link prefix
-                            .prefix-link-icon .prefix-icon-ico 		- link prefix
-                            .prefix-link-icon .prefix-icon-arrow 	- link prefix
-
-                        .nav-link.nav-link-caret-hide 	- no dropdown icon indicator on main link
-                        .nav-item.dropdown-mega 		- required ONLY on fullwidth mega menu
-
-                -->
 				<div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
 
 
 					<!-- MOBILE MENU NAVBAR -->
-					<div class="navbar-xs d-none">
+					<div class="navbar-xs d-none bg-primary">
 
 						<!-- mobile menu button : close -->
 						<button class="navbar-toggler pt-0" type="button" data-toggle="collapse"
@@ -228,16 +188,10 @@
 						<!-- mobile only image + simple search (d-block d-sm-none) -->
 						<li class="nav-item d-block d-sm-none">
 
-							<!-- image -->
-							<div class="mb-4">
-								<img width="600" height="600" class="img-fluid"
-									 src="demo.files/svg/artworks/people_crossbrowser.svg" alt="...">
-							</div>
-
 							<!-- search -->
-							<form method="get" action="#!search"
+							<form method="get" action="#"
 								  class="input-group-over mb-5 bg-light p-2 form-control-pill">
-								<input type="text" name="keyword" value="" placeholder="Quick search..."
+								<input type="text" name="keyword" value="" placeholder="Ricerca veloce"
 									   class="form-control border-dashed">
 								<button class="btn btn-primary btn-ghost fi fi-search p-0 ml-2 mr-2 w--50 h--50"></button>
 							</form>
@@ -246,7 +200,7 @@
 
 
 						<!-- home -->
-						<li class="nav-item active">
+						<li class="nav-item ">
 
 							<a class="nav-link" href="index.html">
 								Home
@@ -256,40 +210,22 @@
 
 
 						<!-- dropdown -->
-						<li class="nav-item dropdown">
+						<li class="nav-item dropdown active">
 
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							   aria-expanded="false" id="mainNavPages">
-								Films
+								Pages
 							</a>
 
-							<ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover"
-								aria-labelledby="mainNavPages">
-								<li class="dropdown-item dropdown">
-									<a href="#" class="dropdown-link" data-toggle="dropdown">Deep Dropdown</a>
-
-									<ul class="dropdown-menu dropdown-menu-hover shadow-lg b--0 m--0">
-										<li class="dropdown-item">
-											<a class="dropdown-link" href="#">Link 1</a>
-										</li>
-										<li class="dropdown-item">
-											<a class="dropdown-link" href="#">Link 2</a>
-										</li>
-										<li class="dropdown-item">
-											<a class="dropdown-link" href="#">Link 3</a>
-										</li>
-									</ul>
-
+							<ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover">
+								<li class="dropdown-item active">
+									<a href="lista_film.html" class="dropdown-link">Film Recenti</a>
 								</li>
-
 								<li class="dropdown-item">
 									<a href="the_avengers.html" class="dropdown-link">The Avengers</a>
 								</li>
 								<li class="dropdown-item">
-									<a href="dash_e_lily.html" class="dropdown-link">dash e lily</a>
-								</li>
-								<li class="dropdown-item">
-									<a href="lista_film.html" class="dropdown-link">Lista Film</a>
+									<a href="dash_e_lily.html" class="dropdown-link">Dash &amp; Lily</a>
 								</li>
 								<li class="dropdown-item">
 									<a href="about_person.html" class="dropdown-link">Rober Downey Jr.</a>
@@ -297,42 +233,15 @@
 								<li class="dropdown-item">
 									<a href="award_edition.html" class="dropdown-link">Oscar 2020</a>
 								</li>
+								<li class="dropdown-item">
+									<a href="backend/index.html" class="dropdown-link">Back-End</a>
+								</li>
 							</ul>
-
-						</li>
-
-
-						<!-- social : mobile only (d-block d-sm-none)-->
-						<li class="nav-item d-block d-sm-none text-center mb-4">
-
-							<h3 class="h6 text-muted">Follow Us</h3>
-
-							<a href="#!" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
-							   rel="noopener">
-								<i class="fi fi-social-facebook"></i>
-							</a>
-
-							<a href="#!" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
-							   rel="noopener">
-								<i class="fi fi-social-twitter"></i>
-							</a>
-
-							<a href="#!" class="btn btn-sm btn-linkedin transition-hover-top mb-2 rounded-circle"
-							   rel="noopener">
-								<i class="fi fi-social-linkedin"></i>
-							</a>
-
-							<a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
-							   rel="noopener">
-								<i class="fi fi-social-youtube"></i>
-							</a>
 
 						</li>
 
 					</ul>
 					<!-- /NAVIGATION -->
-
-
 				</div>
 
 
@@ -356,18 +265,13 @@
 								John Doe
 							</div>
 							<div class="dropdown-divider"></div>
-							<a href="#!" class="dropdown-item text-truncate font-weight-light active">
-								My Orders <small>(2)</small>
-							</a>
-							<a href="#!" class="dropdown-item text-truncate font-weight-light">
-								My Favourites <small>(3)</small>
+							<a href="review_list.html" class="dropdown-item text-truncate font-weight-light">
+								Le Tue Recensioni
 							</a>
 							<a href="impostazione_profilo_utente_front_end.html" class="dropdown-item text-truncate font-weight-light">
-								Account Settings
+								Impostazioni Account
 							</a>
-							<a href="review_list.html" class="dropdown-item text-truncate font-weight-light">
-								Recensioni
-							</a>
+
 							<a href="#"
 							   data-href="accedi_modal.html"
 							   data-ajax-modal-size="modal-lg"
@@ -378,7 +282,7 @@
 								Login
 							</a>
 							<div class="dropdown-divider mb--0"></div>
-							<a href="#!" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
+							<a href="#" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
 								<i class="fi fi-power float-start"></i>
 								Log Out
 							</a>
@@ -1418,7 +1322,7 @@
 
 
 </div><!-- /#wrapper -->
-
+<script src="assets/js/core.min.js"></script>
 <script>
 		function espandi(e) {
 		let esp = e.target.id;
@@ -1547,9 +1451,6 @@
 	// 	}
 	// }
 
-
-</script>
-<script src="assets/js/core.min.js">
 
 </script>
 <script>

@@ -1,0 +1,366 @@
+<!-- HEADER -->
+<header id="header" class="shadow-xs bg-gradient-primary">
+    <!-- NAVBAR -->
+    <div class="container position-relative">
+
+        <form action="risultati_ricerca.html"
+              method="GET"
+              data-autosuggest="on"
+              data-container="#sow-search-container"
+              data-input-min-length="2"
+              data-input-delay="300"
+              data-related-keywords=""
+              data-related-url="_ajax/search_suggest_related.html"
+              data-suggest-url="_ajax/search_suggest_input.html"
+              data-related-action="related_get"
+              data-suggest-action="suggest_get"
+              class="js-ajax-search sow-search sow-search-over hide d-inline-flex">
+            <div class="sow-search-input w-100">
+
+                <div class="input-group-over d-flex align-items-center w-100 h-100 rounded shadow-md">
+
+                    <input placeholder="cosa vuoi cercare oggi?" name="search" type="text"
+                           class="form-control-sow-search form-control form-control form-control-lg shadow-xs"
+                           value="" autocomplete="off">
+
+                    <span class="sow-search-buttons">
+
+									<!-- search button -->
+									<button type="submit"
+                                            class="btn btn-primary btn-noshadow m--0 pl--8 pr--8 pt--3 pb--3 b--0 bg-transparent text-muted">
+										<i class="fi fi-search fs--20"></i>
+									</button>
+
+                        <!-- close : mobile only (d-inline-block d-lg-none) -->
+									<a href="javascript:;"
+                                       class="btn-sow-search-toggler btn btn-light btn-noshadow m--0 pl--8 pr--8 pt--3 pb--3 d-inline-block d-lg-none">
+										<i class="fi fi-close fs--20"></i>
+									</a>
+
+								</span>
+
+                </div>
+
+            </div>
+
+            <!-- search suggestion container -->
+            <div class="sow-search-container w-100 p--0 hide shadow-md" id="sow-search-container">
+                <div class="sow-search-container-wrapper">
+
+                    <!-- main search container -->
+                    <div class="sow-search-loader p--15 text-center hide">
+                        <i class="fi fi-circle-spin fi-spin text-muted fs--30"></i>
+                    </div>
+
+                    <!--
+                        AJAX CONTENT CONTAINER
+                        SHOULD ALWAYS BE AS IT IS : NO COMMENTS OR EVEN SPACES!
+                    -->
+                    <div class="sow-search-content rounded w-100 scrollable-vertical"></div>
+
+                </div>
+            </div>
+            <!-- /search suggestion container -->
+
+            <!--
+
+                overlay combinations:
+                    overlay-dark opacity-* [1-9]
+                    overlay-light opacity-* [1-9]
+
+            -->
+            <div class="sow-search-backdrop overlay-dark opacity-3 hide"></div>
+
+        </form>
+        <!-- /SEARCH -->
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-lg-between justify-content-md-inherit">
+
+            <div class="align-items-start">
+
+                <!-- mobile menu button : show -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMainNav"
+                        aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg width="25" viewBox="0 0 20 20">
+                        <path d="M 19.9876 1.998 L -0.0108 1.998 L -0.0108 -0.0019 L 19.9876 -0.0019 L 19.9876 1.998 Z"></path>
+                        <path d="M 19.9876 7.9979 L -0.0108 7.9979 L -0.0108 5.9979 L 19.9876 5.9979 L 19.9876 7.9979 Z"></path>
+                        <path d="M 19.9876 13.9977 L -0.0108 13.9977 L -0.0108 11.9978 L 19.9876 11.9978 L 19.9876 13.9977 Z"></path>
+                        <path d="M 19.9876 19.9976 L -0.0108 19.9976 L -0.0108 17.9976 L 19.9876 17.9976 L 19.9876 19.9976 Z"></path>
+                    </svg>
+                </button>
+
+                <!--
+                    Logo : height: 70px max
+                -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo/redcarpet.png" alt="...">
+                </a>
+
+            </div>
+
+
+            <!-- Menu -->
+
+            <div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
+
+
+                <!-- MOBILE MENU NAVBAR -->
+                <div class="navbar-xs d-none bg-primary">
+
+                    <!-- mobile menu button : close -->
+                    <button class="navbar-toggler pt-0" type="button" data-toggle="collapse"
+                            data-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <svg width="20" viewBox="0 0 20 20">
+                            <path d="M 20.7895 0.977 L 19.3752 -0.4364 L 10.081 8.8522 L 0.7869 -0.4364 L -0.6274 0.977 L 8.6668 10.2656 L -0.6274 19.5542 L 0.7869 20.9676 L 10.081 11.679 L 19.3752 20.9676 L 20.7895 19.5542 L 11.4953 10.2656 L 20.7895 0.977 Z"></path>
+                        </svg>
+                    </button>
+
+                    <!--
+                        Mobile Menu Logo
+                        Logo : height: 70px max
+                    -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo/redcarpet.png" alt="...">
+                    </a>
+
+                </div>
+                <!-- /MOBILE MENU NAVBAR -->
+
+
+                <!-- NAVIGATION -->
+                <ul class="navbar-nav">
+
+                    <!-- mobile only image + simple search (d-block d-sm-none) -->
+                    <li class="nav-item d-block d-sm-none">
+
+                        <!-- search -->
+                        <form method="get" action="#"
+                              class="input-group-over mb-5 bg-light p-2 form-control-pill">
+                            <input type="text" name="keyword" value="" placeholder="Ricerca veloce"
+                                   class="form-control border-dashed">
+                            <button class="btn btn-primary btn-ghost fi fi-search p-0 ml-2 mr-2 w--50 h--50"></button>
+                        </form>
+
+                    </li>
+
+
+                    <!-- home -->
+                    <li class="nav-item ">
+
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+
+                    </li>
+
+
+                    <!-- dropdown -->
+                    <li class="nav-item dropdown active">
+
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false" id="mainNavPages">
+                            Pages
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover">
+                            <li class="dropdown-item">
+                                <a href="lista_film.html" class="dropdown-link">Film Recenti</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="the_avengers.html" class="dropdown-link">The Avengers</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="dash_e_lily.html" class="dropdown-link">Dash &amp; Lily</a>
+                            </li>
+                            <li class="dropdown-item active">
+                                <a href="about_person.html" class="dropdown-link">Rober Downey Jr.</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="award_edition.html" class="dropdown-link">Oscar 2020</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="backend/index.html" class="dropdown-link">Back-End</a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+                <!-- /NAVIGATION -->
+            </div>
+
+
+            <!-- OPTIONS -->
+            <ul class="list-inline list-unstyled mb--0 d-flex align-items-end">
+
+                <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+                    <a href="#" id="dropdownAccountOptions"
+                       class="btn btn-sm rounded-circle btn-primary btn-soft-static" data-toggle="dropdown"
+                       aria-expanded="false" aria-haspopup="true">
+									<span class="group-icon">
+										<i class="fi fi-user-male"></i>
+										<i class="fi fi-close"></i>
+									</span>
+                    </a>
+
+                    <div aria-labelledby="dropdownAccountOptions"
+                         class="prefix-link-icon prefix-icon-dot dropdown-menu dropdown-menu-clean dropdown-menu-invert dropdown-click-ignore p--0 mt--18 fs--15">
+                        <div class="dropdown-header">
+                            John Doe
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="review_list.html" class="dropdown-item text-truncate font-weight-light">
+                            Le Tue Recensioni
+                        </a>
+                        <a href="impostazione_profilo_utente_front_end.html" class="dropdown-item text-truncate font-weight-light">
+                            Impostazioni Account
+                        </a>
+
+                        <a href="#"
+                           data-href="accedi_modal.html"
+                           data-ajax-modal-size="modal-lg"
+                           data-ajax-modal-centered="false"
+                           data-ajax-modal-callback-function=""
+                           data-ajax-modal-backdrop=""
+                           class="js-ajax-modal dropdown-item text-truncate font-weight-light">
+                            Login
+                        </a>
+                        <div class="dropdown-divider mb--0"></div>
+                        <a href="#" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
+                            <i class="fi fi-power float-start"></i>
+                            Log Out
+                        </a>
+                    </div>
+
+
+
+                </li>
+
+                <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+                    <a href="#"
+                       class="btn-sow-search-toggler btn btn-sm rounded-circle btn-primary btn-soft-static">
+                        <i class="fi fi-search"></i>
+                    </a>
+
+                </li>
+
+                <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+                    <!-- TRIGGER -->
+                </li>
+
+            </ul>
+            <!-- /OPTIONS -->
+
+
+        </nav>
+
+    </div>
+    <!-- /NAVBAR -->
+</header>
+<!-- /HEADER-->
+
+
+<!-- Footer -->
+<footer id="footer" class="footer-dark text-white">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="bg-distinct col-12 col-md-6 col-lg-4 text-center p-0 py-5">
+
+                <div class="footer-svg-shape position-absolute absolute-top z-index-2 mt--n70 w-100 overflow-hidden pt--5">
+                    <svg viewBox="0 0 1440 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         preserveAspectRatio="none">
+                        <path d="M0 28H1440C1440 28 1154 3.21961e-10 720 1.30487e-09C286 2.28777e-09 0 28 0 28Z"></path>
+                    </svg>
+                </div>
+
+                <form method="post" action="#subscribe_url" class="px-4">
+
+                    <input type="hidden" name="action" value="subscribe" tabindex="-1">
+
+                    <p id="btnAriaFooterFormTitle" class="text-white">
+                        Rimani informato, iscriviti alla nostra newletter!
+                    </p>
+
+
+                    <div class="input-group-over input-group-pill mb-4">
+
+                        <input required class="form-control b-0" name="subscriber_email" type="email" value=""
+                               placeholder="Indirizzo email" aria-label="indirizzo email">
+
+                        <button type="submit" class="btn bg-transparent shadow-none" aria-label="subscribe"
+                                aria-labelledby="btnAriaFooterFormTitle">
+                            <i class="fi fi-send fs--18"></i>
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+                <div class="mt--12">
+
+                    <a href="#" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
+                       rel="noopener" aria-label="facebook page">
+                        <i class="fi fi-social-facebook"></i>
+                    </a>
+
+                    <a href="#" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
+                       rel="noopener" aria-label="twitter page">
+                        <i class="fi fi-social-twitter"></i>
+                    </a>
+
+                    <a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
+                       rel="noopener" aria-label="youtube page">
+                        <i class="fi fi-social-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="pl--30 col-12 col-md-6 col-lg-8 py-5 text-center-xs">
+
+
+                <ul class="mb-0 breadcrumb bg-transparent p-0 block-xs font-weight-bold fs--18">
+                    <li class="breadcrumb-item"><a href="#">Contact</a></li>
+                    <li class="breadcrumb-item"><a href="#">About Us</a></li>
+                    <li class="breadcrumb-item"><a href="#">Terms &amp; Conditions</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="#">GDPR &amp; Cookies</a></li>
+                </ul>
+
+                <div class="text-muted mt--30">
+                    <p>
+                        Sul sito Red Carpet trovi tutto sul mondo del cinema e delle serieTv:
+                        i trailer dei film in uscita, le recensioni delle migliori testate gionalistiche , recensioni di altri utenti appassionati e tutte le informazioni su attori e cast e tanto altro ancora!!!
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bg-distinct py-3 clearfix">
+
+        <div class="container clearfix font-weight-light text-center-xs">
+
+            <div class="fs--14 py-2 float-start float-none-xs m-0-xs">
+                &copy; Red Carpet.
+            </div>
+
+
+        </div>
+    </div>
+
+</footer>
+<!-- /Footer -->
