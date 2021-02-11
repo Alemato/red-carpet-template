@@ -297,15 +297,101 @@
     </header>
     <!-- /HEADER-->
 
-    <!-- CAROSELLO 1 FILM MESE IN CORSO-->
-    <div class="container bg-c-6f3 mt--50"> <!-- style="color: #fff6f3" -->
+    <!-- COVER -->
+    <section class="p-3">
+        <div class="container min-h-33vh d-middle pt-4">
+            <div class="row text-center-xs">
+                <div class="col-12 col-md-7 order-2 order-md-1 pb-3" data-aos="fade-in" data-aos-delay="0">
+                    <div class="mb-3 mt-5">
+                        <h1 class="font-weight-light mb-3">
+                            Benvenuti in <span class="text-primary font-weight-medium">Red Carpet</span><br>
+                            <span class="font-weight-medium">Il cinema parte dal pubblico!</span>
+                        </h1>
+                        <p class="lead">
+                            Database di tutti i film dal 1895 ad oggi, recensioni, critica, nuove uscite, cast completo, produzione, durata.
+                            Tutto quello che c'è da sapere su <b>film</b> e <b>serie tv</b>!
+                        </p>
+                        <div class="mt-4">
+                            <a href="risultati_ricerca.html" class="btn btn-primary transition-hover-top mb-3 d-block-xs">
+                                In uscita
+                            </a>
+                            <a href="review_list.html" class="btn btn-primary transition-hover-top btn-soft mb-3 d-block-xs">        <!-- TODO link alle recensioni degli ultimi film -->
+                                Ultime recensioni
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 order-1 order-md-2 pb-3 d-flex justify-content-end" data-aos="fade-in" data-aos-delay="200">
+
+                    <!-- svg image -->
+                    <img width="450" height="250" class="img-fluid lazy" data-src="assets/images/logo/red_carpet_logo_senza_sfondo.png" src="assets/images/logo/red_carpet_logo_senza_sfondo.png" alt="...">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /COVER -->
+
+    <!-- COUNTER -->
+    <section class="pt--50 pb--50">
+        <div class="bg-white">
+            <div class="container shadow-xs">
+            <div class="row col-border text-center text-muted">
+                <div class="col-6 col-md-3 mt-3 mb-3 font-raleway">
+                    <div class="h1">
+								<span data-toggle="count"
+                                      data-count-from="0"
+                                      data-count-to="8000"
+                                      data-count-duration="3000"
+                                      data-count-decimals="0">0</span><span class="font-weight-light">+</span>
+                    </div>
+                    <h3 class="h6 m-0">FILM E SERIE TV</h3>
+                </div>
+                <div class="col-6 col-md-3 mt-3 mb-3 font-raleway">
+                    <div class="h1">
+								<span data-toggle="count"
+                                      data-count-from="0"
+                                      data-count-to="7000"
+                                      data-count-duration="2800"
+                                      data-count-decimals="0">0</span><span class="font-weight-light">+</span>
+                    </div>
+                    <h3 class="h6 m-0">RECENSIONI</h3>
+                </div>
+                <div class="col-6 col-md-3 mt-3 mb-3 b--0-xs font-raleway">
+                    <div class="h1">
+								<span data-toggle="count"
+                                      data-count-from="0"
+                                      data-count-to="3000"
+                                      data-count-duration="2300"
+                                      data-count-decimals="0">0</span><span class="font-weight-light">+</span>
+                    </div>
+                    <h3 class="h6 m-0">UTENTI REGISTRATI</h3>
+                </div>
+                <div class="col-6 col-md-3 mt-3 mb-3 font-raleway">
+                    <div class="h1">                                                                                          <!-- TODO da trovare un tema per il quarto contatore -->
+                        <span data-toggle="count"
+                              data-count-from="0"
+                              data-count-to="5"
+                              data-count-duration="1500"
+                              data-count-decimals="0">0</span><span class="font-weight-light">/5</span>
+                    </div>
+                    <h3 class="h6 m-0">RATED</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- /COUNTER -->
+
+    <!-- CAROSELLO 1 FILM IN SALA-->
+    <section class="p-3" data-aos="zoom-in-up" data-aos-once="false">
+        <div class="container bg-c-6f3 mt--50"> <!-- style="color: #fff6f3" -->
         <div class="mt--25">
             <div class="row">
                 <div class="column col-2">
                     <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo"> <!--  style="color:#f3eed9;background-color:#BB3132" -->
                 </div>
                 <div class="column col-8">
-                    <h1 class="fs&#45;&#45;30 text-center text-primary"> FILM IN USCITA A DICEMBRE</h1>
+                    <h1 class="fs&#45;&#45;30 text-center text-primary"> FILM IN SALA</h1>
                 </div>
                 <div class="column col-2">
                     <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
@@ -578,9 +664,35 @@
         </div>
 
     </div>
+    </section>
+
+    <!-- FILM MESE IN CORSO -->
+    <section class="" data-aos="zoom-in" data-aos-once="false">
+        <div class="shadow-xs pt-2 pb-2 bg-white">
+            <div class="container">
+            <div class="row max-h-250">
+                <div class="col-12 col-md-4 d-flex justify-content-center">
+                    <!-- svg image -->
+                    <img width="180" height="180" class="lazy rounded-circle" data-src="assets/images/img_home/nastro_pellicola.jpg" src="assets/images/img_home/nastro_pellicola.jpg" alt="...">
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center pl--0">
+                        <h2 class="font-weight-light font-raleway">
+                            Cosa guardare
+                        </h2>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-end pl--0">
+                        <a href="#!" class="btn transition-hover-top d-block-xs bg-primary text-white fs--20 pl--40 pr--40">
+                            Film mese in corso
+                        </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
 
     <!-- CAROSELLO 2 SERIE TV IN CORSO-->
-    <div class="container bg-c-6f3">
+    <section class="p-3" data-aos="zoom-in-up" data-aos-once="false">
+        <div class="container bg-c-6f3">
         <div class="mt--25">
             <div class="row">
                 <div class="column col-2">
@@ -859,9 +971,39 @@
         </div>
 
     </div>
+    </section>
+
+    <!-- PARALLAX -->
+    <div class="pt--100 pb--100">
+        <section class="position-relative jarallax overlay-dark overlay-opacity-7 text-white p-0 bg-cover shadow-xs"
+             style="background-image:url('assets/images/img_home/stretta_di_mano_2.jpg')">
+        <div class="container pt--250 pb--250 text-center position-relative z-index-2">
+            <h1 class="mb-5 font-raleway">
+                Iscriviti e Recensisci
+            </h1>
+            <h2 class="lead mb-5 font-raleway">
+                i tuoi Film e Serie TV preferite
+            </h2>
+            <a href="#"
+               data-href="accedi_modal.html"
+               data-ajax-modal-size="modal-lg"
+               data-ajax-modal-centered="false"
+               data-ajax-modal-callback-function=""
+               data-ajax-modal-backdrop=""
+               class="js-ajax-modal text-truncate font-weight-light btn transition-hover-top mb-3 d-block-xs bg-primary text-white fs--20">
+                Accedi
+            </a>
+        </div>
+        <!-- lines, looks like through a glass -->
+        <div class="absolute-full w-100 overflow-hidden opacity-5">
+            <img class="img-fluid" width="2000" height="2000" src="assets/images/masks/shape-line-lense.svg" alt="...">
+        </div>
+    </section>
+    </div>
 
     <!-- CAROSELLO 3 FILM PIU' VOTATI-->
-    <div class="container bg-c-6f3"> <!-- style="color: #fff6f3" -->
+    <section class="p-3" data-aos="zoom-in-up" data-aos-once="false">
+        <div class="container bg-c-6f3"> <!-- style="color: #fff6f3" -->
         <div class="mt--25">
             <div class="row">
                 <div class="column col-2">
@@ -1135,9 +1277,49 @@
         </div>
 
     </div>
+    </section>
+
+    <!-- SPAM PAGINE SOCIAL -->
+    <section class="" data-aos="zoom-in" data-aos-once="false">
+        <div class="shadow-xs bg-white">
+            <div class="container">
+            <div class="row max-h-250">
+                <div class="col-12 col-md-3 d-flex justify-content-center pl--25">
+                    <!-- svg image -->
+                    <img width="190" height="190" class="lazy" data-src="assets/images/img_home/freccia_vettoriale.jpg" src="assets/images/img_home/freccia_vettoriale.jpg" alt="...">
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center pl--0">
+                    <h3 class="font-weight-light mr-auto font-raleway">
+                        Aiutaci a crescere mettendo il <span class="text-primary font-weight-bold">Mi Piace</span> alle nostre pagine Social
+                    </h3>
+                </div>
+                <div class="col-12 col-md-3 d-flex align-items-center justify-content-center pl--10">
+<!--                    <div class="row pl&#45;&#45;10">-->
+                        <a href="#!" class="btn btn-facebook transition-hover-top mb-2 mr--10 rounded-circle"
+                           rel="noopener" aria-label="facebook page">
+                            <i class="fi fi-social-facebook"></i>
+                        </a>
+
+                        <a href="#!" class="btn btn-twitter transition-hover-top mb-2 mr--10 rounded-circle"
+                           rel="noopener" aria-label="twitter page">
+                            <i class="fi fi-social-twitter"></i>
+                        </a>
+
+                        <a href="#!" class="btn btn-youtube transition-hover-top mb-2 rounded-circle"
+                           rel="noopener" aria-label="youtube page">
+                            <i class="fi fi-social-youtube"></i>
+                        </a>
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- /SPAM PAGINE SOCIAL -->
 
     <!-- CAROSELLO 4 SERIE TV PIU' VOTATE-->
-    <div class="container bg-c-6f3 mb--100">
+    <section class="p-3" data-aos="zoom-in-up" data-aos-once="false">
+        <div class="container bg-c-6f3 mb--100">
         <div class="mt--25">
             <div class="row">
                 <div class="column col-2">
@@ -1413,6 +1595,7 @@
         </div>
 
     </div>
+    </section>
 
     </div>
 
