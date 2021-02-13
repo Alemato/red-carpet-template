@@ -265,3 +265,13 @@ p.a-none-decoration-blold a:hover {
 .h--45{
   height: 45px;
 }
+
+.invalidato{
+  border-color: #f64e60;
+}
+
+
+.invalidato:focus{
+  border-color: #f64e60;
+  box-shadow: 0 0 0 0.2rem rgba(246, 78,96, .25);
+}

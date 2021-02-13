@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Red Carpet</title>
+    <meta name="description" content="...">
+
+    <meta name="viewport" content="width=device-width, maximum-scale=5, initial-scale=1, user-scalable=0">
+    <!--[if IE]>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <!-- up to 10% speed up for external res -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <!-- preloading icon font is helping to speed up a little bit -->
+    <link rel="preload" href="assets/fonts/flaticon/Flaticon.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="assets/css/core.min.css">
+    <link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700%7CRoboto:100,300,400,500,700&amp;display=swap">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="demo.files/logo/icon_512x512.png">
+
+    <link rel="manifest" href="assets/images/manifest/manifest.json">
+    <meta name="theme-color" content="#bb3132">
+
+</head>
+<body>
+
+<div id="wrapper">
+
+
+    <!-- go back button -->
+    <a href="index.html" class="btn btn-primary rounded-circle position-absolute top-0 start-0 mx-4 my-4 z-index-2" aria-label="go back" title="go back" data-toggle="tooltip">
+        <i class="fi fi-arrow-start"></i>
+    </a>
+
+
+    <div class="d-lg-flex min-h-100vh">
+
+        <div class="col-12 col-lg-5 d-lg-flex bg-gradient-primary text-white d-none d-lg-block">
+            <div class="w-100 align-self-center text-center">
+
+
+                <div class="d-inline-block max-w-600">
+
+                    <!-- icon -->
+                    <div class="mb-5" data-aos="fade-in" data-aos-delay="50" data-aos-offset="0">
+								<span class="badge badge-primary fs--45 w--100 h--100 badge-pill rounded-circle">
+									<i class="fi fi-users mt-1"></i>
+								</span>
+                    </div>
+
+
+                    <!-- light logo : desktop only -->
+                    <a href="index.html" class="text-decoration-none" data-aos="fade-in" data-aos-delay="150" data-aos-offset="0">
+                        <img class="" src="assets/images/logo/redcarpet.png" height="85" width="242" alt="...">
+                    </a>
+
+
+                    <!-- quote / slogan -->
+                    <blockquote class="blockquote text-center mt-5" data-aos="fade-in" data-aos-delay="250" data-aos-offset="0">
+                        <h2 class="h4 m-auto font-weight-light font-italic text-white">
+                            Istriviti a Red Carpet!<br>
+                           La comiunity di cinefili più grande d&apos;Italia!
+                        </h2>
+
+                    </blockquote>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-12 col-lg-7 d-lg-flex">
+            <div class="w-100 align-self-center text-center py-7">
+
+
+                <div class="max-w-600 w-100 d-inline-block text-align-start p-4">
+
+                    <!-- title -->
+                    <h1 class="text-primary text-center mb-5 font-weight-normal">
+                        Iscrizione <span class="font-weight-medium">Utente </span>
+                    </h1>
+
+
+                    <!-- optional class: .form-control-pill -->
+                    <form novalidate action="#" method="POST" class="bs-validate p-5 rounded shadow-xs"
+                          data-error-toast-text="<i class='fi fi-circle-spin fi-spin float-start'></i> Perfavore completa i campi!"
+                          data-error-toast-delay="3000"
+                          data-error-toast-position="top-right"
+                          data-error-scroll-up="true">
+
+
+                        <div class="form-label-group mb-3">
+                            <input required placeholder="Nome" id="account_first_name" name="nome" type="text" class="form-control">
+                            <label for="account_first_name">Nome</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required placeholder="Cognome" id="account_last_name" name="cognome" type="text" class="form-control">
+                            <label for="account_last_name">Cognome</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required id="account_birthday" name="birthday" type="date" class="form-control" max="2003-12-31" value="2003-12-31">
+                            <label for="account_birthday">Data di Nascita</label>
+                        </div>
+
+                        <div class="form-label-group mb-3">
+                            <input required placeholder="Email" id="account_email" name="email" type="email" class="form-control">
+                            <label for="account_email">Email</label>
+                        </div>
+
+                        <div class="input-group-over">
+                            <div class="form-label-group mb-3">
+                                <input required placeholder="Password" id="account_password" type="password" class="form-control">
+                                <label for="account_password">Password</label>
+                            </div>
+
+                            <!-- `SOW : Form Advanced` plugin used -->
+                            <a href="#" class="btn fs--12 btn-password-type-toggle" data-target="#account_password">
+										<span class="group-icon">
+											<i class="fi fi-eye m-0"></i>
+											<i class="fi fi-close m-0"></i>
+										</span>
+                            </a>
+
+                        </div>
+
+                        <div class="input-group-over">
+                            <div class="form-label-group mb-4">
+                                <input required placeholder="Password" id="account_password_same" type="password" class="form-control">
+                                <label for="account_password_same">Resinserisci La Password</label>
+                            </div>
+
+                            <!-- `SOW : Form Advanced` plugin used -->
+                            <a href="#" class="btn fs--12 btn-password-type-toggle" data-target="#account_password_same">
+										<span class="group-icon">
+											<i class="fi fi-eye m-0"></i>
+											<i class="fi fi-close m-0"></i>
+										</span>
+                            </a>
+
+                        </div>
+
+
+
+                        <div class="row">
+
+                            <div class="col-12 col-md-12">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    ISCRIVITI !
+                                </button>
+                            </div>
+
+                            <div class="col-12 col-md-12 mb-4 text-align-end text-center-xs">
+                                <!-- empty -->
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+</div><!-- /#wrapper -->
+
+<script src="assets/js/core.min.js"></script>
+
+
+</body>
+</html>
