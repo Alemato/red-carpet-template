@@ -1,0 +1,2027 @@
+<!doctype html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Red Carpet</title>
+  <meta name="description" content="...">
+
+  <meta name="viewport" content="width=device-width, maximum-scale=5, initial-scale=1, user-scalable=0">
+  <!--[if IE]>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+  <!-- up to 10% speed up for external res -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <!-- preloading icon font is helping to speed up a little bit -->
+  <link rel="preload" href="assets/fonts/flaticon/Flaticon.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/core.min.css">
+  <link rel="stylesheet" href="assets/css/vendor_bundle.min.css">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700%7CRoboto:100,300,400,500,700&amp;display=swap">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="demo.files/logo/icon_512x512.png">
+
+  <link rel="manifest" href="assets/images/manifest/manifest.json">
+  <meta name="theme-color" content="#bb3132">
+
+</head>
+<body class="header-sticky">
+<div id="wrapper">
+  <!-- HEADER -->
+  <header id="header" class="shadow-xs bg-gradient-primary">
+    <!-- NAVBAR -->
+    <div class="container position-relative">
+
+      <form action="risultati_ricerca.html"
+            method="GET"
+            data-autosuggest="on"
+            data-container="#sow-search-container"
+            data-input-min-length="2"
+            data-input-delay="300"
+            data-related-keywords=""
+            data-related-url="_ajax/search_suggest_related.html"
+            data-suggest-url="_ajax/search_suggest_input.html"
+            data-related-action="related_get"
+            data-suggest-action="suggest_get"
+            class="js-ajax-search sow-search sow-search-over hide d-inline-flex">
+        <div class="sow-search-input w-100">
+
+          <div class="input-group-over d-flex align-items-center w-100 h-100 rounded shadow-md">
+
+            <input placeholder="cosa vuoi cercare oggi?" name="search" type="text"
+                   class="form-control-sow-search form-control form-control form-control-lg shadow-xs"
+                   value="" autocomplete="off">
+
+            <span class="sow-search-buttons">
+
+									<!-- search button -->
+									<button type="submit"
+                                            class="btn btn-primary btn-noshadow m--0 pl--8 pr--8 pt--3 pb--3 b--0 bg-transparent text-muted">
+										<i class="fi fi-search fs--20"></i>
+									</button>
+
+              <!-- close : mobile only (d-inline-block d-lg-none) -->
+									<a href="javascript:;"
+                                       class="btn-sow-search-toggler btn btn-light btn-noshadow m--0 pl--8 pr--8 pt--3 pb--3 d-inline-block d-lg-none">
+										<i class="fi fi-close fs--20"></i>
+									</a>
+
+								</span>
+
+          </div>
+
+        </div>
+
+        <!-- search suggestion container -->
+        <div class="sow-search-container w-100 p--0 hide shadow-md" id="sow-search-container">
+          <div class="sow-search-container-wrapper">
+
+            <!-- main search container -->
+            <div class="sow-search-loader p--15 text-center hide">
+              <i class="fi fi-circle-spin fi-spin text-muted fs--30"></i>
+            </div>
+
+            <!--
+                AJAX CONTENT CONTAINER
+                SHOULD ALWAYS BE AS IT IS : NO COMMENTS OR EVEN SPACES!
+            -->
+            <div class="sow-search-content rounded w-100 scrollable-vertical"></div>
+
+          </div>
+        </div>
+        <!-- /search suggestion container -->
+
+        <!--
+
+            overlay combinations:
+                overlay-dark opacity-* [1-9]
+                overlay-light opacity-* [1-9]
+
+        -->
+        <div class="sow-search-backdrop overlay-dark opacity-3 hide"></div>
+
+      </form>
+      <!-- /SEARCH -->
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark justify-content-lg-between justify-content-md-inherit">
+
+        <div class="align-items-start">
+
+          <!-- mobile menu button : show -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMainNav"
+                  aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg width="25" viewBox="0 0 20 20">
+              <path d="M 19.9876 1.998 L -0.0108 1.998 L -0.0108 -0.0019 L 19.9876 -0.0019 L 19.9876 1.998 Z"></path>
+              <path d="M 19.9876 7.9979 L -0.0108 7.9979 L -0.0108 5.9979 L 19.9876 5.9979 L 19.9876 7.9979 Z"></path>
+              <path d="M 19.9876 13.9977 L -0.0108 13.9977 L -0.0108 11.9978 L 19.9876 11.9978 L 19.9876 13.9977 Z"></path>
+              <path d="M 19.9876 19.9976 L -0.0108 19.9976 L -0.0108 17.9976 L 19.9876 17.9976 L 19.9876 19.9976 Z"></path>
+            </svg>
+          </button>
+
+          <!--
+              Logo : height: 70px max
+          -->
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/redcarpet.png" alt="...">
+          </a>
+
+        </div>
+
+
+        <!-- Menu -->
+
+        <div class="collapse navbar-collapse navbar-animate-fadein" id="navbarMainNav">
+
+
+          <!-- MOBILE MENU NAVBAR -->
+          <div class="navbar-xs d-none bg-primary">
+
+            <!-- mobile menu button : close -->
+            <button class="navbar-toggler pt-0" type="button" data-toggle="collapse"
+                    data-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+              <svg width="20" viewBox="0 0 20 20">
+                <path d="M 20.7895 0.977 L 19.3752 -0.4364 L 10.081 8.8522 L 0.7869 -0.4364 L -0.6274 0.977 L 8.6668 10.2656 L -0.6274 19.5542 L 0.7869 20.9676 L 10.081 11.679 L 19.3752 20.9676 L 20.7895 19.5542 L 11.4953 10.2656 L 20.7895 0.977 Z"></path>
+              </svg>
+            </button>
+
+            <!--
+                Mobile Menu Logo
+                Logo : height: 70px max
+            -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/images/logo/redcarpet.png" alt="...">
+            </a>
+
+          </div>
+          <!-- /MOBILE MENU NAVBAR -->
+
+
+          <!-- NAVIGATION -->
+          <ul class="navbar-nav">
+
+            <!-- mobile only image + simple search (d-block d-sm-none) -->
+            <li class="nav-item d-block d-sm-none">
+
+              <!-- search -->
+              <form method="get" action="#"
+                    class="input-group-over mb-5 bg-light p-2 form-control-pill">
+                <input type="text" name="keyword" value="" placeholder="Ricerca veloce"
+                       class="form-control border-dashed">
+                <button class="btn btn-primary btn-ghost fi fi-search p-0 ml-2 mr-2 w--50 h--50"></button>
+              </form>
+
+            </li>
+
+
+            <!-- home -->
+            <li class="nav-item active">
+
+              <a class="nav-link" href="index.html">
+                Home
+              </a>
+
+            </li>
+
+
+            <!-- dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link c-link " href="#" data-toggle="collapse" data-target="#collapseExample2"
+                 aria-expanded="false" aria-controls="collapseExample2">
+
+                <span>Pages</span>
+                <span class="group-icon">
+			<i class="fi fi-arrow-down-slim"></i>
+		</span>
+              </a>
+            </li>
+            <!-- dropdown -->
+            <li class="nav-item dropdown c-d">
+
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false" id="mainNavPages">
+                Pages
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-clean dropdown-menu-hover">
+                <li class="dropdown-item">
+                  <a href="lista_film.html" class="dropdown-link">Film Recenti</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="the_avengers.html" class="dropdown-link">The Avengers</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="dash_e_lily.html" class="dropdown-link">Dash &amp; Lily</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="about_person.html" class="dropdown-link">Rober Downey Jr.</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="award_edition.html" class="dropdown-link">Oscar 2020</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="backend/index.html" class="dropdown-link">Back-End</a>
+                </li>
+              </ul>
+
+            </li>
+
+            <!-- dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link c-link" href="#"  data-target="#collapseExample1">
+
+                <span>Pages</span>
+                <span class="group-icon">
+			<i class="fi fi-arrow-down-slim"></i>
+		</span>
+              </a>
+            </li>
+
+          </ul>
+          <!-- /NAVIGATION -->
+        </div>
+
+
+        <!-- OPTIONS -->
+        <ul class="list-inline list-unstyled mb--0 d-flex align-items-end">
+
+          <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+            <a href="#" id="dropdownAccountOptions"
+               class="btn btn-sm rounded-circle btn-primary btn-soft-static" data-toggle="dropdown"
+               aria-expanded="false" aria-haspopup="true">
+									<span class="group-icon">
+										<i class="fi fi-user-male"></i>
+										<i class="fi fi-close"></i>
+									</span>
+            </a>
+
+            <div aria-labelledby="dropdownAccountOptions"
+                 class="prefix-link-icon prefix-icon-dot dropdown-menu dropdown-menu-clean dropdown-menu-invert dropdown-click-ignore p--0 mt--18 fs--15">
+              <div class="dropdown-header">
+                John Doe
+              </div>
+              <div class="dropdown-divider"></div>
+              <a href="review_list.html" class="dropdown-item text-truncate font-weight-light">
+                Le Tue Recensioni
+              </a>
+              <a href="impostazione_profilo_utente_front_end.html"
+                 class="dropdown-item text-truncate font-weight-light">
+                Impostazioni Account
+              </a>
+
+              <a href="#"
+                 data-href="accedi_modal.html"
+                 data-ajax-modal-size="modal-lg"
+                 data-ajax-modal-centered="false"
+                 data-ajax-modal-callback-function=""
+                 data-ajax-modal-backdrop=""
+                 class="js-ajax-modal dropdown-item text-truncate font-weight-light">
+                Login
+              </a>
+              <div class="dropdown-divider mb--0"></div>
+              <a href="#" class="prefix-icon-ignore dropdown-footer dropdown-custom-ignore">
+                <i class="fi fi-power float-start"></i>
+                Log Out
+              </a>
+            </div>
+
+
+          </li>
+
+          <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+            <a href="#"
+               class="btn-sow-search-toggler btn btn-sm rounded-circle btn-primary btn-soft-static">
+              <i class="fi fi-search"></i>
+            </a>
+
+          </li>
+
+          <li class="list-inline-item ml--6 mr--6 dropdown float-start">
+
+            <!-- TRIGGER -->
+          </li>
+
+        </ul>
+        <!-- /OPTIONS -->
+
+
+      </nav>
+
+    </div>
+    <!-- /NAVBAR -->
+
+  </header>
+  <div class="collapse c-c w-100 position-fixed z-index-10" id="collapseExample1">
+    <div class="bg-white">
+      <ul class="list-inline mb-0 overflow-x-auto p-3">
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti 1</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="collapse c-c w-100 position-fixed z-index-10" id="collapseExample2">
+    <div class="bg-white">
+      <ul class="list-inline mb-0 overflow-x-auto p-3">
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film 2</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+        <li class="inline-menu">
+          <a href="lista_film.html" class="">Film Recenti</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="the_avengers.html" class="">The Avengers</a>
+        </li>
+        <li class=" inline-menu">
+          <a href="dash_e_lily.html" class="">Dash &amp; Lily</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- /HEADER-->
+
+  <!-- COVER -->
+  <section class="p-3">
+    <div class="container min-h-33vh d-middle pt-4">
+      <div class="row text-center-xs">
+        <div class="col-12 col-md-7 order-2 order-md-1 pb-3" data-aos="fade-in" data-aos-delay="0">
+          <div class="mb-3 mt-5">
+            <h1 class="font-weight-light mb-3">
+              Benvenuti in <span class="text-primary font-weight-medium">Red Carpet</span><br>
+              <span class="font-weight-medium">Il cinema parte dal pubblico!</span>
+            </h1>
+            <p class="lead">
+              Database di tutti i film dal 1895 ad oggi, recensioni, critica, nuove uscite, cast completo,
+              produzione, durata.
+              Tutto quello che c'è da sapere su <b>film</b> e <b>serie tv</b>!
+            </p>
+            <div class="mt-4">
+              <a href="risultati_ricerca.html"
+                 class="btn btn-primary transition-hover-top mb-3 d-block-xs">
+                In uscita
+              </a>
+              <a href="review_list.html"
+                 class="btn btn-primary transition-hover-top btn-soft mb-3 d-block-xs">
+                <!-- TODO link alle recensioni degli ultimi film -->
+                Ultime recensioni
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 order-1 order-md-2 pb-3 d-flex justify-content-end" data-aos="fade-in"
+             data-aos-delay="200">
+
+          <!-- svg image -->
+          <img width="450" height="250" class="img-fluid lazy"
+               data-src="assets/images/logo/red_carpet_logo_senza_sfondo.png"
+               src="assets/images/logo/red_carpet_logo_senza_sfondo.png" alt="...">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /COVER -->
+
+  <!-- COUNTER -->
+  <section class="pt--50 pb--50">
+    <div class="bg-white">
+      <div class="container shadow-xs">
+        <div class="row col-border text-center text-muted">
+          <div class="col-6 col-md-3 mt-3 mb-3 font-raleway">
+            <div class="h1">
+								<span data-toggle="count"
+                                      data-count-from="0"
+                                      data-count-to="8000"
+                                      data-count-duration="3000"
+                                      data-count-decimals="0">0</span><span class="font-weight-light">+</span>
+            </div>
+            <h3 class="h6 m-0">FILM E SERIE TV</h3>
+          </div>
+          <div class="col-6 col-md-3 mt-3 mb-3 font-raleway">
+            <div class="h1">
+								<span data-toggle="count"
+                                      data-count-from="0"
+                                      data-count-to="7000"
+                                      data-count-duration="2800"
+                                      data-count-decimals="0">0</span><span class="font-weight-light">+</span>
+            </div>
+            <h3 class="h6 m-0">RECENSIONI</h3>
+          </div>
+          <div class="col-6 col-md-3 mt-3 mb-3 b--0-xs font-raleway">
+            <div class="h1">
+								<span data-toggle="count"
+                                      data-count-from="0"
+                                      data-count-to="3000"
+                                      data-count-duration="2300"
+                                      data-count-decimals="0">0</span><span class="font-weight-light">+</span>
+            </div>
+            <h3 class="h6 m-0">UTENTI REGISTRATI</h3>
+          </div>
+          <div class="col-6 col-md-3 mt-3 mb-3 font-raleway">
+            <div class="h1">
+              <!-- TODO da trovare un tema per il quarto contatore -->
+              <span data-toggle="count"
+                    data-count-from="0"
+                    data-count-to="5"
+                    data-count-duration="1500"
+                    data-count-decimals="0">0</span><span class="font-weight-light">/5</span>
+            </div>
+            <h3 class="h6 m-0">RATED</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /COUNTER -->
+
+  <!-- CAROSELLO 1 FILM IN SALA-->
+  <section class="p-3" data-aos="zoom-in-up" data-aos-once="false">
+    <div class="container bg-c-6f3 mt--50"> <!-- style="color: #fff6f3" -->
+      <div class="mt--25">
+        <div class="row">
+          <div class="column col-2">
+            <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
+            <!--  style="color:#f3eed9;background-color:#BB3132" -->
+          </div>
+          <div class="column col-8">
+            <h1 class="fs&#45;&#45;30 text-center text-primary"> FILM IN SALA</h1>
+          </div>
+          <div class="column col-2">
+            <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
+          </div>
+        </div>
+        <div class="swiper-container p--30" data-swiper='{
+		"slidesPerView": 4,
+		"spaceBetween": 0,
+		"slidesPerGroup": 4,
+		"loop": false,
+		"autoplay": false
+	}'>
+
+          <div class="swiper-wrapper hide">
+            <!-- SLIDE 1 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891" src="assets/images/film_incorso/loc_1.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.50</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                           href="#">
+                          The avengers
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Un gruppo di super-eroi si riunisce per sconfingere un'invasione
+                          aliena
+                          causata da Loki sotto la supervisione di Thanos
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      01/12/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891" src="assets/images/film_incorso/loc_2.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.05</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Dragonball Super Broly
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Goku e Vegeta dopo esser riusciti a salvare l'universo nel torneo
+                          tra gli universi,
+                          si trovano ad affrontare un nuovo nemico, il super sayan leggendario
+                          Broly
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      02/12/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891" src="assets/images/film_incorso/loc_3.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-3 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">3.10</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                           href="#">
+                          Demon Slayer: Mugin Train
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Tanjiro ed il suo gruppo dopo aver affrontato una Luna Calante si
+                          trovano ad affrontare un nuovo
+                          nemico ancora più forte in compagnia al Pilastro del fuoco
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      03/12/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891" src="assets/images/film_incorso/loc_4.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">5.00</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                           href="#">
+                          Matrix
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Matrix è ovunque. È intorno a noi. Anche adesso, nella stanza in cui
+                          siamo.
+                          È quello che vedi quando ti affacci alla finestra, o quando accendi
+                          il televisore.
+                          L'avverti quando vai al lavoro, quando vai in chiesa, quando paghi
+                          le tasse.
+                          È il mondo che ti è stato messo davanti agli occhi per nasconderti
+                          la verità.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      04/12/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 5 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891" src="assets/images/film_incorso/loc_5.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-2_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">2.57</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Wonder Woman
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Tratta la storia della più grande eroina della DC che abbia mai
+                          avuto e di come si è
+                          incontrata con gli altri membre della Justice League
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      05/12/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 6 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891" src="assets/images/film_incorso/loc_6.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-1_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">1.58</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                           href="#">
+                          John Wick: Parabellum
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Dieci minuti dopo la conclusione del film precedente, l'ex sicario
+                          John Wick è un uomo ricercato
+                          ed in fuga a Manhattan. Dopo l'uccisione non autorizzata di Santino
+                          D'Antonio, il signore
+                          della camorra nonché nuovo membro della Gran Tavola, nell'hotel
+                          Continental di New York,
+                          John viene dichiarato "scomunicato" e sulla sua testa viene posta
+                          una taglia di 14 milioni di
+                          dollari.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      06/12/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUA INIZIA L'ULTIMA SLIDE -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891" src="assets/images/film_incorso/loc_7.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-2 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">2.12</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                           href="#">
+                          Black Widow
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Dopo gli eventi di Captain America: Civil War, Natasha Romanoff si
+                          ritrova da sola
+                          e costretta ad affrontare il suo passato mentre incombe una nuova
+                          minaccia.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      04/12/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- QUA FINISCE L'ULTIMA SLIDE -->
+
+          </div> <!-- QUA FINISCE LO SWIPER-WRAPPER -->
+          <!-- FRECCIE -->
+          <div class="swiper-button-next swiper-button-redcarper-dx"></div>   <!-- BOTTONE DESTRO -->
+          <div class="swiper-button-prev swiper-button-redcarper-sx"></div>   <!-- BOTTONE SINISTRO -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FILM MESE IN CORSO -->
+  <section class="" data-aos="zoom-in" data-aos-once="false">
+    <div class="shadow-xs pt-2 pb-2 bg-white">
+      <div class="container">
+        <div class="row max-h-250">
+          <div class="col-12 col-md-4 d-flex justify-content-center">
+            <!-- svg image -->
+            <img width="180" height="180" class="lazy rounded-circle"
+                 data-src="assets/images/img_home/nastro_pellicola.jpg"
+                 src="assets/images/img_home/nastro_pellicola.jpg" alt="...">
+          </div>
+          <div class="col-12 col-md-4 d-flex align-items-center justify-content-center pl--0">
+            <h2 class="font-weight-light font-raleway">
+              Cosa guardare
+            </h2>
+          </div>
+          <div class="col-12 col-md-4 d-flex align-items-center justify-content-end pl--0">
+            <a href="#!"
+               class="btn transition-hover-top d-block-xs bg-primary text-white fs--20 pl--40 pr--40">
+              Film mese in corso
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAROSELLO 2 SERIE TV IN CORSO-->
+  <section class="p-3" data-aos="zoom-in-up" data-aos-once="false">
+    <div class="container bg-c-6f3">
+      <div class="mt--25">
+        <div class="row">
+          <div class="column col-2">
+            <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
+          </div>
+          <div class="column col-8">
+            <h1 class="fs&#45;&#45;30 text-center text-primary"> SERIE TV IN CORSO</h1>
+          </div>
+          <div class="column col-2">
+            <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
+          </div>
+        </div>
+        <div class="swiper-container p--30" data-swiper='{
+		"slidesPerView": 4,
+		"spaceBetween": 0,
+		"slidesPerGroup": 4,
+		"loop": false,
+		"autoplay": false
+	}'>
+
+          <div class="swiper-wrapper hide">
+            <!-- SLIDE 1 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891"
+                         src="assets/images/serietv_incorso/loc_1.jpg" alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">5.00</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                           href="#">
+                          The Witcher
+                        </a>
+                        <h5 class="h5 mb--5 fs--17 text-gray-600"> 2° stagione </h5>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Geralt di Rivia, un cacciatore di mostri mutante, viaggia verso il
+                          suo destino
+                          in un mondo turbolento in cui le persone spesso si dimostrano più
+                          perverse delle bestie.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      08/10/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891"
+                         src="assets/images/serietv_incorso/loc_2.jpg" alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-2 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">2.20</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Supergirl
+                        </a>
+                        <h5 class="h5 mb--5 fs--17 text-gray-600"> 1° stagione </h5>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Narra le origini della cugina di Clark Kent e di come è diventata
+                          Supergirl
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      13/10/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891"
+                         src="assets/images/serietv_incorso/loc_3.jpg" alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-2_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">2.87</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                           href="#">
+                          Gotham: la città della notte
+                        </a>
+                        <h5 class="h5 mb--5 fs--17 text-gray-600"> 1° stagione </h5>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Ambientato prima degli eventi di Batman, mostro com'è la città più
+                          pericolosa al mondo
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      03/11/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891"
+                         src="assets/images/serietv_incorso/loc_4.jpg" alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-3 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">3.21</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          The 100
+                        </a>
+                        <h5 class="h5 mb--5 fs--17 text-gray-600"> 4° stagione </h5>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Il pianeta Terra ormai distrutto e la popolazione è costretta a
+                          vivere a nello spazio.
+                          A distanza di 100 anni, 100 ragazzi sono stati spediti sulla Terra
+                          per vedere se fosse abitabile ma...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      12/12/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 5 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891"
+                         src="assets/images/serietv_incorso/loc_5.jpg" alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.10</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                           href="#">
+                          Green Arrow: le avventure dell'arciere infallibile
+                        </a>
+                        <h5 class="h5 mb--5 fs--17 text-gray-600"> 5° stagione </h5>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Ambientato nel DC-universe tratta la storia di uno dei più grandi
+                          eroi che ha fatto
+                          parte della Justice League
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      10/10/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 6 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891"
+                         src="assets/images/serietv_incorso/loc_6.jpg" alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.10</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Batwoman: le origini
+                        </a>
+                        <h5 class="h5 mb--5 fs--17 text-gray-600"> 12° stagione </h5>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Ambientato sempre nel Bat-verse narra le origini di una delle più
+                          grandi alleate
+                          di Batman
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      10/11/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUA INIZIA L'ULTIMA SLIDE -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15">
+                    <img width="217.5" height="321.891"
+                         src="assets/images/serietv_incorso/loc_7.jpg" alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-3_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">3.68</span>
+                                    </span>
+                        <h2 class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-decoration-none text-dark"
+                            href="#">
+                          Smallville
+                        </h2>
+                        <h5 class="h5 mb--5 fs--17 text-gray-600"> 5° stagione </h5>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Tratta le origini del più grande eroe che il mondo abbia conosciuto,
+                          Superman
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      12/11/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- QUA FINISCE L'ULTIMA SLIDE -->
+
+          </div> <!-- QUA FINISCE LO SWIPER-WRAPPER -->
+          <!-- FRECCIE -->
+          <div class="swiper-button-next swiper-button-redcarper-dx"></div>   <!-- BOTTONE DESTRO -->
+          <div class="swiper-button-prev swiper-button-redcarper-sx"></div>   <!-- BOTTONE SINISTRO -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PARALLAX -->
+  <div class="pt--100 pb--100">
+    <section class="position-relative jarallax overlay-dark overlay-opacity-7 text-white p-0 bg-cover shadow-xs"
+             style="background-image:url('assets/images/img_home/stretta_di_mano_2.jpg')">
+      <div class="container pt--250 pb--250 text-center position-relative z-index-2">
+        <h1 class="mb-5 font-raleway">
+          Iscriviti e Recensisci
+        </h1>
+        <h2 class="lead mb-5 font-raleway">
+          i tuoi Film e Serie TV preferite
+        </h2>
+        <a href="#"
+           data-href="accedi_modal.html"
+           data-ajax-modal-size="modal-lg"
+           data-ajax-modal-centered="false"
+           data-ajax-modal-callback-function=""
+           data-ajax-modal-backdrop=""
+           class="js-ajax-modal text-truncate font-weight-light btn transition-hover-top mb-3 d-block-xs bg-primary text-white fs--20">
+          Accedi
+        </a>
+      </div>
+      <!-- lines, looks like through a glass -->
+      <div class="absolute-full w-100 overflow-hidden opacity-5">
+        <img class="img-fluid" width="2000" height="2000" src="assets/images/masks/shape-line-lense.svg"
+             alt="...">
+      </div>
+    </section>
+  </div>
+
+  <!-- CAROSELLO 3 FILM PIU' VOTATI-->
+  <section class="p-3" data-aos="zoom-in-up" data-aos-once="false">
+    <div class="container bg-c-6f3"> <!-- style="color: #fff6f3" -->
+      <div class="mt--25">
+        <div class="row">
+          <div class="column col-2">
+            <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
+            <!--  style="color:#f3eed9;background-color:#BB3132" -->
+          </div>
+          <div class="column col-8">
+            <h1 class="fs&#45;&#45;30 text-center text-primary"> FILM PIU' VOTATI</h1>
+          </div>
+          <div class="column col-2">
+            <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
+          </div>
+        </div>
+        <div class="swiper-container p--30" data-swiper='{
+		"slidesPerView": 5,
+		"spaceBetween": 0,
+		"slidesPerGroup": 5,
+		"loop": false,
+		"autoplay": false
+	}'>
+
+          <div class="swiper-wrapper hide">
+            <!-- SLIDE 1 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/film_votati/loc_1.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">5.00</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          The Avengers
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Un gruppo di super-eroi si riunisce per sconfingere un'invasione
+                          aliena
+                          causata da Loki sotto la supervisione di Thanos
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      04/21/2014
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/film_votati/loc_2.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.93</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Avengers: Age of Ultron
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Un gruppo di super-eroi si riunisce per sconfingere un gruppo di
+                          cyborg comandati da
+                          Ultron
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      03/03/2016
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/film_votati/loc_3.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.77</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Avengers: Infinity War
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Un gruppo di super-eroi si riunisce per sconfingere il guerriero più
+                          forte proveniente
+                          dallo spazio chiamato Thanos ed il suo scopo è quello di riunire
+                          tutte le gemme
+                          dell'infinito
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      05/05/2017
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/film_votati/loc_4.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.65</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Avengers: Endgame
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Dopo aver subito una sconfitta da Thanos, gli eroi rimanenti si
+                          riunisco per fermarlo
+                          e riportare in vita tutte le persone morte a causa sua
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      08/08/2019
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 5 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/film_votati/loc_5.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.53</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Star Trek
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Un gruppo di viaggiatori partono alla volta dello spazio alla
+                          scoperta di nuove cività
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      07/07/2017
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 6 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/film_votati/loc_6.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.49</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Star Wars: l'ascesa di Skywalker
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Un'eroina cerca di fermare l'ascesa dell'Impero sulla galassi
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      20/20/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUA INIZIA L'ULTIMA SLIDE -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/film_votati/loc_7.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.39</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Lo Hobbit: un viaggio inaspettato
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Prequel del Signore degli Anelli, un hobbit parte all'avventura per
+                          fermare
+                          il signore oscuro
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      21/03/2015
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- QUA FINISCE L'ULTIMA SLIDE -->
+
+          </div> <!-- QUA FINISCE LO SWIPER-WRAPPER -->
+          <!-- FRECCIE -->
+          <div class="swiper-button-next swiper-button-redcarper-dx"></div>   <!-- BOTTONE DESTRO -->
+          <div class="swiper-button-prev swiper-button-redcarper-sx"></div>   <!-- BOTTONE SINISTRO -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPAM PAGINE SOCIAL -->
+  <section class="" data-aos="zoom-in" data-aos-once="false">
+    <div class="shadow-xs bg-white">
+      <div class="container">
+        <div class="row max-h-250">
+          <div class="col-12 col-md-3 d-flex justify-content-center pl--25">
+            <!-- svg image -->
+            <img width="190" height="190" class="lazy"
+                 data-src="assets/images/img_home/freccia_vettoriale.jpg"
+                 src="assets/images/img_home/freccia_vettoriale.jpg" alt="...">
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center pl--0">
+            <h3 class="font-weight-light mr-auto font-raleway">
+              Aiutaci a crescere mettendo il <span class="text-primary font-weight-bold">Mi Piace</span>
+              alle nostre pagine Social
+            </h3>
+          </div>
+          <div class="col-12 col-md-3 d-flex align-items-center justify-content-center pl--10">
+            <!--                    <div class="row pl&#45;&#45;10">-->
+            <a href="#!" class="btn btn-facebook transition-hover-top mb-2 mr--10 rounded-circle"
+               rel="noopener" aria-label="facebook page">
+              <i class="fi fi-social-facebook"></i>
+            </a>
+
+            <a href="#!" class="btn btn-twitter transition-hover-top mb-2 mr--10 rounded-circle"
+               rel="noopener" aria-label="twitter page">
+              <i class="fi fi-social-twitter"></i>
+            </a>
+
+            <a href="#!" class="btn btn-youtube transition-hover-top mb-2 rounded-circle"
+               rel="noopener" aria-label="youtube page">
+              <i class="fi fi-social-youtube"></i>
+            </a>
+            <!--                    </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /SPAM PAGINE SOCIAL -->
+
+  <!-- CAROSELLO 4 SERIE TV PIU' VOTATE-->
+  <section class="p-3" data-aos="zoom-in-up" data-aos-once="false">
+    <div class="container bg-c-6f3 mb--100">
+      <div class="mt--25">
+        <div class="row">
+          <div class="column col-2">
+            <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
+          </div>
+          <div class="column col-8">
+            <h1 class="fs&#45;&#45;30 text-center text-primary"> SERIE TV PIU' VOTATE</h1>
+          </div>
+          <div class="column col-2">
+            <hr class="h&#45;&#45;1 bw&#45;&#45;0 linea-titolo">
+          </div>
+        </div>
+        <div class="swiper-container p--30" data-swiper='{
+		"slidesPerView": 5,
+		"spaceBetween": 0,
+		"slidesPerGroup": 5,
+		"loop": false,
+		"autoplay": false
+	}'>
+
+          <div class="swiper-wrapper hide">
+            <!-- SLIDE 1 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/serietv_votate/loc_1.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">5.00</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          The Witcher
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Geralt di Rivia, un cacciatore di mostri mutante, viaggia verso il
+                          suo destino
+                          in un mondo turbolento in cui le persone spesso si dimostrano più
+                          perverse delle bestie.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      08/10/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/serietv_votate/loc_2.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.98</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          The Boys
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Al giorno d'oggi i supereroi vivono al centro dell'attenzione e sono
+                          gestiti come star
+                          del cinema dalla potentissima multinazionale Vought American, il cui
+                          scopo primario è
+                          mascherare i vizi dei propri affiliati per ritrarli come i paladini
+                          di cui il mondo ha
+                          bisogno in modo da trarne il massimo profitto inserendoli, oltre che
+                          in vere missioni di
+                          salvataggio, in qualsiasi operazione di marketing che possa fruttare
+                          miliardi di dollari.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      07/06/2016
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/serietv_votate/loc_3.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.76</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          The Flash: la storia di Berry Allen
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Un ragazzo grazie ad un incidente chimico riescie ad ottenere il
+                          potere della
+                          supervelocità e grazie ad essi combatte il crimine
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      01/01/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/serietv_votate/loc_4.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.51</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Mandalorian: l'origine del maestro di Skywalker
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Un soldato dell'impero trova un ragazzo che in futuro sarà il
+                          maestro di Skywalker
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      10/10/2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 5 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/serietv_votate/loc_5.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.47</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Green Arrow
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Ambientato nel DC-universe tratta la storia di uno dei più grandi
+                          eroi che ha fatto
+                          parte della Justice League
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      03/03/2017
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 6 -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/serietv_votate/loc_6.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4_5 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.40</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Batwoman: le origini
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Ambientato sempre nel Bat-verse narra le origini di una delle più
+                          grandi alleate
+                          di Batman
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      01/09/2018
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUA INIZIA L'ULTIMA SLIDE -->
+            <div class="swiper-slide">
+              <div class="col-12">
+                <div class="card b-0 shadow-md shadow-lg-hover transition-all-ease-250 transition-hover-top h-100">
+                  <div class="clearfix p--15 pl--10 pr--10">
+                    <img width="172" height="254.547" src="assets/images/serietv_votate/loc_7.jpg"
+                         alt="...">
+                  </div>
+                  <div class="card-body font-weight-light pt--0 pb--15 pl--15 pr--15">
+                    <div class="d-table">
+                      <div class="d-table-cell align-bottom">
+                                    <span class="d-block mb--5">
+                                        <i class="rating-4 text-warning fs--18"></i>
+                                        <span class="fs--17 font-weight-bolder pl--5 text-dark">4.27</span>
+                                    </span>
+                        <a class="h5 card-title mb--5 h--50 overflow-hidden text-truncate-2 text-dark text-decoration-none"
+                           href="#">
+                          Smallville
+                        </a>
+                        <p class="lead overflow-hidden mb--0 h--105 fs--18 text-truncate-4">
+                          Tratta le origini del più grande eroe che il mondo abbia conosciuto,
+                          Superman
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer bg-transparent b-0 pt--4 pl--10 pr--10">
+                    <hr class="mt--0 mb--15 bg-primary">
+                    <p class="text-center mb--4 fs--20 text-dark">
+                      21/03/2011
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- QUA FINISCE L'ULTIMA SLIDE -->
+
+          </div> <!-- QUA FINISCE LO SWIPER-WRAPPER -->
+          <!-- FRECCIE -->
+          <div class="swiper-button-next swiper-button-redcarper-dx"></div>   <!-- BOTTONE DESTRO -->
+          <div class="swiper-button-prev swiper-button-redcarper-sx"></div>   <!-- BOTTONE SINISTRO -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="footer-dark text-white">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="bg-distinct col-12 col-md-6 col-lg-4 text-center p-0 py-5">
+
+        <div class="footer-svg-shape position-absolute absolute-top z-index-2 mt--n70 w-100 overflow-hidden pt--5">
+          <svg viewBox="0 0 1440 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+               preserveAspectRatio="none">
+            <path d="M0 28H1440C1440 28 1154 3.21961e-10 720 1.30487e-09C286 2.28777e-09 0 28 0 28Z"></path>
+          </svg>
+        </div>
+
+        <form method="post" action="#subscribe_url" class="px-4">
+
+          <input type="hidden" name="action" value="subscribe" tabindex="-1">
+
+          <p id="btnAriaFooterFormTitle" class="text-white">
+            Rimani informato, iscriviti alla nostra newletter!
+          </p>
+
+
+          <div class="input-group-over input-group-pill mb-4">
+
+            <input required class="form-control b-0" name="subscriber_email" type="email" value=""
+                   placeholder="Indirizzo email" aria-label="indirizzo email">
+
+            <button type="submit" class="btn bg-transparent shadow-none" aria-label="subscribe"
+                    aria-labelledby="btnAriaFooterFormTitle">
+              <i class="fi fi-send fs--18"></i>
+            </button>
+
+          </div>
+
+
+        </form>
+
+        <div class="mt--12">
+
+          <a href="#" class="btn btn-sm btn-facebook transition-hover-top mb-2 rounded-circle"
+             rel="noopener" aria-label="facebook page">
+            <i class="fi fi-social-facebook"></i>
+          </a>
+
+          <a href="#" class="btn btn-sm btn-twitter transition-hover-top mb-2 rounded-circle"
+             rel="noopener" aria-label="twitter page">
+            <i class="fi fi-social-twitter"></i>
+          </a>
+
+          <a href="#!" class="btn btn-sm btn-youtube transition-hover-top mb-2 rounded-circle"
+             rel="noopener" aria-label="youtube page">
+            <i class="fi fi-social-youtube"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="pl--30 col-12 col-md-6 col-lg-8 py-5 text-center-xs">
+
+
+        <ul class="mb-0 breadcrumb bg-transparent p-0 block-xs font-weight-bold fs--18">
+          <li class="breadcrumb-item"><a href="#">Contact</a></li>
+          <li class="breadcrumb-item"><a href="#">About Us</a></li>
+          <li class="breadcrumb-item"><a href="#">Terms &amp; Conditions</a>
+          </li>
+          <li class="breadcrumb-item"><a href="#">GDPR &amp; Cookies</a></li>
+        </ul>
+
+        <div class="text-muted mt--30">
+          <p>
+            Sul sito Red Carpet trovi tutto sul mondo del cinema e delle serieTv:
+            i trailer dei film in uscita, le recensioni delle migliori testate gionalistiche , recensioni di
+            altri utenti appassionati e tutte le informazioni su attori e cast e tanto altro ancora!!!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bg-distinct py-3 clearfix">
+
+    <div class="container clearfix font-weight-light text-center-xs">
+
+      <div class="fs--14 py-2 float-start float-none-xs m-0-xs">
+        &copy; Red Carpet.
+      </div>
+
+
+    </div>
+  </div>
+
+</footer>
+<!-- /Footer -->
+
+
+</div> <!-- /#wrapper -->
+
+<script src="assets/js/core.min.js"></script>
+<script>
+  // mouseenter con click opzionale
+  $('.c-link').on("click", function (){
+    //console.log($(this).data("target"));
+    //console.log($(".c-c"));
+    $(".c-c").each(function (){
+      //console.log($(this));
+      $(this).collapse("hide");
+    });
+    //console.log($(target));
+    var target = $(this).data("target");
+    $(target).collapse("toggle");
+  });
+
+  $('.c-d').on("click mouseenter", function () {
+    $(".c-c").each(function () {
+      //console.log($(this));
+      $(this).collapse("hide");
+    });
+  });
+</script>
+</body>
+</html>
